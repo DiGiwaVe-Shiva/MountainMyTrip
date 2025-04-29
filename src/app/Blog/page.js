@@ -75,7 +75,7 @@ export default function Blog() {
             tips
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
-            <Link href="/Blog2"
+            <Link href="/"
              className="bg-white text-[#F54A00] px-6 py-3 rounded-xl font-medium hover:bg-gray-100 transition">
               Explore Destinations
             </Link>
@@ -110,7 +110,7 @@ export default function Blog() {
               </p>
               <div className="flex items-center justify-between">
                 <Link
-                  href={`/blog/${featuredPost.slug}`}
+                  href={`/Blog2`}
                   className="flex items-center gap-2 font-semibold hover:text-teal-300"
                 >
                   Read Full Article →

@@ -191,10 +191,10 @@ export default function Footer() {
             {[
               { label: "Treks", href: "#" },
               { label: "Stays with us", href: "#" },
-              { label: "Careers", href: "#" },
+              { label: "Careers", href: "/Careers" },
               { label: "Team", href: "/Team" },
               { label: "Privacy Policy", href: "/PrivacyPolicy" },
-              { label: "Terms and Conditions", href: "#" },
+              { label: "Terms and Conditions", href: "/TermsandConditions" },
             ].map((link) => (
               <li key={link.label}>
                 <a href={link.href} className="hover:underline">

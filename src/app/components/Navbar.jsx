@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
@@ -8,6 +8,7 @@ import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const hoverTimeout = useRef(null);
 
   const toggleMobileMenu = () => {
     setIsOpen((prev) => !prev);
@@ -19,9 +20,9 @@ export default function Navbar() {
     {
       name: "Destination",
       link: "#",
-      dropdown: [{ name: "Top Places", link: "/MountainMyTripGallery" },
-        {name:"Uttarakhand",link:"/Uttarakhand"},
-        {name:"HimachalPradesh",link:"/HimachalPradesh"}
+      dropdown: [
+        { name: "Uttarakhand", link: "/Uttarakhand" },
+        { name: "HimachalPradesh", link: "/HimachalPradesh" },
       ],
     },
     {
@@ -30,7 +31,7 @@ export default function Navbar() {
       dropdown: [
         { name: "GulabiKanthaTrek", link: "/GulabiKantha" },
         { name: "BalipassTrek", link: "/Balipass" },
-        { name: "Dayara Bugyal Trek", link: "/DayaraBugyal" },
+        { name: "Dinara Top Trek", link: "/DinaraTopTrek" },
         { name: "Brahmatal Winter Trek", link: "/Bramtal" },
         { name: "Kuari Pass Trek", link: "/Kuaripass" },
         { name: "Kedarkantha Trek ", link: "/Kedarkantha" },
@@ -43,49 +44,17 @@ export default function Navbar() {
         { name: "Chandrashila Trek", link: "/Chandrashila" },
       ],
     },
-    {
-      name: "CharDham",
-      link: "/CharDham",
-    },
-    {
-      name: "Stays with us",
-      link: "/",
-      // dropdown: [
-      //   { name: "GulabiKantha", link: "/GulabiKanthaTrek" },
-      //   { name: "Balipass", link: "/BalipassTrek" },
-      // ],
-    },
+    { name: "CharDham", link: "/CharDham" },
+    { name: "Stays with us", link: "/" },
     { name: "Blog", link: "/Blog" },
     { name: "Contact Us", link: "/Contact" },
   ];
 
+  useEffect(() => {
+    return () => clearTimeout(hoverTimeout.current);
+  }, []);
+
   return (
-    // <nav className="bg-white px-4 fixed top-0 left-0 w-full z-50 border-b border-gray-200 shadow-sm">
-    //   <div className="max-w-7xl mx-auto flex justify-between items-center h-[60px]">
-    //     <Link href="/">
-    //       <Image
-    //         src="/deal19.png"
-    //         width={120}
-    //         height={60}
-    //         alt="Logo"
-    //         className="cursor-pointer"
-    //       />
-    //     </Link>
-
-    // <nav className="bg-white px-4 fixed top-0 left-0 w-full z-50 border-b border-gray-200 shadow-sm">
-    //   <div className="max-w-7xl mx-auto flex justify-between items-center h-[60px]">
-    //     <Link href="/" aria-label="Go to homepage">
-    //       {/* Avoid div/span around Image unless styling is needed */}
-    //       <Image
-    //         src="/deal19.png"
-    //         width={120}       // Explicit width
-    //         height={60}       // Explicit height
-    //         alt="HimaliyeMyTrip Logo"
-    //         priority          // Boosts LCP for above-the-fold images
-    //         className="cursor-pointer" // No size-altering Tailwind class
-    //       />
-    //     </Link>
-
     <nav className="bg-white px-4 fixed top-0 left-0 w-full z-50 border-b border-gray-200 shadow-sm will-change-transform">
       <div className="max-w-7xl mx-auto flex justify-between items-center h-[70px]">
         <Link href="/" prefetch={false} aria-label="Go to homepage">
@@ -99,7 +68,7 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Toggle */}
         <button
           onClick={toggleMobileMenu}
           className="md:hidden text-2xl"
@@ -108,13 +77,21 @@ export default function Navbar() {
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
 
+        {/* Desktop Nav */}
         <ul className="hidden md:flex space-x-8 items-center text-gray-800 font-medium text-[16px]">
           {navItems.map((item, idx) => (
             <li
               key={idx}
               className="relative group"
-              onMouseEnter={() => setActiveDropdown(item.name)}
-              onMouseLeave={() => setActiveDropdown(null)}
+              onMouseEnter={() => {
+                clearTimeout(hoverTimeout.current);
+                setActiveDropdown(item.name);
+              }}
+              onMouseLeave={() => {
+                hoverTimeout.current = setTimeout(() => {
+                  setActiveDropdown(null);
+                }, 3000);
+              }}
             >
               <Link
                 href={item.link}
@@ -124,7 +101,7 @@ export default function Navbar() {
                 {item.dropdown && <FaChevronDown className="text-sm mt-0.5" />}
               </Link>
 
-              {/* Dropdown menu */}
+              {/* Dropdown */}
               {item.dropdown && activeDropdown === item.name && (
                 <div
                   className={`absolute top-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-30 ${
@@ -159,7 +136,7 @@ export default function Navbar() {
           <li>
             <Link
               href="/Bookyourstay"
-              className="bg-orange-500  text-white px-5 py-2 rounded-full hover:bg-[#F54900] transition"
+              className="bg-orange-500 text-white px-5 py-2 rounded-full hover:bg-[#F54900] transition"
             >
               Book Your Stay
             </Link>

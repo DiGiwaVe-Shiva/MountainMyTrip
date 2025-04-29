@@ -47,7 +47,7 @@ const teamMembers = [
     name: "Mohit Verma",
     role: "Marketing & Outreach",
     bio: "Crafts compelling campaigns to bring trekking adventures to the world.",
-    image: "/deal9.webp",
+    image: "/Slot.webp",
     linkedin: "https://linkedin.com/in/snehaverma",
     twitter: "https://twitter.com/snehaverma",
     instagram: "https://instagram.com/snehaverma",

@@ -86,7 +86,7 @@ import Link from "next/link";
 
 export default function Aboutsection() {
   return (
-    <section className="px-4 sm:px-8 md:px-24 py-12 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto">
+    <section className="px-4 sm:px-8 md:px-8 py-12 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto">
       {/* Text Section */}
       <div className="w-full md:w-1/2 text-center md:text-left">
         <h2 className="text-lg sm:text-xl text-orange-500 font-semibold uppercase tracking-wide">

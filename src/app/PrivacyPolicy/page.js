@@ -3,94 +3,99 @@
 export default function PrivacyPolicy() {
   return (
     <>
-    <div
+      {/* Banner Section */}
+      <div
         className="bg-cover mt-12 bg-center h-[400px] flex items-center justify-center text-white text-center shadow-lg"
-        style={{
-          backgroundImage: "url('/deal26.webp')", // Update image path
-        }}
+        style={{ backgroundImage: "url('/deal26.webp')" }}
       >
-        <div className="bg-opacity-50 p-12 rounded-xl">
-          <h1 className="text-5xl text-gray-200 font-extrabold drop-shadow-lg">
-          Privacy Policy
+        <div className=" bg-opacity-50 p-12 rounded-xl">
+          <h1 className="text-4xl sm:text-5xl text-gray-100 font-extrabold drop-shadow-lg">
+            Privacy Policy
           </h1>
-          {/* <h3 className="text-lg font-medium text-gray-200 mt-4">
-            Explore the Majestic Mountains of Himachal Pradesh
-          </h3> */}
         </div>
       </div>
 
-    
-    <main className="bg-white mt-24 text-gray-800 px-6 md:px-20 py-10">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-[#393849]">
-          Privacy Policy
-        </h2>
+      {/* Main Content */}
+      <main className="bg-white mt-12 text-gray-800 px-6 md:px-20 py-10">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-[#393849]">
+            Privacy Policy
+          </h2>
 
-        <section className="space-y-6 text-sm md:text-base leading-relaxed">
-          <p>
-            At <strong>MountainMyTrip</strong>, we respect your privacy and are committed to
-            protecting your personal information. This Privacy Policy explains how we collect, use,
-            and safeguard your data when you use our travel services and browse our website.
-          </p>
+          <section className="space-y-6 text-sm md:text-base leading-relaxed">
+            <p>
+              At <strong>MountainMyTrip</strong>, we are committed to
+              safeguarding consumer privacy. We value your trust and want to
+              assure you that we handle your personal information with the
+              utmost care. This privacy policy outlines the information we
+              collect, how we use it, and the measures we take to protect it.
+            </p>
 
-          <h2 className="text-xl font-semibold text-[#393849] mt-6">1. Information We Collect</h2>
-          <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Personal Information:</strong> Name, email, phone number, etc.</li>
-            <li><strong>Booking Information:</strong> Travel preferences, dates, destinations.</li>
-            <li><strong>Device & Usage Data:</strong> IP address, browser type, pages visited.</li>
-          </ul>
+            <h3 className="text-xl font-semibold text-[#393849] mt-6">
+              IP Addresses & Cookies
+            </h3>
+            <p>
+              To enhance our website’s functionality and user experience, we may
+              collect and use visitors’ IP addresses. This information is used
+              for optimizing search engine performance and diagnosing server
+              issues. We also use Google Analytics to understand how visitors
+              navigate our site. Cookies are employed to collect aggregated data
+              like traffic sources, browser types, and visit duration. This data
+              is anonymous and not personally identifiable. You may choose to
+              disable cookies in your browser settings if preferred.
+            </p>
 
-          <h2 className="text-xl font-semibold text-[#393849] mt-6">2. How We Use Your Information</h2>
-          <p>We use your data to:</p>
-          <ul className="list-disc pl-5 space-y-2">
-            <li>Process bookings and provide travel services.</li>
-            <li>Send updates, promotional emails, and offers.</li>
-            <li>Improve user experience and website performance.</li>
-          </ul>
+            <h3 className="text-xl font-semibold text-[#393849] mt-6">
+              Bookings & Payments
+            </h3>
+            <p>
+              When you book a tour on our website, we collect essential contact
+              details like your name, email address, and occasionally phone
+              number or postal address. This information is used strictly for
+              communication regarding your tour. In rare cases, we may share
+              your contact details with your assigned tour guide. We never sell
+              or share this data with third parties.
+            </p>
+            <p>
+              During booking, we also collect payment details, such as credit
+              card numbers or bank information. Online security is a top
+              priority to ensure your data remains protected.
+            </p>
 
-          <h2 className="text-xl font-semibold text-[#393849] mt-6">3. Sharing of Data</h2>
-          <p>
-            We do not sell or trade your personal information. Your data may be shared with
-            third-party vendors or service partners only for the purpose of delivering our services.
-          </p>
+            <h3 className="text-xl font-semibold text-[#393849] mt-6">
+              Online Security
+            </h3>
+            <p>
+              Our website uses advanced online security protocols to protect
+              your information. All transactions are securely processed by
+              Razorpay services over HTTPS using TLS, with industry-standard
+              AES-128-bit encryption and secure cipher configurations.
+            </p>
 
-          <h2 className="text-xl font-semibold text-[#393849] mt-6">4. Data Protection</h2>
-          <p>
-            We implement industry-standard security measures to ensure the safety of your personal
-            data.
-          </p>
+            <h3 className="text-xl font-semibold text-[#393849] mt-6">
+              All Rights Reserved
+            </h3>
+            <p>
+              All content on the MountainMyTrip website is protected and cannot
+              be copied, reproduced, or used for commercial purposes without
+              prior written consent from MountainMyTrip. We reserve the right to
+              amend this policy as necessary, and any updates will be reflected
+              on this page.
+            </p>
 
-          <h2 className="text-xl font-semibold text-[#393849] mt-6">5. Your Rights</h2>
-          <p>
-            You may request access, correction, or deletion of your personal information at any
-            time by contacting us at{" "}
-            <a
-              href="mailto:info@mountainmytrip.com"
-              className="text-blue-600 hover:underline"
-            >
-              info@mountainmytrip.com
-            </a>
-            .
-          </p>
+            <p className="mt-6">
+              Your privacy is important to us. We are committed to maintaining
+              the confidentiality and security of your personal information. If
+              you have any questions or concerns, please don’t hesitate to
+              contact us.
+            </p>
 
-          <h2 className="text-xl font-semibold text-[#393849] mt-6">6. Cookies</h2>
-          <p>
-            We use cookies to analyze traffic and enhance your experience. By using our website, you
-            consent to our cookie policy.
-          </p>
-
-          <h2 className="text-xl font-semibold text-[#393849] mt-6">7. Policy Updates</h2>
-          <p>
-            We may update this Privacy Policy from time to time. All changes will be posted on this
-            page with the updated effective date.
-          </p>
-
-          <p className="text-sm text-gray-500 mt-10">
-            Effective Date: {new Date().toLocaleDateString()}
-          </p>
-        </section>
-      </div>
-    </main>
+            {/* <p className="text-sm text-gray-500 mt-10">
+              Effective Date: {new Date().toLocaleDateString()}
+            </p> */}
+          </section>
+        </div>
+      </main>
     </>
   );
 }

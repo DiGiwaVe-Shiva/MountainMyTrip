@@ -256,3 +256,4 @@ const BookYourStayForm = () => {
 };
 
 export default BookYourStayForm;
+
