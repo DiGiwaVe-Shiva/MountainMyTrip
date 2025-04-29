@@ -74,7 +74,7 @@ export default function SarPassTrek() {
 
 📌 Please reach out for confirmation and next steps.`;
 
-    const whatsappURL = `https://wa.me/9123456156?text=${encodeURIComponent(
+    const whatsappURL = `https://wa.me/6239092532?text=${encodeURIComponent(
       message
     )}`;
     window.open(whatsappURL, "_blank");
@@ -82,30 +82,6 @@ export default function SarPassTrek() {
 
   return (
     <>
-      {/* <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 mt-16">
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 auto-rows-[220px] md:auto-rows-[250px]">
-          {destinations.map((item, index) => (
-            <div
-              key={index}
-              className={`relative w-full h-full rounded-xl overflow-hidden group shadow-md ${
-                item.gridClass || ""
-              }`}
-            >
-              <div className="w-full h-full transition-transform duration-500 ease-in-out transform group-hover:scale-110">
-                <Image
-                  src={item.src}
-                  alt={`MountainMyTrip image ${index + 1}`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </section> */}
-
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 mt-8">
         <div className="flex flex-col gap-2 sm:hidden">
           <div className="w-full h-[300px] relative rounded-xl overflow-hidden shadow-md">
@@ -243,39 +219,7 @@ export default function SarPassTrek() {
             </ul>
           </div>
 
-          {/* <div className="my-8">
-            <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800">
-              Itinerary
-            </h2>
-            <div className="flex flex-col gap-4">
-              {itinerary.map((item, index) => (
-                <div
-                  key={index}
-                  className="w-full border border-gray-200 rounded-xl shadow-sm bg-white"
-                >
-                  <button
-                    onClick={() => toggleAccordion(index)}
-                    className="w-full px-4 py-4 flex justify-between items-center hover:bg-gray-100"
-                  >
-                    <span className="text-base md:text-lg font-semibold text-gray-800">
-                      {item.title}
-                    </span>
-                    {openIndex === index ? (
-                      <FaChevronUp className="text-orange-500" />
-                    ) : (
-                      <FaChevronDown className="text-orange-500" />
-                    )}
-                  </button>
-                  {openIndex === index && (
-                    <div className="px-5 pb-4 text-gray-600 whitespace-pre-line text-sm md:text-base">
-                      {item.content}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div> */}
-
+        
           {/* Itinerary Section */}
           <div className="my-8">
             <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800">
@@ -338,13 +282,17 @@ export default function SarPassTrek() {
               <h3 className="text-lg font-semibold text-gray-800 mb-1">
                 Book Your Slot Now!
               </h3>
-              <div className="text-sm text-green-600 font-bold mb-2">
+              {/* <div className="text-sm text-green-600 font-bold mb-2">
                 Save 20%
-              </div>
+              </div> */}
               <div className="text-xl font-bold text-red-600 mb-4">
-                Starting From: <span className="text-gray-600">₹12,000</span>/
+                Starting From: <span className="text-gray-600">₹6,499</span>/
                 Per Person
               </div>
+              <div className="text-sm text-green-600 font-bold mb-2">
+              +5% gst
+              </div>
+              
 
               <form onSubmit={handleSubmit} className="space-y-3">
                 <input

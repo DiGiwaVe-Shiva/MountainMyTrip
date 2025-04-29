@@ -19,7 +19,10 @@ export default function Navbar() {
     {
       name: "Destination",
       link: "#",
-      dropdown: [{ name: "Top Places", link: "/MountainMyTripGallery" }],
+      dropdown: [{ name: "Top Places", link: "/MountainMyTripGallery" },
+        {name:"Uttarakhand",link:"/Uttarakhand"},
+        {name:"HimachalPradesh",link:"/HimachalPradesh"}
+      ],
     },
     {
       name: "Treks",
@@ -31,7 +34,7 @@ export default function Navbar() {
         { name: "Brahmatal Winter Trek", link: "/Bramtal" },
         { name: "Kuari Pass Trek", link: "/Kuaripass" },
         { name: "Kedarkantha Trek ", link: "/Kedarkantha" },
-        // { name: "Vinayak Top Trek", link: "/VinayakTrek" },
+        { name: "Jalsupass Trek", link: "/Jalsupass" },
         { name: "Sarutal Trek", link: "/Sarutal" },
         { name: "DoditalTrek", link: "/Dodital" },
         { name: "HarKiDunTrek", link: "/Hariki" },
@@ -41,9 +44,8 @@ export default function Navbar() {
       ],
     },
     {
-      name:"CharDham",
-      link:"/CharDham",
-
+      name: "CharDham",
+      link: "/CharDham",
     },
     {
       name: "Stays with us",
@@ -58,15 +60,42 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-white px-4 fixed top-0 left-0 w-full z-50 border-b border-gray-200 shadow-sm">
-      <div className="max-w-7xl mx-auto flex justify-between items-center h-[60px]">
-        <Link href="/">
+    // <nav className="bg-white px-4 fixed top-0 left-0 w-full z-50 border-b border-gray-200 shadow-sm">
+    //   <div className="max-w-7xl mx-auto flex justify-between items-center h-[60px]">
+    //     <Link href="/">
+    //       <Image
+    //         src="/deal19.png"
+    //         width={120}
+    //         height={60}
+    //         alt="Logo"
+    //         className="cursor-pointer"
+    //       />
+    //     </Link>
+
+    // <nav className="bg-white px-4 fixed top-0 left-0 w-full z-50 border-b border-gray-200 shadow-sm">
+    //   <div className="max-w-7xl mx-auto flex justify-between items-center h-[60px]">
+    //     <Link href="/" aria-label="Go to homepage">
+    //       {/* Avoid div/span around Image unless styling is needed */}
+    //       <Image
+    //         src="/deal19.png"
+    //         width={120}       // Explicit width
+    //         height={60}       // Explicit height
+    //         alt="HimaliyeMyTrip Logo"
+    //         priority          // Boosts LCP for above-the-fold images
+    //         className="cursor-pointer" // No size-altering Tailwind class
+    //       />
+    //     </Link>
+
+    <nav className="bg-white px-4 fixed top-0 left-0 w-full z-50 border-b border-gray-200 shadow-sm will-change-transform">
+      <div className="max-w-7xl mx-auto flex justify-between items-center h-[70px]">
+        <Link href="/" prefetch={false} aria-label="Go to homepage">
           <Image
-            src="/deal19.png"
-            width={120}
-            height={60}
-            alt="Logo"
-            className="cursor-pointer"
+            src="/logo2.png"
+            width={200}
+            height={239}
+            alt="HimaliyeMyTrip Logo"
+            priority
+            className="cursor-pointer select-none"
           />
         </Link>
 
@@ -79,87 +108,6 @@ export default function Navbar() {
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
 
-        {/*       
-        <ul className="hidden md:flex space-x-8 items-center text-gray-800 font-medium text-[16px]">
-          {navItems.map((item, idx) => (
-            <li
-              key={idx}
-              className="relative group"
-              onMouseEnter={() => setActiveDropdown(item.name)}
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
-              <Link
-                href={item.link}
-                className="flex items-center gap-1 hover:text-orange-500 transition"
-              >
-                {item.name}
-                {item.dropdown && <FaChevronDown className="text-sm mt-0.5" />}
-              </Link>
-
-              {item.dropdown && activeDropdown === item.name && (
-                <div
-                  className={`absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-30 ${
-                    item.name === "Treks" ? "w-[600px]" : "w-56"
-                  }`}
-                >
-                  <ul
-                    className={`py-2  ${
-                      item.name === "Treks"
-                        ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1 px-4"
-                        : ""
-                    }`}
-                  >
-                    {item.dropdown.map((drop, i) => (
-                      <li key={i}>
-                        <Link
-                          href={drop.link}
-                          className="block px-4 py-2 hover:bg-gray-100 text-sm rounded transition"
-                        >
-                          {drop.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </li>
-          ))}
-
-          <li>
-            <Link
-              href="/Bookyourstay"
-              className="bg-[#F54900] text-white px-5 py-2 rounded-full hover:bg-[#f54a00a1] transition"
-            >
-              Book Your Stay
-            </Link>
-          </li>
-        </ul> */}
-        {/* {item.dropdown && activeDropdown === item.name && (
-          <div
-            className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-30 ${
-              item.name === "Treks" ? "w-[600px]" : "w-56"
-            }`}
-          >
-            <ul
-              className={`py-2 ${
-                item.name === "Treks"
-                  ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1.5 px-4"
-                  : ""
-              }`}
-            >
-              {item.dropdown.map((drop, i) => (
-                <li key={i}>
-                  <Link
-                    href={drop.link}
-                    className="block px-3 py-2 hover:bg-gray-100 text-sm rounded transition"
-                  >
-                    {drop.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )} */}
         <ul className="hidden md:flex space-x-8 items-center text-gray-800 font-medium text-[16px]">
           {navItems.map((item, idx) => (
             <li
@@ -211,7 +159,7 @@ export default function Navbar() {
           <li>
             <Link
               href="/Bookyourstay"
-              className="bg-[#F54900] text-white px-5 py-2 rounded-full hover:bg-[#f54a00a1] transition"
+              className="bg-orange-500  text-white px-5 py-2 rounded-full hover:bg-[#F54900] transition"
             >
               Book Your Stay
             </Link>
@@ -266,7 +214,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/Bookyourstay"
-                className="block bg-[#F54900] text-white text-center py-2 rounded-full hover:bg-[#f54a00a1] transition"
+                className="block bg-[#f54a00a1] text-white text-center py-2 rounded-full hover:bg-[#F54900] transition"
                 onClick={toggleMobileMenu}
               >
                 Book Your Stay
@@ -278,4 +226,3 @@ export default function Navbar() {
     </nav>
   );
 }
-

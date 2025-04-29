@@ -75,12 +75,13 @@ export default function Blog() {
             tips
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
-            <button className="bg-white text-[#F54A00] px-6 py-3 rounded-xl font-medium hover:bg-gray-100 transition">
+            <Link href="/Blog2"
+             className="bg-white text-[#F54A00] px-6 py-3 rounded-xl font-medium hover:bg-gray-100 transition">
               Explore Destinations
-            </button>
-            <button className="border-2 border-white px-6 py-3 rounded-xl hover:bg-white hover:text-[#F54A00] transition">
+            </Link>
+            {/* <button className="border-2 border-white px-6 py-3 rounded-xl hover:bg-white hover:text-[#F54A00] transition">
               Get Travel Tips
-            </button>
+            </button> */}
           </div>
         </div>
         <div className="absolute inset-0  from-black/50 to-transparent" />
@@ -156,7 +157,7 @@ export default function Blog() {
               </div>
 
               <div className="p-6">
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
+                <div className="flex items-center justify-between  text-sm text-gray-500 mb-3">
                   <div className="flex items-center gap-1">
                     <CalendarDays size={16} />
                     <span>{post.date}</span>

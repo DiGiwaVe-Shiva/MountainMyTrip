@@ -18,7 +18,7 @@ export default function HimTrek() {
         />
 
         {/* Left Overlay Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-l mask-l-from-70% from-black/80 via-black/40 to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-l mask-l-from-70% from-black/80 via-black/40 to-transparent" />
 
         {/* Text Content */}
         <div className="absolute inset-0 z-20 flex items-center justify-end px-6 md:px-16">

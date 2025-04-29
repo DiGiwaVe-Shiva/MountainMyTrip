@@ -58,27 +58,29 @@ const TeamCarousel = () => {
     <>
       {/* Hero Section */}
       <div
-        className="bg-cover mt-12 bg-center h-[300px] flex items-center justify-center text-white text-center shadow-lg"
+        className="bg-cover mt-12 bg-center h-[400px] flex items-center justify-center text-white text-center shadow-lg"
         style={{
-          backgroundImage: "url('deal83.webp')",
+          backgroundImage: "url('deal92.jpg')",
         }}
       >
         <div className=" bg-opacity-50 p-12 rounded-xl">
-          <h1 className="text-5xl text-gray-700 font-extrabold drop-shadow-lg">
+          <h1 className="text-5xl text-gray-200 font-extrabold drop-shadow-lg">
             Meet Our Team
           </h1>
           {/* <h3 className="text-lg mt-4 font-light">
               Discover the Himalayas like never before—one step at a time.
             </h3> */}
-          <h3 className="text-lg font-medium text-gray-700 mt-4 font-light">
+          <h3 className="text-lg font-medium text-gray-200 mt-4 ">
             Meet the explorers who make every Himalayan step unforgettable.
           </h3>
         </div>
       </div>
-      <section className="py-16 px-4 sm:px-6 md:px-10 lg:px-20 bg-white max-w-[1440px] mx-auto">
-        {/* <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-gray-800">
-        Meet Our Team
-      </h2> */}
+      <section className="py-8 px-4 sm:px-6 md:px-8 lg:px-20 bg-white max-w-[1440px] mx-auto">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-center text-gray-700">
+        Meet with our experienced team member
+      </h2>
+      <h3 className="text-2xl md:text-3xl font-semibold mb-4 text-center text-gray-700">
+         Our Team </h3>
 
         <Swiper
           modules={[Autoplay]}

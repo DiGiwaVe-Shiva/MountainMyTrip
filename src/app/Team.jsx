@@ -43,6 +43,15 @@ const teamMembers = [
     twitter: "https://twitter.com/snehaverma",
     instagram: "https://instagram.com/snehaverma",
   },
+  {
+    name: "mohit Verma",
+    role: "Marketing & Outreach",
+    bio: "Crafts compelling campaigns to bring trekking adventures to the world.",
+    image: "/deal9.webp",
+    linkedin: "https://linkedin.com/in/snehaverma",
+    twitter: "https://twitter.com/snehaverma",
+    instagram: "https://instagram.com/snehaverma",
+  },
 ];
 
 const TeamCarousel = () => {

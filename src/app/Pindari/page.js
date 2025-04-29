@@ -121,6 +121,7 @@ export default function PindariGlacierTrek() {
         sizes="100vw"
       />
     </div> */}
+  
 
     {/* Show two rows of two images in flex */}
     <div className="flex gap-2">

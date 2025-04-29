@@ -444,7 +444,7 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
                 >
                   <button
                     onClick={() => toggleAccordion(index)}
-                    className="w-full px-4 py-4 flex justify-between items-center hover:bg-gray-100"
+                    className="w-full px-4 py-4 flex justify-between rounded-xl  items-center hover:bg-gray-100"
                   >
                     <span className="text-base md:text-lg font-semibold text-gray-800">
                       {item.title}
