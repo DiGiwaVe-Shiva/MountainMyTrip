@@ -8,12 +8,12 @@
 //     <section className="px-24 md:ml-[50px] md:px-28 py-12 flex flex-col md:flex-row items-center jus justify-between">
 //       {/* Text Section */}
 //       <div className="md:w-1/2  text-center md:text-left">
-        // <h2 className="text-2xl text-orange-500 font-semibold uppercase tracking-wide">
-        //   About Us
-        // </h2>
-        // <h3 className="text-2xl md:text-4xl font-bold mt-2">
-        //   Experience the Thrill of Mountain Trekking in India
-        // </h3>
+//         <h2 className="text-2xl text-orange-500 font-semibold uppercase tracking-wide">
+//           About Us
+//         </h2>
+//         <h3 className="text-2xl md:text-4xl font-bold mt-2">
+//           Experience the Thrill of Mountain Trekking in India
+//         </h3>
 // <p className="text-gray-600 mt-4 leading-relaxed pb-2 ">
 //   Explore the thrilling world of mountain trekking in India, where the
 //   majestic Himalayas promise adventure like no other. If you seek
@@ -46,12 +46,12 @@
 //         </div>
 
 //         {/* Button */}
-        // <Link
-        //   href="./Aboutus"
-        //   className="mt-32 bg-[#F54900] text-white px-6 py-3 rounded-lg shadow-md hover:bg-orange-400 transition duration-300"
-        // >
-        //   Explore Now
-        // </Link>
+//         <Link
+//           href="./Aboutus"
+//           className="mt-32 bg-[#F54900] text-white px-6 py-3 rounded-lg shadow-md hover:bg-orange-400 transition duration-300"
+//         >
+//           Explore Now
+//         </Link>
 //       </div>
 
 //       {/* Image Section */}
@@ -79,92 +79,231 @@
 //     </section>
 //   );
 // }
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 
-const AboutSection = () => {
+export default function Aboutsection() {
   return (
-    <section className="w-full px-4 py-16 md:py-24 bg-white flex flex-col md:flex-row items-center justify-between gap-12 max-w-7xl mx-auto">
-      {/* Left Side: Text Content */}
-      <div className="md:w-1/2 text-center md:text-left">
-        {/* <p className="text-sm text-orange-500 font-semibold uppercase mb-2">
-          About Us
-        </p>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-          Crafting Unforgettable <br /> Journeys at Push
-        </h2> */}
-        <h2 className="text-2xl text-orange-500 font-semibold uppercase tracking-wide">
+    <section className="px-4 sm:px-8 md:px-24 py-12 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto">
+      {/* Text Section */}
+      <div className="w-full md:w-1/2 text-center md:text-left">
+        <h2 className="text-lg sm:text-xl text-orange-500 font-semibold uppercase tracking-wide">
           About Us
         </h2>
-        <h3 className="text-2xl md:text-4xl font-bold mt-2">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 text-gray-900">
           Experience the Thrill of Mountain Trekking in India
         </h3>
-        <p className="text-gray-600 mt-4 leading-relaxed pb-2 ">
+        <p className="text-gray-600 mt-4 leading-relaxed text-sm sm:text-base">
           Explore the thrilling world of mountain trekking in India, where the
           majestic Himalayas promise adventure like no other. If you seek
           breathtaking landscapes, challenging trails, and mesmerizing views,
           trekking in Uttarakhand is the perfect escape. Imagine snow-capped
           peaks, lush meadows, and charming villages—this region is a trekker’s
-          paradise waiting to be explored.<br></br>
-          <br></br>
+          paradise waiting to be explored.
+          <br />
+          <br />
           Among Uttarakhand’s hidden gems are the Dinar Top Trek and Gulabi
           Kantha Trek. Dinar Top offers serenity and panoramic Himalayan views,
           making it ideal for both beginners and seasoned trekkers. Meanwhile,
           Gulabi Kantha stuns with its vibrant alpine meadows and spectacular
           360° vistas, a dream for photographers. Join us on an unforgettable
           journey with expert guides, well-planned itineraries, and a strong
-          commitment to safety. Whether you're a first-time trekker or a
-          mountain enthusiast, let trekking in Uttarakhand be your next great
-          adventure!
+          commitment to safety.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-6 mb-6 sm:mb-8">
+        {/* Stats */}
+        <div className="flex justify-center md:justify-start gap-6 mt-6 mb-8">
           <div>
-            <p className="text-2xl font-bold text-gray-900">10 K</p>
-            <p className="text-sm text-gray-500">Success Trips</p>
+            <p className="text-2xl font-bold">10K</p>
+            <p className="text-gray-500 text-sm">Success Trips</p>
           </div>
           <div>
-            <p className="text-2xl font-bold text-gray-900">200 K</p>
-            <p className="text-sm text-gray-500">Happy Clients</p>
+            <p className="text-2xl font-bold">200K</p>
+            <p className="text-gray-500 text-sm">Happy Clients</p>
           </div>
         </div>
 
         {/* Button */}
-        {/* <button className="bg-orange-500 hover:bg-orange-600 transition text-white font-semibold px-6 py-3 rounded-full">
-          Explore Now
-        </button> */}
         <Link
-          href="./Aboutus"
-          className="mt-32 bg-[#F54900] text-white px-6 py-3 rounded-lg shadow-md hover:bg-orange-400 transition duration-300"
+          href="/Aboutus"
+          className="inline-block bg-[#F54900] text-white px-6 py-3 rounded-lg shadow-md hover:bg-orange-400 transition duration-300"
         >
           Explore Now
         </Link>
       </div>
 
-      {/* Right Side: Images */}
-      <div className="md:w-1/2 flex justify-center relative">
-        <div className="relative px-6 w-104 h-80 md:w-132 md:h-104 rounded-2xl overflow-hidden ">
+      {/* Image Section */}
+      <div className="relative w-full md:w-1/2 mt-10 md:mt-0 flex justify-center">
+        {/* Background Image */}
+        <div className="relative w-64 h-48 sm:w-80 sm:h-56 md:w-96 md:h-64 rounded-xl overflow-hidden">
           <Image
-            src="/trek1.webp"
-            alt="Hiker in forest"
+            src="/deal23.webp"
+            alt="Hiker on a trail"
             layout="fill"
             objectFit="cover"
             className="rounded-xl"
           />
         </div>
-        {/* <div className="absolute -bottom-8 -right-8 w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden border-4 border-white shadow-lg bg-white">
+
+        {/* Overlapping Image */}
+        <div className="absolute bottom-[-24px] left-[20px] sm:bottom-[-32px] sm:left-[36px] md:bottom-[-40px] md:left-[50px] w-40 h-28 sm:w-52 sm:h-36 md:w-64 md:h-44 rounded-xl overflow-hidden shadow-lg border-4 border-white bg-white">
           <Image
-            src="/images/camping.jpg"
+            src="/deal21.webp"
             alt="Camping tent"
             layout="fill"
             objectFit="cover"
             className="rounded-xl"
           />
-        </div> */}
+        </div>
       </div>
     </section>
   );
-};
+}
 
-export default AboutSection;
+
+// import Image from "next/image";
+// import Link from "next/link";
+
+// const AboutSection = () => {
+//   return (
+//     <section className="w-full px-4 py-16 md:py-24 bg-white flex flex-col md:flex-row items-center justify-between gap-12 max-w-7xl mx-auto">
+//       {/* Left Side: Text Content */}
+//       <div className="md:w-1/2 text-center md:text-left">
+//         {/* <p className="text-sm text-orange-500 font-semibold uppercase mb-2">
+//           About Us
+//         </p>
+//         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+//           Crafting Unforgettable <br /> Journeys at Push
+//         </h2> */}
+//         <h2 className="text-2xl text-orange-500 font-semibold uppercase tracking-wide">
+//           About Us
+//         </h2>
+//         <h3 className="text-2xl md:text-4xl font-bold mt-2">
+//           Experience the Thrill of Mountain Trekking in India
+//         </h3>
+//         <p className="text-gray-600 mt-4 leading-relaxed pb-2 ">
+//           Explore the thrilling world of mountain trekking in India, where the
+//           majestic Himalayas promise adventure like no other. If you seek
+//           breathtaking landscapes, challenging trails, and mesmerizing views,
+//           trekking in Uttarakhand is the perfect escape. Imagine snow-capped
+//           peaks, lush meadows, and charming villages—this region is a trekker’s
+//           paradise waiting to be explored.<br></br>
+//           <br></br>
+//           Among Uttarakhand’s hidden gems are the Dinar Top Trek and Gulabi
+//           Kantha Trek. Dinar Top offers serenity and panoramic Himalayan views,
+//           making it ideal for both beginners and seasoned trekkers. Meanwhile,
+//           Gulabi Kantha stuns with its vibrant alpine meadows and spectacular
+//           360° vistas, a dream for photographers. Join us on an unforgettable
+//           journey with expert guides, well-planned itineraries, and a strong
+//           commitment to safety. Whether you're a first-time trekker or a
+//           mountain enthusiast, let trekking in Uttarakhand be your next great
+//           adventure!
+//         </p>
+
+//         <div className="flex flex-col sm:flex-row gap-6 mb-6 sm:mb-8">
+//           <div>
+//             <p className="text-2xl font-bold text-gray-900">10 K</p>
+//             <p className="text-sm text-gray-500">Success Trips</p>
+//           </div>
+//           <div>
+//             <p className="text-2xl font-bold text-gray-900">200 K</p>
+//             <p className="text-sm text-gray-500">Happy Clients</p>
+//           </div>
+//         </div>
+
+//         {/* Button */}
+//         {/* <button className="bg-orange-500 hover:bg-orange-600 transition text-white font-semibold px-6 py-3 rounded-full">
+//           Explore Now
+//         </button> */}
+//         <Link
+//           href="./Aboutus"
+//           className="mt-32 bg-[#F54900] text-white px-6 py-3 rounded-lg shadow-md hover:bg-orange-400 transition duration-300"
+//         >
+//           Explore Now
+//         </Link>
+//       </div>
+
+//       {/* Right Side: Images */}
+//       <div className="md:w-1/2 flex justify-center relative">
+//         <div className="relative px-6 w-104 h-80 md:w-132 md:h-104 rounded-2xl overflow-hidden ">
+//           <Image
+//             src="/trek1.webp"
+//             alt="Hiker in forest"
+//             layout="fill"
+//             objectFit="cover"
+//             className="rounded-xl"
+//           />
+//         </div>
+//         {/* <div className="absolute -bottom-8 -right-8 w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden border-4 border-white shadow-lg bg-white">
+//           <Image
+//             src="/images/camping.jpg"
+//             alt="Camping tent"
+//             layout="fill"
+//             objectFit="cover"
+//             className="rounded-xl"
+//           />
+//         </div> */}
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default AboutSection;
+
+// import Image from "next/image";
+// import Link from "next/link";
+
+// const AboutSection = () => {
+//   return (
+//     <section className="w-full px-4 py-12 md:py-24 bg-white flex flex-col md:flex-row items-center justify-between gap-12 max-w-7xl mx-auto">
+//       {/* Left Side: Text Content */}
+//       <div className="w-full md:w-1/2 text-center md:text-left">
+//         <h2 className="text-xl text-orange-500 font-semibold uppercase tracking-wide">
+//           About Us
+//         </h2>
+//         <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 text-gray-900">
+//           Experience the Thrill of Mountain Trekking in India
+//         </h3>
+//         <p className="text-gray-600 mt-4 leading-relaxed text-sm sm:text-base">
+//           Explore the thrilling world of mountain trekking in India, where the majestic Himalayas promise adventure like no other. If you seek breathtaking landscapes, challenging trails, and mesmerizing views, trekking in Uttarakhand is the perfect escape.
+//           <br /><br />
+//           Among Uttarakhand’s hidden gems are the Dinar Top Trek and Gulabi Kantha Trek. Dinar Top offers serenity and panoramic Himalayan views, making it ideal for both beginners and seasoned trekkers. Meanwhile, Gulabi Kantha stuns with its vibrant alpine meadows and spectacular 360° vistas.
+//         </p>
+
+//         <div className="flex flex-col sm:flex-row gap-6 mt-6 sm:mt-8 mb-6 sm:mb-10 justify-center md:justify-start">
+//           <div>
+//             <p className="text-2xl font-bold text-gray-900">10 K</p>
+//             <p className="text-sm text-gray-500">Success Trips</p>
+//           </div>
+//           <div>
+//             <p className="text-2xl font-bold text-gray-900">200 K</p>
+//             <p className="text-sm text-gray-500">Happy Clients</p>
+//           </div>
+//         </div>
+
+//         <Link
+//           href="./Aboutus"
+//           className="inline-block bg-[#F54900] text-white px-6 py-3 rounded-lg shadow-md hover:bg-orange-400 transition duration-300"
+//         >
+//           Explore Now
+//         </Link>
+//       </div>
+
+//       {/* Right Side: Image */}
+//       <div className="w-full md:w-1/2 flex justify-center">
+//         <div className="relative w-full max-w-sm h-64 sm:h-80 md:h-[420px] rounded-2xl overflow-hidden">
+//           <Image
+//             src="/trek1.webp"
+//             alt="Hiker in forest"
+//             layout="fill"
+//             objectFit="cover"
+//             className="rounded-xl"
+//           />
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
