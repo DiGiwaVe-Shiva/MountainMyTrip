@@ -29,14 +29,14 @@ const tourPackages = [
     link: "/GulabiKantha",
   },
   {
-    title: "Dayara Bugyal Trek",
+    title: "Dinara Top Trek",
     nights: 4,
     days: 5,
     price: "10,499",
     discount: "10%",
     tag: "Spring to Winter Trek",
     image: "/deal56.webp",
-    link: "/DayaraBugyal",
+    link: "/DinaraTopTrek",
   },
   {
     title: "Kedarnath Trek Package",

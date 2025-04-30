@@ -8,8 +8,7 @@ import {
   FaChevronDown,
   FaChevronUp,
 } from "react-icons/fa";
-import HimaliyeMyTripCarousel from "../components/HimaliyeMyTrip";
-import HimTrek from "../components/HimTrek";
+import MyTrip from "../components/SarPassTrek";
 
 // const destinations = [
 //   { name: "", src: "/uttarakhand1.webp", gridClass: "lg:col-span-2" },
@@ -168,20 +167,9 @@ export default function UttarakhandTrek() {
 
           {/* Itinerary Section */}
           <div className="my-8">
-            {/* <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800">
-              Itinerary
-            </h2> */}
+           
 
-            <button
-              onClick={() => {
-                const allOpen = openIndex.length === itinerary.length;
-                setOpenIndex(allOpen ? [] : itinerary.map((_, i) => i));
-              }}
-              className="mb-4 text-orange-600 font-medium hover:underline"
-            >
-              {openIndex.length === itinerary.length ? "Close All" : "Open All"}
-            </button>
-
+{/* 
             <div className="flex flex-col gap-4">
               {itinerary.map((item, index) => {
                 const isOpen = openIndex.includes(index);
@@ -217,7 +205,8 @@ export default function UttarakhandTrek() {
                   </div>
                 );
               })}
-            </div>
+            </div> */}
+
           </div>
         </div>
 
@@ -295,8 +284,8 @@ export default function UttarakhandTrek() {
         </div>
       </section>
 
-      <HimaliyeMyTripCarousel />
-      <HimTrek />
+      <MyTrip/>
+    
     </>
   );
 }
