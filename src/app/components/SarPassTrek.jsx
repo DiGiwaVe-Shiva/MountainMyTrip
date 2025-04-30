@@ -347,7 +347,7 @@ const MyTrip = () => {
   return (
     <section className="pb-12 pt-4 px-4 sm:px-6 md:px-10 lg:px-20 bg-white max-w-[1440px] mx-auto">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-center text-gray-800">
-        Check our Seasonal Treks
+      Places To Visit In Uttarakhand
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -387,7 +387,7 @@ const MyTrip = () => {
                 </span>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-2 mt-auto pt-3">
+              <div className="flex flex-col sm:flex-row gap-4 mt-auto pt-3">
                 <button
                   type="button"
                   className="border border-orange-500 text-orange-500 p-2 rounded-full flex items-center justify-center w-full sm:w-auto"

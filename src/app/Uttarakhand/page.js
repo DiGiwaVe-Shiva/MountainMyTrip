@@ -86,7 +86,6 @@ export default function UttarakhandTrek() {
         className="bg-cover mt-12 bg-center h-[400px] flex items-center justify-center text-white text-center shadow-lg"
         style={{
           backgroundImage: "url('deal93.webp')",
-          
         }}
       >
         <div className=" bg-opacity-50 p-12 rounded-xl">
@@ -97,13 +96,11 @@ export default function UttarakhandTrek() {
               Discover the Himalayas like never before—one step at a time.
             </h3> */}
           <h3 className="text-lg font-medium text-gray-200 mt-4 ">
-          Discover the tranquil beauty of Uttarakhand
+            Discover the tranquil beauty of Uttarakhand
           </h3>
         </div>
       </div>
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 mt-8">
-       
-      </section>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 mt-8"></section>
 
       {/* Main Content + Booking Form */}
       <section className="max-w-7xl mx-auto px-4  flex flex-col md:flex-row gap-10">
@@ -132,10 +129,29 @@ export default function UttarakhandTrek() {
             About this Activity
           </h2>
           <p className="text-gray-600 mb-4">
-            The Uttarakhand Trek offers a thrilling adventure through some of
+            {/* The Uttarakhand Trek offers a thrilling adventure through some of
             the most pristine and untouched landscapes in India. Experience
             majestic views of snow-covered mountains, lush valleys, and vibrant
             villages. Perfect for adventure enthusiasts and nature lovers!
+            Embark on an unforgettable journey through the unspoiled wilderness
+            of Uttarakhand. This trek is a perfect blend of adventure and
+            tranquility, guiding you across snow-draped peaks, dense alpine
+            forests, and picturesque mountain villages. Whether you're an avid
+            trekker or a nature lover seeking serenity, this experience offers
+            breathtaking vistas and authentic Himalayan culture at every step.
+            Ideal for those looking to reconnect with nature and challenge
+            themselves amidst the majestic Garhwal Himalayas. */}
+            The Uttarakhand Trek invites you on a thrilling adventure through
+            some of the most pristine and untouched landscapes in India. From
+            majestic views of snow-clad peaks to lush green valleys and charming
+            Himalayan villages, every step offers a breathtaking experience.
+            This journey is the perfect fusion of adventure and serenity—leading
+            you through dense alpine forests, tranquil meadows, and
+            high-altitude passes wrapped in natural beauty. Whether you're an
+            avid trekker or a nature enthusiast seeking solitude, this trek
+            promises awe-inspiring vistas and a deep connection with authentic
+            Himalayan culture. Ideal for those looking to challenge themselves
+            and rediscover peace amidst the grandeur of the Garhwal Himalayas.
           </p>
 
           <h2 className="text-xl font-semibold text-gray-700 mb-2">
@@ -167,9 +183,7 @@ export default function UttarakhandTrek() {
 
           {/* Itinerary Section */}
           <div className="my-8">
-           
-
-{/* 
+            {/* 
             <div className="flex flex-col gap-4">
               {itinerary.map((item, index) => {
                 const isOpen = openIndex.includes(index);
@@ -206,7 +220,6 @@ export default function UttarakhandTrek() {
                 );
               })}
             </div> */}
-
           </div>
         </div>
 
@@ -284,8 +297,7 @@ export default function UttarakhandTrek() {
         </div>
       </section>
 
-      <MyTrip/>
-    
+      <MyTrip />
     </>
   );
 }

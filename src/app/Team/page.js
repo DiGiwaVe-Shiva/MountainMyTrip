@@ -8,7 +8,7 @@ import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const teamMembers = [
   {
-    name: "Aatar Panwar",
+    name: "Avtar Panwar",
     role: "Founder & CEO",
     bio: "Visionary trekker, passionate about creating unforgettable experiences in the Himalayas.",
     image: "/Avtar.webp",
@@ -34,15 +34,15 @@ const teamMembers = [
     twitter: "https://twitter.com/rohankapoor",
     instagram: "https://instagram.com/rohankapoor",
   },
-  {
-    name: "Abc Verma",
-    role: "Marketing & Outreach",
-    bio: "Crafts compelling campaigns to bring trekking adventures to the world.",
-    image: "/abc.webp",
-    linkedin: "https://linkedin.com/in/snehaverma",
-    twitter: "https://twitter.com/snehaverma",
-    instagram: "https://instagram.com/snehaverma",
-  },
+  // {
+  //   name: "Abc Verma",
+  //   role: "Marketing & Outreach",
+  //   bio: "Crafts compelling campaigns to bring trekking adventures to the world.",
+  //   image: "/abc.webp",
+  //   linkedin: "https://linkedin.com/in/snehaverma",
+  //   twitter: "https://twitter.com/snehaverma",
+  //   instagram: "https://instagram.com/snehaverma",
+  // },
   {
     name: "Rohit Verma",
     role: "Marketing & Outreach",

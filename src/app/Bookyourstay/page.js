@@ -257,3 +257,207 @@ const BookYourStayForm = () => {
 
 export default BookYourStayForm;
 
+
+
+
+// "use client";
+
+// import React, { useState } from "react";
+
+// const Bookyourstay = () => {
+//   const [showModal, setShowModal] = useState(false);
+
+//   const [formData, setFormData] = useState({
+//     name: "",
+//     email: "",
+//     phone: "",
+//     checkin: "",
+//     checkout: "",
+//     guests: "",
+//     message: "",
+//   });
+
+//   const [errors, setErrors] = useState({});
+
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setFormData(prev => ({ ...prev, [name]: value }));
+//   };
+
+//   const validateForm = () => {
+//     const newErrors = {};
+//     if (!formData.name) newErrors.name = "Name is required";
+//     if (!formData.email) {
+//       newErrors.email = "Email is required";
+//     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+//       newErrors.email = "Invalid email";
+//     }
+//     if (!formData.phone) newErrors.phone = "Phone number is required";
+//     if (!formData.checkin) newErrors.checkin = "Check-in date is required";
+//     if (!formData.checkout) newErrors.checkout = "Check-out date is required";
+//     if (!formData.guests) newErrors.guests = "Guests count required";
+//     if (!formData.message) newErrors.message = "Message is required";
+//     return newErrors;
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     const validationErrors = validateForm();
+//     if (Object.keys(validationErrors).length === 0) {
+//       console.log("Booking Submitted:", formData);
+//       alert("Thank you! Your booking request has been received.");
+//       setFormData({
+//         name: "",
+//         email: "",
+//         phone: "",
+//         checkin: "",
+//         checkout: "",
+//         guests: "",
+//         message: "",
+//       });
+//       setErrors({});
+//       setShowModal(false); // Close modal after submission
+//     } else {
+//       setErrors(validationErrors);
+//     }
+//   };
+
+//   return (
+//     <>
+//       {/* Trigger Button */}
+//       <button
+//         onClick={() => setShowModal(true)}
+//         className="bg-[#F54900] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#d13e00] transition"
+//       >
+//         Book Your Stay
+//       </button>
+
+//       {/* Modal Overlay */}
+//       {showModal && (
+//         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
+//           <div className="bg-white w-full max-w-2xl mx-auto rounded-xl shadow-xl relative p-8 overflow-y-auto max-h-[90vh]">
+//             {/* Close Button */}
+//             <button
+//               onClick={() => setShowModal(false)}
+//               className="absolute top-4 right-4 text-gray-500 hover:text-red-600 text-xl"
+//             >
+//               &times;
+//             </button>
+
+//             <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
+//               Book Your Stay
+//             </h2>
+
+//             <form onSubmit={handleSubmit} className="space-y-5">
+//               {/* Name */}
+//               <div>
+//                 <label className="block text-sm font-medium">Full Name</label>
+//                 <input
+//                   type="text"
+//                   name="name"
+//                   value={formData.name}
+//                   onChange={handleChange}
+//                   placeholder="John Doe"
+//                   className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F54900] focus:outline-none"
+//                 />
+//                 {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
+//               </div>
+
+//               {/* Email */}
+//               <div>
+//                 <label className="block text-sm font-medium">Email Address</label>
+//                 <input
+//                   type="email"
+//                   name="email"
+//                   value={formData.email}
+//                   onChange={handleChange}
+//                   placeholder="you@example.com"
+//                   className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F54900] focus:outline-none"
+//                 />
+//                 {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+//               </div>
+
+//               {/* Phone */}
+//               <div>
+//                 <label className="block text-sm font-medium">Phone Number</label>
+//                 <input
+//                   type="tel"
+//                   name="phone"
+//                   value={formData.phone}
+//                   onChange={handleChange}
+//                   placeholder="9876543210"
+//                   className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F54900] focus:outline-none"
+//                 />
+//                 {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
+//               </div>
+
+//               {/* Dates */}
+//               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+//                 <div>
+//                   <label className="block text-sm font-medium">Check-in Date</label>
+//                   <input
+//                     type="date"
+//                     name="checkin"
+//                     value={formData.checkin}
+//                     onChange={handleChange}
+//                     className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F54900] focus:outline-none"
+//                   />
+//                   {errors.checkin && <p className="text-red-500 text-sm">{errors.checkin}</p>}
+//                 </div>
+//                 <div>
+//                   <label className="block text-sm font-medium">Check-out Date</label>
+//                   <input
+//                     type="date"
+//                     name="checkout"
+//                     value={formData.checkout}
+//                     onChange={handleChange}
+//                     className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F54900] focus:outline-none"
+//                   />
+//                   {errors.checkout && <p className="text-red-500 text-sm">{errors.checkout}</p>}
+//                 </div>
+//               </div>
+
+//               {/* Guests */}
+//               <div>
+//                 <label className="block text-sm font-medium">Number of Guests</label>
+//                 <input
+//                   type="number"
+//                   name="guests"
+//                   value={formData.guests}
+//                   onChange={handleChange}
+//                   placeholder="e.g. 2"
+//                   className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F54900] focus:outline-none"
+//                 />
+//                 {errors.guests && <p className="text-red-500 text-sm">{errors.guests}</p>}
+//               </div>
+
+//               {/* Message */}
+//               <div>
+//                 <label className="block text-sm font-medium">Special Requests / Message</label>
+//                 <textarea
+//                   name="message"
+//                   rows="4"
+//                   value={formData.message}
+//                   onChange={handleChange}
+//                   placeholder="Let us know if you have any preferences..."
+//                   className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F54900] focus:outline-none"
+//                 />
+//                 {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
+//               </div>
+
+//               {/* Submit */}
+//               <button
+//                 type="submit"
+//                 className="w-full bg-[#F54900] text-white font-semibold py-3 px-4 rounded-lg hover:bg-[#c73c00] transition"
+//               >
+//                 Confirm Booking
+//               </button>
+//             </form>
+//           </div>
+//         </div>
+//       )}
+//     </>
+//   );
+// };
+
+// export default Bookyourstay;
