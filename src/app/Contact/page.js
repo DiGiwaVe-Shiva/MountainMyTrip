@@ -195,14 +195,15 @@ export default function ContactForm() {
       <div className="relative h-[400px] rounded-lg shadow-lg overflow-hidden mb-8">
         <iframe
           title="Company Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.458926441687!2d-122.08424958469406!3d37.42206597984618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0x3f8f5e9b4a8f8b8e!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1629999999999!5m2!1sen!2sus"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13772.509044190032!2d77.90638915355684!3d30.34733294635578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f2bca85431751%3A0x1f09dfefe6b7c064!2ssubcentre%20jhajhra!5e0!3m2!1sen!2sin!4v1745997151064!5m2!1sen!2sin"
+         width="100%"
+         height="100%"
+         style={{ border: 0 }}
+         allowfullscreen=""
           loading="lazy"
-          className="absolute inset-0"
-        ></iframe>
+           referrerpolicy="no-referrer-when-downgrade">
+            </iframe>"
+        
       </div>
     </>
   );
