@@ -17,7 +17,7 @@ const teamMembers = [
     instagram: "https://instagram.com/aaravmehta",
   },
   {
-    name: "Dipika Assistant",
+    name: "Deepika",
     role: "Trek Leader",
     bio: "Certified mountaineer with a love for nature and guiding adventurers safely.",
     image: "/Dipika.webp",
