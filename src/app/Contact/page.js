@@ -60,7 +60,7 @@ export default function ContactForm() {
                 </p>
                 <a
                   href="tel:+919259205032"
-                  className="text-orange-600 font-semibold block mt-1"
+                  className="text-orange-600  text-[19px] font-semibold block mt-1"
                 >
                 +91-6239092532
                 <br></br>
@@ -73,12 +73,12 @@ export default function ContactForm() {
               <Mail className="text-orange-600" />
               <div>
                 <p className="font-medium">Email Us</p>
-                <p className="text-sm text-gray-600">
+                <p className=" text-gray-600  text-sm">
                   Send us your queries anytime!
                 </p>
                 <a
                   href="mailto:booking@travelmybharat.com"
-                  className="text-orange-600 font-semibold block mt-1"
+                  className="text-orange-600 font-semibold block mt-1  text-[19px]"
                 >
                   booking@mountainmytrip.com
                 </a>
@@ -95,7 +95,7 @@ export default function ContactForm() {
                 <a
                   href="https://goo.gl/maps/DG8c9nUKF1fSgFMu7"
                   target="_blank"
-                  className="text-orange-600 font-semibold block mt-1"
+                  className="text-orange-600 font-semibold block mt-1  text-[19px]"
                 >
                   Get Direction
                 </a>
