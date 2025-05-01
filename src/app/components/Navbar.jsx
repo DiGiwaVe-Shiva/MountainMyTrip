@@ -45,7 +45,7 @@ export default function Navbar() {
       ],
     },
     { name: "CharDham", link: "/CharDham" },
-    { name: "Stays with us", link: "/" },
+    { name: "Stays with us", link: "/StaysWithUs" },
     { name: "Blog", link: "/Blog" },
     { name: "Contact Us", link: "/Contact" },
   ];
