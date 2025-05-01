@@ -122,7 +122,7 @@ export default function Blog() {
                     width={36}
                     height={36}
                     className="w-9 h-9 rounded-full"
-                  />
+                  />  
                   <span>{featuredPost.author.name}</span>
                 </div>
               </div>
@@ -219,7 +219,7 @@ export default function Blog() {
       </section>
 
       {/* Newsletter */}
-      <section className="bg-white py-16 px-4">
+      {/* <section className="bg-white py-16 px-4">
         <div className="max-w-3xl mx-auto text-center bg-gray-50 shadow-xl rounded-2xl p-10">
           <h3 className="text-2xl font-bold mb-4">
             Stay Updated with MountainMyTrip
@@ -239,7 +239,7 @@ export default function Blog() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

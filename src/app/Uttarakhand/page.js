@@ -164,7 +164,7 @@ export default function UttarakhandTrek() {
             <li>Indulge in serene campfire evenings.</li>
             <li>Achieve the perfect balance of adventure and relaxation.</li>
           </ul>
-
+{/* 
           <h2 className="text-2xl font-bold mb-6">Excluded & Included</h2>
           <div className="grid md:grid-cols-2 gap-8 text-gray-700 mb-10">
             <ul className="list-disc list-inside space-y-2">
@@ -179,7 +179,7 @@ export default function UttarakhandTrek() {
               <li>Optional gear rentals.</li>
               <li>Travel to and from Uttarakhand base camp.</li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Itinerary Section */}
           <div className="my-8">

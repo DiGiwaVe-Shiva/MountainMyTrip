@@ -78,7 +78,7 @@ export default function Navbar() {
         </button>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex space-x-8 items-center text-gray-800 font-medium text-[16px]">
+        <ul className="hidden md:flex space-x-8 items-center text-gray-800 font-medium text-[16px] pt-2">
           {navItems.map((item, idx) => (
             <li
               key={idx}

@@ -152,21 +152,21 @@
 //   );
 // }
 
-
 "use client";
+import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn } from "react-icons/fa";
 
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaYoutube,
-  FaLinkedinIn,
-} from "react-icons/fa";
+const socialLinks = [
+  { Icon: FaFacebookF, href: "https://facebook.com", hoverColor: "hover:text-blue-600" },
+  { Icon: FaInstagram, href: "https://instagram.com", hoverColor: "hover:text-pink-500" },
+  { Icon: FaYoutube, href: "https://youtube.com", hoverColor: "hover:text-red-600" },
+  { Icon: FaLinkedinIn, href: "https://linkedin.com", hoverColor: "hover:text-blue-700" },
+];
+
 
 export default function Footer() {
   return (
     <footer className="bg-[#58535359] text-[16px] font-semibold text-gray-800 py-10 px-6 md:px-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
-        
         {/* Logo & Description */}
         <div className="flex flex-col items-start space-y-3">
           <img
@@ -174,15 +174,12 @@ export default function Footer() {
             width={200}
             height={239}
             alt="MountainMyTrip Logo"
-          
-            />
-        
+          />
+
           <p className="text-sm leading-relaxed">
             Conquer the Himalayan Heights on a Budget with MountainMyTrip!
           </p>
-          
         </div>
-        
 
         {/* Quick Links */}
         <div>
@@ -210,20 +207,27 @@ export default function Footer() {
           <h3 className="font-bold text-lg mb-4">Contact Us</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="mailto:info@mountainmytrip.com" className="hover:underline">
+              <a
+                href="mailto:info@mountainmytrip.com"
+                className="hover:underline"
+              >
                 info@mountainmytrip.com
               </a>
             </li>
             <li>
-              <a href="tel:+916239092532" className="hover:underline">+91-6239092532</a>
+              <a href="tel:+916239092532" className="hover:underline">
+                +91-6239092532
+              </a>
               <br />
-              <a href="tel:+917466028080" className="hover:underline">+91-7466028080</a>
+              <a href="tel:+917466028080" className="hover:underline">
+                +91-7466028080
+              </a>
             </li>
           </ul>
         </div>
 
-        {/* Social Media */}
-        <div>
+        
+        {/* <div>
           <h3 className="font-semibold text-lg mb-4">Follow Us</h3>
           <div className="flex space-x-4 mt-2">
             {[FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn].map(
@@ -240,8 +244,25 @@ export default function Footer() {
               )
             )}
           </div>
-        </div>
+        </div> */}
+
+      <div>
+      <h3 className="font-semibold text-lg mb-4">Follow Us</h3>
+      <div className="flex space-x-4 mt-2">
+        {socialLinks.map(({ Icon, href, hoverColor }, index) => (
+          <a
+            key={index}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`text-gray-700 ${hoverColor} transition duration-200`}
+          >
+            <Icon size={28} />
+          </a>
+        ))}
       </div>
+    </div>
+    </div>
 
       {/* Copyright */}
       <div className="border-t mt-10 pt-4 text-center text-sm text-gray-00">
@@ -250,4 +271,3 @@ export default function Footer() {
     </footer>
   );
 }
-
