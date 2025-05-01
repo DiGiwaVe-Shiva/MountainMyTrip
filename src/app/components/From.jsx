@@ -82,7 +82,7 @@ export default function Form() {
 
             {/* Check-In Input */}
             <div className="flex flex-col">
-              <label htmlFor="checkin" className="text-xs text-gray-500 mb-1 md:block hidden">
+              <label htmlFor="checkin" className="text-xs text-gray-500 mb-1">
                 Check-In
               </label>
               <div className="flex items-center border border-gray-300 rounded-md px-3 py-2">
@@ -99,7 +99,7 @@ export default function Form() {
 
             {/* Check-Out Input */}
             <div className="flex flex-col">
-              <label htmlFor="checkout" className="text-xs text-gray-500 mb-1 md:block hidden">
+              <label htmlFor="checkout" className="text-xs text-gray-500 mb-1">
                 Check-Out
               </label>
               <div className="flex items-center border border-gray-300 rounded-md px-3 py-2">
