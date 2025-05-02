@@ -35,7 +35,7 @@ export default function Form() {
   }, []);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-y-auto">
       {/* Background Slides */}
       {slides.map((slide, index) => (
         <div
@@ -65,80 +65,69 @@ export default function Form() {
           </p>
         </div>
 
-        {/* Search Form */}
-        <div className="bg-white text-gray-700 p-4 rounded-lg shadow-lg flex flex-col md:flex-row items-center w-full max-w-lg md:max-w-4xl space-y-4 md:space-y-0 md:space-x-4">
-          {/* Location Input */}
-          <div className="flex items-center px-2 py-2 w-full">
-            <FaMapMarkerAlt className="text-gray-500 mr-2" />
-            <input
-              type="text"
-              placeholder="Where are you going?"
-              className="w-full outline-none bg-transparent text-sm md:text-base px-2 py-2 border border-gray-300 rounded-md"
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
-            />
-          </div>
+      {/* Search Form */}
+<div className="bg-white text-gray-700 p-4 rounded-lg shadow-lg flex flex-col md:flex-row items-center w-full max-w-lg md:max-w-4xl gap-4 md:gap-4">
+  {/* Location Input */}
+  <div className="flex flex-col w-full">
+    <label htmlFor="location" className="text-xs text-gray-500 mb-1">Location</label>
+    <div className="relative flex items-center border border-gray-300 rounded-md bg-white px-3 py-2">
+      <FaMapMarkerAlt className="text-gray-500 absolute left-3 pointer-events-none" />
+      <input
+        id="location"
+        type="text"
+        placeholder="Where are you going?"
+        className="w-full outline-none bg-white pl-8 text-sm md:text-base text-gray-700"
+        value={location}
+        onChange={(e) => setLocation(e.target.value)}
+      />
+    </div>
+  </div>
 
-          {/* Check-In Input */}
-          <div className="flex flex-col w-full">
-            <label htmlFor="checkin" className="text-xs text-gray-500 mb-1">
-              Check-In
-            </label>
-            <div className="relative flex items-center border border-gray-300 rounded-md px-3 py-2">
-              <FaCalendarAlt className="text-gray-500 mr-2" />
-              <div className="relative w-full">
-                {!checkin && (
-                  <span className="absolute left-10 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm pointer-events-none z-10">
-                    dd-mm-yyyy
-                  </span>
-                )}
-                <input
-                  id="checkin"
-                  type="date"
-                  className="w-full outline-none bg-transparent text-sm md:text-base text-gray-700 relative z-20"
-                  value={checkin}
-                  onChange={(e) => setCheckin(e.target.value)}
-                />
-              </div>
-            </div>
-          </div>
+  {/* Check-In Input */}
+  <div className="flex flex-col w-full">
+    <label htmlFor="checkin" className="text-xs text-gray-500 mb-1">Check-In</label>
+    <div className="relative flex items-center border border-gray-300 rounded-md px-3 py-2 bg-white">
+      <FaCalendarAlt className="text-gray-500 absolute left-3 pointer-events-none" />
+      <input
+        id="checkin"
+        type="date"
+        className="w-full outline-none bg-white pl-8 text-sm md:text-base text-gray-700"
+        value={checkin}
+        onChange={(e) => setCheckin(e.target.value)}
+      />
+    </div>
+  </div>
 
-          {/* Check-Out Input */}
-          <div className="flex flex-col w-full">
-            <label htmlFor="checkout" className="text-xs text-gray-500 mb-1">
-              Check-Out
-            </label>
-            <div className="relative flex items-center border border-gray-300 rounded-md px-3 py-2">
-              <FaCalendarAlt className="text-gray-500 mr-2" />
-              <div className="relative w-full">
-                {!checkout && (
-                  <span className="absolute left-10 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm pointer-events-none z-10">
-                    dd-mm-yyyy
-                  </span>
-                )}
-                <input
-                  id="checkout"
-                  type="date"
-                  className="w-full outline-none bg-transparent text-sm md:text-base text-gray-700 relative z-20"
-                  value={checkout}
-                  onChange={(e) => setCheckout(e.target.value)}
-                />
-              </div>
-            </div>
-          </div>
+  {/* Check-Out Input */}
+  <div className="flex flex-col w-full">
+    <label htmlFor="checkout" className="text-xs text-gray-500 mb-1">Check-Out</label>
+    <div className="relative flex items-center border border-gray-300 rounded-md px-3 py-2 bg-white">
+      <FaCalendarAlt className="text-gray-500 absolute left-3 pointer-events-none" />
+      <input
+        id="checkout"
+        type="date"
+        className="w-full outline-none bg-white pl-8 text-sm md:text-base text-gray-700"
+        value={checkout}
+        onChange={(e) => setCheckout(e.target.value)}
+      />
+    </div>
+  </div>
 
-          {/* Send Button */}
-          <a
-            href="https://wa.me/6239092532"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full md:w-auto"
-          >
-            <button className="bg-orange-500 text-white px-6 py-3 rounded-md w-full md:w-auto text-sm md:text-base font-medium hover:bg-orange-600 transition duration-200">
-              Send
-            </button>
-          </a>
-        </div>
+  {/* Send Button */}
+  <div className="w-full md:w-auto mt-2 md:mt-6">
+    <a
+      href="https://wa.me/6239092532"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block w-full"
+    >
+      <button className="bg-orange-500 text-white px-6 py-3 rounded-md w-full md:w-auto text-sm md:text-base font-medium hover:bg-orange-600 transition duration-200">
+        Send
+      </button>
+    </a>
+  </div>
+</div>
+
       </div>
     </div>
   );
