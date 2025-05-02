@@ -85,7 +85,7 @@ export default function UttarakhandTrek() {
       <div
         className="bg-cover mt-12 bg-center h-[400px] flex items-center justify-center text-white text-center shadow-lg"
         style={{
-          backgroundImage: "url('deal93.webp')",
+          backgroundImage: "url('deal112.webp')",
         }}
       >
         <div className=" bg-opacity-50 p-12 rounded-xl">

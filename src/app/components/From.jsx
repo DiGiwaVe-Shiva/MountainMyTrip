@@ -35,7 +35,7 @@ export default function Form() {
   ];
 
   return (
-    <div className="relative w-full min-h-[100svh]  overflow-hidden">
+    <div className="relative w-full min-h-[100svh]   overflow-hidden">
       {/* Background Swiper */}
       <div className="absolute inset-0 -z-10">
         <Swiper
