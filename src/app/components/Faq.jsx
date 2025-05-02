@@ -68,7 +68,7 @@ const Faq = () => {
               </button>
 
               {openIndex === index && (
-                <div className="px-6 pb-6 text-gray-700 bg-blue-50 border-t border-gray-200">
+                <div className="px-6 pt-6 pb-6 text-gray-700 bg-blue-50 border-t border-gray-200">
                   {faq.answer}
                 </div>
               )}
