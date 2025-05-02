@@ -69,7 +69,7 @@ export default function Form() {
                 id="location"
                 type="text"
                 placeholder="Where are you going?"
-                className="w-full min-h-[44px] border border-gray-300 rounded-md pl-10 pr-3 py-2 bg-white text-sm md:text-base outline-none"
+                className="w-full border border-gray-300 rounded-md pl-10 pr-3 py-2 bg-white text-[16px] min-h-[44px] outline-none appearance-none touch-manipulation"
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
               />
@@ -84,7 +84,7 @@ export default function Form() {
               <input
                 id="checkin"
                 type="date"
-                className="w-full min-h-[44px] border border-gray-300 rounded-md pl-10 pr-3 py-2 bg-white text-sm md:text-base outline-none"
+                className="w-full border border-gray-300 rounded-md pl-10 pr-3 py-2 bg-white text-[16px] min-h-[44px] outline-none appearance-none touch-manipulation"
                 value={checkin}
                 onChange={(e) => setCheckin(e.target.value)}
               />
@@ -99,7 +99,7 @@ export default function Form() {
               <input
                 id="checkout"
                 type="date"
-                className="w-full min-h-[44px] border border-gray-300 rounded-md pl-10 pr-3 py-2 bg-white text-sm md:text-base outline-none"
+                className="w-full border border-gray-300 rounded-md pl-10 pr-3 py-2 bg-white text-[16px] min-h-[44px] outline-none appearance-none touch-manipulation"
                 value={checkout}
                 onChange={(e) => setCheckout(e.target.value)}
               />
