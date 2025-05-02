@@ -1,13 +1,20 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import SwiperCore from "swiper";
+import { EffectFade, Autoplay } from "swiper/modules";
+
+// install modules
+SwiperCore.use([EffectFade, Autoplay]);
 
 export default function Form() {
   const [location, setLocation] = useState("");
   const [checkout, setCheckout] = useState("");
   const [checkin, setCheckin] = useState("");
-  const [currentImage, setCurrentImage] = useState(0);
 
   const slides = [
     {
@@ -27,41 +34,40 @@ export default function Form() {
     },
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="relative w-full min-h-[100svh] bg-black">
-      {/* Background Slides */}
+    <div className="relative w-full min-h-[100svh]  overflow-hidden">
+      {/* Background Swiper */}
       <div className="absolute inset-0 -z-10">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out ${
-              index === currentImage ? "opacity-100" : "opacity-0"
-            }`}
-            style={{ backgroundImage: `url(${slide.image})` }}
-          />
-        ))}
-        {/* Overlay */}
+        <Swiper
+          effect="fade"
+          autoplay={{ delay: 5000 }}
+          loop={true}
+          speed={1000}
+          className="h-full w-full"
+        >
+          {slides.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <div
+                className="w-full h-full bg-cover bg-center"
+                style={{ backgroundImage: `url(${slide.image})` }}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        {/* Dark overlay */}
         <div className="absolute inset-0 bg-black opacity-50" />
       </div>
 
-      {/* Page Content */}
-      <div className="flex flex-col justify-start items-center text-center text-white min-h-[100svh] px-6 pt-[18rem]">
-        {/* Title */}
+      {/* Content */}
+      <div className="relative z-10 flex flex-col justify-start items-center text-center text-white min-h-[100svh] px-6 pt-[18rem]">
+        {/* Title (from first slide since Swiper doesn't expose current index easily) */}
         <div className="mb-4">
-          <h1 className="text-3xl md:text-5xl font-bold py-1">{slides[currentImage]?.title}</h1>
-          <p className="text-base md:text-lg py-1">{slides[currentImage]?.subtitle}</p>
+          <h1 className="text-3xl md:text-5xl font-bold py-1">{slides[0].title}</h1>
+          <p className="text-base md:text-lg py-1">{slides[0].subtitle}</p>
         </div>
 
         {/* Form */}
         <div className="bg-white text-gray-700 p-4 rounded-lg shadow-lg w-full max-w-lg md:max-w-4xl grid grid-cols-1 md:grid-cols-4 gap-4">
-          {/* Location */}
           <div className="flex flex-col">
             <label htmlFor="location" className="text-xs text-gray-500 mb-1">Location</label>
             <div className="relative">
@@ -77,7 +83,6 @@ export default function Form() {
             </div>
           </div>
 
-          {/* Check-In */}
           <div className="flex flex-col">
             <label htmlFor="checkin" className="text-xs text-gray-500 mb-1">Check-In</label>
             <div className="relative">
@@ -92,7 +97,6 @@ export default function Form() {
             </div>
           </div>
 
-          {/* Check-Out */}
           <div className="flex flex-col">
             <label htmlFor="checkout" className="text-xs text-gray-500 mb-1">Check-Out</label>
             <div className="relative">
@@ -107,7 +111,6 @@ export default function Form() {
             </div>
           </div>
 
-          {/* Button */}
           <div className="flex items-end">
             <a
               href="https://wa.me/6239092532"
