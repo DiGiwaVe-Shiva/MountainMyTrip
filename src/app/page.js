@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <main>
          {/* Ensure this stays on top */}
-         <section className="relative z-50">
+         <section className="relative z-20">
           <From />
         </section>
 
