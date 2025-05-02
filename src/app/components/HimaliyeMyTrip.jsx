@@ -154,7 +154,7 @@ const HimaliyeMyTripCarousel = () => {
   const router = useRouter();
 
   return (
-    <section className="pb-12 pt-4 px-4 sm:px-6 md:px-10 lg:px-20 bg-white max-w-[1440px] mx-auto">
+    <section className="pb-12 pt-4 mt-8 px-4 sm:px-6 md:px-10 lg:px-20 bg-white max-w-[1430px] mx-auto">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-center text-gray-800">
         Check our Seasonal Treks
       </h2>
