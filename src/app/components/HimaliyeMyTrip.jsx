@@ -163,6 +163,9 @@ const HimaliyeMyTripCarousel = () => {
         modules={[Autoplay]}
         loop={true}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
+        cssMode={false}
+        touchStartPreventDefault={false}
+        touchMoveStopPropagation={false}
         spaceBetween={20}
         breakpoints={{
           320: { slidesPerView: 1 },
@@ -178,6 +181,7 @@ const HimaliyeMyTripCarousel = () => {
                 <img
                   src={tour.image}
                   alt={tour.title}
+                  loading="lazy"
                   className="w-full h-56 sm:h-64 md:h-72 object-cover"
                 />
               </Link>
@@ -212,7 +216,7 @@ const HimaliyeMyTripCarousel = () => {
                 <div className="mt-auto flex flex-col sm:flex-row gap-2 sm:items-center">
                   <button
                     type="button"
-                    className="border border-orange-500 text-orange-500 p-2 rounded-full flex items-center justify-center w-full sm:w-auto"
+                    className="border border-orange-500 text-orange-500 p-2 rounded-full flex items-center justify-center w-full sm:w-auto outline-none"
                     onClick={(e) => {
                       e.preventDefault();
                       window.location.href = "tel:+911234567890";
@@ -222,7 +226,7 @@ const HimaliyeMyTripCarousel = () => {
                   </button>
                   <button
                     onClick={() => router.push(tour.link)}
-                    className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-2 rounded-full w-full sm:w-auto"
+                    className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-2 rounded-full w-full sm:w-auto outline-none"
                   >
                     Explore Now
                   </button>
