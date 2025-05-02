@@ -312,7 +312,7 @@ export default function ContactForm() {
         className="bg-cover mt-12 bg-center h-[220px] sm:h-[280px] md:h-[350px] lg:h-[400px] flex items-center justify-center text-white text-center shadow-lg"
         style={{ backgroundImage: "url('deal95.webp')" }}
       >
-        <div className="bg-black bg-opacity-50 px-4 py-6 sm:px-6 sm:py-10 rounded-xl">
+        <div className=" bg-opacity-50 px-4 py-6 sm:px-6 sm:py-10 rounded-xl">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold drop-shadow-lg">
             Contact Us
           </h1>
