@@ -35,24 +35,24 @@ export default function Form() {
   }, []);
 
   return (
-    <section className="relative w-full h-screen overflow-hidden isolate z-0">
+    <div className="relative w-full h-screen overflow-hidden z-50">
       {/* Background Slides */}
       {slides.map((slide, index) => (
         <div
           key={index}
           className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out ${
-            index === currentImage ? "opacity-100 z-10" : "opacity-0 z-0"
+            index === currentImage ? "opacity-100 z-10" : "opacity-0"
           }`}
           style={{ backgroundImage: `url(${slide.image})` }}
-        />
+        ></div>
       ))}
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black opacity-50 z-20" />
+      <div className="absolute inset-0 bg-black opacity-50 z-20"></div>
 
       {/* Content */}
       <div
-        className="relative z-30 flex flex-col justify-start items-center text-center text-white h-full px-6"
+        className="relative flex flex-col justify-start items-center text-center text-white h-full px-6 z-30"
         style={{ paddingTop: "24rem" }}
       >
         {/* Title & Subtitle */}
@@ -60,7 +60,9 @@ export default function Form() {
           <h1 className="text-3xl md:text-5xl font-bold py-1" style={{ fontDisplay: "swap" }}>
             {slides[currentImage]?.title || "Loading..."}
           </h1>
-          <p className="text-base md:text-lg py-1">{slides[currentImage].subtitle}</p>
+          <p className="text-base md:text-lg py-1">
+            {slides[currentImage].subtitle}
+          </p>
         </div>
 
         {/* Search Form */}
@@ -126,6 +128,6 @@ export default function Form() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
