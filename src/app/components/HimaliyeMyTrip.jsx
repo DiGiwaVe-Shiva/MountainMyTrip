@@ -167,7 +167,7 @@ const HimaliyeMyTripCarousel = () => {
         cssMode={false}
         touchStartPreventDefault={false}
         touchMoveStopPropagation={false}
-        spaceBetween={20}
+        spaceBetween={10}
         breakpoints={{
           320: { slidesPerView: 1 },
           640: { slidesPerView: 1.2 },
@@ -178,7 +178,7 @@ const HimaliyeMyTripCarousel = () => {
       >
         {tourPackages.map((tour, index) => (
           <SwiperSlide key={index} className="pb-4 flex-shrink-0">
-            <div className="bg-white rounded-2xl overflow-hidden shadow-[0px_10px_20px_rgba(0,0,0,0.1)] flex flex-col h-full min-h-[470px]">
+           <div className="bg-white border border-orange-500 rounded-2xl overflow-hidden shadow-[0px_10px_20px_rgba(0,0,0,0.1)] flex flex-col h-full min-h-[470px]">
               <Link href={tour.link}>
                 <img
                   src={tour.image}
