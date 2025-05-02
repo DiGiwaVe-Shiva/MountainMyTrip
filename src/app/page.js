@@ -19,9 +19,9 @@ export default function Home() {
         </section>
 
         {/* Carousel with lower z-index to prevent overlapping on iOS */}
-        <section className="relative z-10">
+        {/* <section className="relative z-10">
           <HimaliyeMyTrip />
-        </section>
+        </section> */}
         <Aboutsection />
         <Destinations />
         <Planyour />
