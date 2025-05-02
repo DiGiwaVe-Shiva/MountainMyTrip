@@ -75,7 +75,7 @@ export default function Blog() {
             tips
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
-            <Link href="/"
+            <Link href="/Uttarakhand"
              className="bg-white text-[#F54A00] px-6 py-3 rounded-xl font-medium hover:bg-gray-100 transition">
               Explore Destinations
             </Link>
