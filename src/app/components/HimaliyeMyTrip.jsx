@@ -178,7 +178,7 @@ const HimaliyeMyTripCarousel = () => {
       >
         {tourPackages.map((tour, index) => (
           <SwiperSlide key={index} className="pb-4 flex-shrink-0">
-           <div className="bg-white border border-orange-500 rounded-2xl overflow-hidden shadow-[0px_10px_20px_rgba(0,0,0,0.1)] flex flex-col h-full min-h-[470px]">
+           <div className="bg-white border border-orange-500 border-2 rounded-2xl overflow-hidden  flex flex-col h-full min-h-[470px]">
               <Link href={tour.link}>
                 <img
                   src={tour.image}
