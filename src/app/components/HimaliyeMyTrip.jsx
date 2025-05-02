@@ -154,7 +154,7 @@ const HimaliyeMyTripCarousel = () => {
   const router = useRouter();
 
   return (
-    <section className="pb-12 pt-4 mt-8 px-4 sm:px-6 md:px-10 lg:px-20 bg-white max-w-[1430px] mx-auto">
+    <section className="pb-12 pt-4 mt-8 px-4 sm:px-6 md:px-10 lg:px-20 bg-white max-w-[1430px] mx-auto relative z-10">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-center text-gray-800">
         Check our Seasonal Treks
       </h2>
@@ -173,6 +173,7 @@ const HimaliyeMyTripCarousel = () => {
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}
+        className="z-0"
       >
         {tourPackages.map((tour, index) => (
           <SwiperSlide key={index} className="pb-4">

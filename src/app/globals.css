@@ -21,3 +21,8 @@ body {
   font-family: "Poppins", serif;
 }
 
+/* for ios stacking issue */
+.swiper {
+  transform: none !important;
+  will-change: auto !important;
+}

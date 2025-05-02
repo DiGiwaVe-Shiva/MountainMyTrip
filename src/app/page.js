@@ -13,8 +13,15 @@ export default function Home() {
   return (
     <>
       <main>
-        <From />
-        <HimaliyeMyTrip />
+         {/* Ensure this stays on top */}
+         <section className="relative z-20">
+          <From />
+        </section>
+
+        {/* Carousel with lower z-index to prevent overlapping on iOS */}
+        <section className="relative z-10">
+          <HimaliyeMyTrip />
+        </section>
         <Aboutsection />
         <Destinations />
         <Planyour />
