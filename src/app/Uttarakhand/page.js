@@ -316,10 +316,10 @@ export default function UttarakhandTrek() {
         }}
       >
         <div className="bg-opacity-50 p-12 rounded-xl">
-          <h1 className="text-4xl sm:text-5xl text-gray-200 font-extrabold drop-shadow-lg">
+          <h1 className="text-4xl sm:text-5xl text-white  font-extrabold drop-shadow-lg">
             Best Uttarakhand Tour Packages
           </h1>
-          <h3 className="text-lg font-medium text-gray-200 mt-4">
+          <h3 className="text-lg font-medium text-white mt-4">
             Discover the tranquil beauty of Uttarakhand
           </h3>
         </div>
