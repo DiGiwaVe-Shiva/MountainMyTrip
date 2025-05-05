@@ -29,16 +29,17 @@ export default function Navbar() {
       name: "Treks",
       link: "#",
       dropdown: [
-        { name: "GulabiKanthaTrek", link: "/GulabiKantha" },
-        { name: "BalipassTrek", link: "/Balipass" },
-        { name: "Dinara Top Trek", link: "/DinaraTopTrek" },
+        { name: "GulabiKantha Trek", link: "/GulabiKantha" },
+        { name: "Balipass Trek", link: "/Balipass" },
+        { name: "Dinara Buygal Trek", link: "/DinaraTopTrek" },
         { name: "Brahmatal Winter Trek", link: "/Bramtal" },
         { name: "Kuari Pass Trek", link: "/Kuaripass" },
         { name: "Kedarkantha Trek ", link: "/Kedarkantha" },
         { name: "Jalsupass Trek", link: "/Jalsupass" },
+        { name: "Dayara Buygal Trek", link: "/DayaraBugyal" },
         { name: "Sarutal Trek", link: "/Sarutal" },
-        { name: "DoditalTrek", link: "/Dodital" },
-        { name: "HarKiDunTrek", link: "/Hariki" },
+        { name: "Dodital Trek", link: "/Dodital" },
+        { name: "HarKiDun Trek", link: "/Hariki" },
         { name: "Valley of Flowers Trek", link: "/Valleyflowers" },
         { name: "Chopta Tungnath  Trek", link: "/Chopta" },
         { name: "Chandrashila Trek", link: "/Chandrashila" },
@@ -188,7 +189,7 @@ export default function Navbar() {
               </li>
             ))}
 
-            <li>
+            {/* <li>
               <Link
                 href="/Bookyourstay"
                 className="block bg-[#f54a00a1] text-white text-center py-2 rounded-full hover:bg-[#F54900] transition"
@@ -196,10 +197,12 @@ export default function Navbar() {
               >
                 Book Your Stay
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       )}
     </nav>
   );
 }
+
+

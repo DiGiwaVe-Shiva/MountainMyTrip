@@ -474,7 +474,7 @@ export default function ContactForm() {
                 <p className="font-medium">Give us a call</p>
                 <p className="text-sm text-gray-600">Get expert travel help now!</p>
                 <a href="tel:+919259205032" className="text-orange-600 font-semibold block mt-1 text-sm sm:text-base">
-                  +91-6239092532 <br /> +91-7466028080
+                  +91-6239092532 <br /><br /> +91-7466028080
                 </a>
               </div>
             </div>

@@ -361,8 +361,9 @@ export default function HimachalPradeshTrek() {
           <h1 className="text-5xl font-bold text-white drop-shadow-md">
             Explore Himachal Pradesh Treks
           </h1>
-          <h3 className="text-lg font-medium text-gray-700 mt-4">
-            Discover alpine charm, cultural heritage, and the soul of the Himalayas
+          <h3 className="text-lg font-medium text-white mt-4">
+            Discover alpine charm, cultural heritage, and the soul of the
+            Himalayas
           </h3>
         </div>
       </div>
@@ -370,10 +371,10 @@ export default function HimachalPradeshTrek() {
       <section className="max-w-7xl mx-auto px-4 py-12 flex flex-col md:flex-row gap-10">
         {/* Left Content */}
         <div className="flex-1">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            HIMACHAL PRADESH TREK
+          <h1 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-4">
+            Discover the Spirit of the Mountains with Himachal Treks
           </h1>
-
+          {/* 
           <div className="flex flex-wrap gap-4 mb-6 text-gray-600">
             <div className="flex items-center gap-2">
               <FaRegClock className="text-orange-500" />
@@ -387,22 +388,33 @@ export default function HimachalPradeshTrek() {
               <FaUndo className="text-orange-500" />
               <span>Free Cancellation up to 7 Days</span>
             </div>
-          </div>
+          </div> */}
 
           <h2 className="text-xl font-semibold text-gray-700 mb-2">
-            About this Adventure
+            Adventure Awaits in the Land of Gods and Valleys
           </h2>
           <p className="text-gray-600 mb-6 leading-relaxed">
-            The Himachal Pradesh Trek is a perfect escape into nature’s arms—
-            combining the majestic snow-clad peaks, lush green meadows, pine
-            forests, and untouched Himalayan hamlets. Whether you're chasing a
-            high-altitude thrill or tranquil moments by mountain streams, this
-            trek is designed for explorers, dreamers, and peace seekers.
-            Journey through local culture, ancient trails, and unforgettable
-            landscapes that define Himachal’s heart.
+            Welcome to <b>Himachal Treks, </b> your doorway to unforgettable
+            journeys in the Himalayan highlands of Himachal Pradesh. From the
+            serene beauty of lush green valleys to the thrill of snow-draped
+            passes, Himachal Treks offer an incredible mix of natural splendor,
+            cultural richness, and adventure.
+            <br></br>
+            <br></br>
+            Himachal Pradesh is a haven for trekking lovers, offering a wide
+            array of trails suitable for all levels—from leisurely nature walks
+            to challenging high-altitude expeditions. At Himachal Treks, we
+            bring you handpicked trekking experiences across the most scenic and
+            soul-stirring landscapes of the region.
+            <br></br>
+            <br></br>
+            Whether you're gazing at the Dhauladhar range, exploring
+            pine-scented forests, or camping under a sky full of stars, every
+            moment spent on a Himachal trek is one step closer to nature and
+            self-discovery.
           </p>
 
-          <h2 className="text-xl font-semibold text-gray-700 mb-2">
+          {/* <h2 className="text-xl font-semibold text-gray-700 mb-2">
             Trip Highlights
           </h2>
           <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
@@ -411,10 +423,12 @@ export default function HimachalPradeshTrek() {
             <li>Himachali hospitality and cultural immersion.</li>
             <li>Accessible yet adventurous trail suitable for beginners.</li>
             <li>Local cuisine and nature’s bounty throughout the route.</li>
-          </ul>
+          </ul> */}
 
           {/* Itinerary */}
-          <h2 className="text-xl font-semibold text-gray-700 mb-4">Itinerary</h2>
+          {/* <h2 className="text-xl font-semibold text-gray-700 mb-4">
+            Itinerary
+          </h2>
           <div className="space-y-4">
             {itinerary.map((item, index) => (
               <div key={index} className="border rounded-xl p-4 shadow-sm">
@@ -432,11 +446,13 @@ export default function HimachalPradeshTrek() {
                   )}
                 </div>
                 {openIndex === index && (
-                  <p className="text-gray-600 mt-3 whitespace-pre-line">{item.content}</p>
+                  <p className="text-gray-600 mt-3 whitespace-pre-line">
+                    {item.content}
+                  </p>
                 )}
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Booking Form */}
@@ -507,12 +523,6 @@ export default function HimachalPradeshTrek() {
     </>
   );
 }
-
-
-
-
-
-
 
 // "use client";
 // import Image from "next/image";

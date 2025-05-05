@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Whatsappicon from "./components/Whatsappicon";
 import Loader from "./components/Loader";
+import { StayFormProvider } from "./context/StayFormContext"; // Update path if needed
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,12 +36,15 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         cz-shortcut-listen="true"
       >
+        {/* <StayFormProvider> */}
         <Navbar />
         <Loader />
         {children}
+         
 
         <Footer />
         <Whatsappicon />
+        {/* </StayFormProvider> */}
       </body>
     </html>
   );

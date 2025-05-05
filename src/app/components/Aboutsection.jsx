@@ -86,13 +86,13 @@ import Link from "next/link";
 
 export default function Aboutsection() {
   return (
-    <section className="px-4 sm:px-8 md:px-8 py-4 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto">
+    <section className="px-4 sm:px-8  py-8 md:py-8 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto">
       {/* Text Section */}
       <div className="w-full md:w-1/2 text-center md:text-left">
-        <h2 className="text-lg sm:text-xl text-orange-500 font-semibold uppercase tracking-wide">
+        <h2 className="text-xl sm:text-xl text-orange-500 font-bold uppercase tracking-wide">
           About Us
         </h2>
-        <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 text-gray-900">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mt-2 text-gray-900">
           Experience the Thrill of Mountain Trekking in India
         </h3>
         <p className="text-gray-600 mt-4 leading-relaxed text-sm sm:text-base">

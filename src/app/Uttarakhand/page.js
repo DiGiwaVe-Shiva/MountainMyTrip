@@ -100,17 +100,17 @@ export default function UttarakhandTrek() {
           </h3>
         </div>
       </div>
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 mt-8"></section>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 mt-4"></section>
 
       {/* Main Content + Booking Form */}
       <section className="max-w-7xl mx-auto px-4  flex flex-col md:flex-row gap-10">
         {/* Left Content */}
         <div className="flex-1">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-            UTTARAKHAND TREK
+          <h1 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-2">
+            Explore the Heart of the Himalayas with Uttarakhand Treks
           </h1>
 
-          <div className="flex flex-wrap gap-4 mb-6 text-gray-600">
+          {/* <div className="flex flex-wrap gap-4 mb-6 text-gray-600">
             <div className="flex items-center gap-2">
               <FaRegClock className="text-orange-500" />
               <span>5 Nights 6 Days</span>
@@ -123,10 +123,10 @@ export default function UttarakhandTrek() {
               <FaUndo className="text-orange-500" />
               <span>Cancellation: Up to 7 Days</span>
             </div>
-          </div>
+          </div> */}
 
           <h2 className="text-xl font-semibold text-gray-700 mb-2">
-            About this Activity
+            Your Gateway to the Most Breathtaking Treks in India
           </h2>
           <p className="text-gray-600 mb-4">
             {/* The Uttarakhand Trek offers a thrilling adventure through some of
@@ -141,20 +141,33 @@ export default function UttarakhandTrek() {
             breathtaking vistas and authentic Himalayan culture at every step.
             Ideal for those looking to reconnect with nature and challenge
             themselves amidst the majestic Garhwal Himalayas. */}
-            The Uttarakhand Trek invites you on a thrilling adventure through
-            some of the most pristine and untouched landscapes in India. From
-            majestic views of snow-clad peaks to lush green valleys and charming
-            Himalayan villages, every step offers a breathtaking experience.
-            This journey is the perfect fusion of adventure and serenity—leading
-            you through dense alpine forests, tranquil meadows, and
-            high-altitude passes wrapped in natural beauty. Whether you're an
-            avid trekker or a nature enthusiast seeking solitude, this trek
-            promises awe-inspiring vistas and a deep connection with authentic
-            Himalayan culture. Ideal for those looking to challenge themselves
-            and rediscover peace amidst the grandeur of the Garhwal Himalayas.
+            Welcome to <b>Uttarakhand Treks,</b> your trusted partner in
+            discovering the awe-inspiring beauty of the Indian Himalayas.
+            Located in the spiritually rich and naturally stunning state of
+            Uttarakhand, also known as the "Land of the Gods," we offer curated
+            trekking experiences that connect you deeply with nature, culture,
+            and adventure.
+            <br></br>
+            <br></br>
+            <b>Uttarakhand Treks</b> specializes in a wide range of Himalayan
+            treks—perfect for beginners, nature enthusiasts, and seasoned
+            trekkers alike. From lush alpine meadows and scenic lakes to
+            snow-clad peaks and sacred valleys, every trail offers a unique
+            glimpse into the magic of the mountains.
+            <br></br>
+            <br></br>
+            Our treks are designed to be immersive and safe, guided by local
+            experts who understand the terrain, traditions, and tales of the
+            region. Whether you want to witness breathtaking Himalayan sunrises,
+            explore hidden trails, or simply escape into the wilderness,
+            Uttarakhand Treks is your ultimate destination for unforgettable
+            trekking adventures.
           </p>
+          {/* <h2 className="text-xl font-semibold text-gray-700 mb-2">
+            Discover the Spirit of the Mountains with Himachal Treks
+          </h2> */}
 
-          <h2 className="text-xl font-semibold text-gray-700 mb-2">
+          {/* <h2 className="text-xl font-semibold text-gray-700 mb-2">
             Highlights
           </h2>
           <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
@@ -163,8 +176,8 @@ export default function UttarakhandTrek() {
             <li>Engage in cultural interactions with locals.</li>
             <li>Indulge in serene campfire evenings.</li>
             <li>Achieve the perfect balance of adventure and relaxation.</li>
-          </ul>
-{/* 
+          </ul> */}
+          {/* 
           <h2 className="text-2xl font-bold mb-6">Excluded & Included</h2>
           <div className="grid md:grid-cols-2 gap-8 text-gray-700 mb-10">
             <ul className="list-disc list-inside space-y-2">

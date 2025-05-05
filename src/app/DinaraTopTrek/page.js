@@ -669,7 +669,7 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
         {/* Left Section */}
         <div className="flex-1">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-            DINARA TOP TREK – HIDDEN GEM OF UTTARAKHAND
+            DINARA BUGYAL TREK – HIDDEN GEM OF UTTARAKHAND
           </h1>
 
           <div className="flex flex-wrap gap-4 mb-6 text-gray-600">
@@ -689,7 +689,7 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
 
           <h2 className="text-xl font-semibold text-gray-700 mb-2">About this Trek</h2>
           <p className="text-gray-600 mb-4">
-            The Dinara Top Trek is a pristine trail tucked away in Uttarkashi, offering trekkers an untouched Himalayan experience. Ideal for those looking to explore offbeat trails and experience the charm of remote Garhwali villages.
+            The Dinara Bugyal Trek is a pristine trail tucked away in Uttarkashi, offering trekkers an untouched Himalayan experience. Ideal for those looking to explore offbeat trails and experience the charm of remote Garhwali villages.
           </p>
 
           <h2 className="text-xl font-semibold text-gray-700 mb-2">Highlights</h2>

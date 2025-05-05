@@ -108,7 +108,7 @@ const destinations = [
 
 export default function Destinations() {
   return (
-    <section className="px-6 md:px-40 py-12 text-center">
+    <section className="px-8 md:px-36 py-12 text-center">
       {/* Header */}
       <p className="text-3xl text-orange-500 font-semibold uppercase tracking-wide">
         Best Destinations
