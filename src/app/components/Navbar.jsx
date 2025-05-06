@@ -189,7 +189,7 @@ export default function Navbar() {
               </li>
             ))}
 
-            {/* <li>
+            <li>
               <Link
                 href="/Bookyourstay"
                 className="block bg-[#f54a00a1] text-white text-center py-2 rounded-full hover:bg-[#F54900] transition"
@@ -197,7 +197,7 @@ export default function Navbar() {
               >
                 Book Your Stay
               </Link>
-            </li> */}
+            </li>
           </ul>
         </div>
       )}
