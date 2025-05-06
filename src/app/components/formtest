@@ -1,0 +1,92 @@
+        <div className="bg-white text-gray-700 p-4 rounded-lg shadow-lg w-full max-w-5xl grid grid-cols-1 md:grid-cols-[1fr_1fr_1fr_auto] gap-4 items-end">
+          {/* Location Dropdown */}
+          <div className="relative">
+            <label className="text-xs text-gray-500 mb-1 block">Location</label>
+            <div
+              onClick={() => handleDropdownToggle("location")}
+              className="cursor-pointer w-full border border-gray-300 rounded-md px-3 py-2 bg-white flex justify-between items-center min-h-[44px]"
+            >
+              <div className="flex items-center gap-2 text-sm truncate">
+                <FaMapMarkerAlt className="text-gray-500" />
+                {location || (
+                  <span className="text-gray-400">Where are you going?</span>
+                )}
+              </div>
+              <FaChevronDown />
+            </div>
+            {activeDropdown === "location" && (
+              <ul className="absolute top-full mt-1 left-0 w-full bg-white border border-gray-300 rounded-md shadow-md z-20 max-h-60 overflow-y-auto text-sm">
+                {locations.map((loc, i) => (
+                  <li
+                    key={i}
+                    onClick={() => handleLocationSelect(loc)}
+                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
+                  >
+                    <FaMapMarkerAlt className="text-gray-500" />
+                    {loc}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          {/* Travel Date */}
+          <div className="relative w-full">
+  <FaCalendarAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
+  {!travelDate && (
+    <span className="absolute left-10 top-1/2 -translate-y-1/2 text-gray-400 text-sm pointer-events-none">
+      Select travel date
+    </span>
+  )}
+  <input
+    id="travelDate"
+    type="date"
+    className="w-full min-w-full border border-gray-300 rounded-md pl-10 pr-3 py-2 bg-white text-sm min-h-[44px] outline-none"
+    value={travelDate}
+    onChange={(e) => setTravelDate(e.target.value)}
+  />
+</div>
+          {/* <div className="flex flex-col">
+            <label htmlFor="travelDate" className="text-xs text-gray-500 mb-1">
+              Travel Date
+            </label>
+            <div className="relative">
+              <FaCalendarAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
+              <input
+                id="travelDate"
+                type="date"
+                className="w-full border border-gray-300 rounded-md pl-10 pr-3 py-2 bg-white text-sm min-h-[44px] outline-none"
+                value={travelDate}
+                onChange={(e) => setTravelDate(e.target.value)}
+              />
+            </div>
+          </div> */}
+
+          {/* Passengers */}
+          <div className="flex flex-col">
+            <label htmlFor="passengers" className="text-xs text-gray-500 mb-1">
+              Number of Travellers
+            </label>
+            <input
+              id="passengers"
+              type="number"
+              min={1}
+              placeholder="e.g. 2"
+              className="w-full border border-gray-300 rounded-md px-3 py-2 bg-white text-sm min-h-[44px] outline-none"
+              value={Travellers}
+              onChange={(e) => setTravellers(e.target.value)}
+            />
+          </div>
+
+          {/* Send Button */}
+          <div className="w-full">
+            <a
+              href="https://wa.me/6239092532"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-orange-500 text-white px-6 py-3 rounded-md text-sm font-medium hover:bg-orange-600 transition duration-200 text-center block"
+            >
+              Send
+            </a>
+          </div>
+        </div>
