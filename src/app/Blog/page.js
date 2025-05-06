@@ -132,12 +132,12 @@ export default function Blog() {
       </section>
 
       {/* Blog Grid */}
-      <section className="max-w-6xl mx-auto px-4 py-16">
-        <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center">
+      {/* <section className="max-w-6xl mx-auto px-4 py-16"> */}
+        {/* <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center">
           Travel Blogs & Adventure Tips
-        </h3>
+        </h3> */}
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {blogPosts.map((post) => (
             <article
               key={post.id}
@@ -187,7 +187,7 @@ export default function Blog() {
                   </div>
                   <Link
                     // href={`/blog/${post.slug}`}
-                    href={`/Home`}
+                    href={`/`}
                     className="text-[#F54A00] hover:underline text-sm font-medium"
                   >
                     Read More →
@@ -196,7 +196,7 @@ export default function Blog() {
               </div>
             </article>
           ))}
-        </div>
+        </div> */}
 
         {/* Pagination */}
         {/* <div className="mt-16 flex justify-center gap-3">
@@ -217,7 +217,7 @@ export default function Blog() {
             Next →
           </button>
         </div> */}
-      </section>
+      {/* </section> */}
 
       {/* Newsletter */}
       {/* <section className="bg-white py-16 px-4">
