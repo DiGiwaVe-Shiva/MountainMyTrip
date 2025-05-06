@@ -175,17 +175,12 @@ export default function Form() {
     Travel Date
   </label>
   <div className="relative w-full">
-    <FaCalendarAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
+    <FaCalendarAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" />
     <input
       id="travelDate"
-      type={travelDate ? "date" : "text"} // dynamic switch
-      placeholder="Select travel date"
-      className="w-full border border-gray-300 rounded-md pl-10 pr-3 py-2 bg-white text-sm min-h-[44px] outline-none text-gray-700"
+      type="date"
+      className="w-full border border-gray-300 rounded-md pl-10 pr-3 py-[10px] bg-white text-sm min-h-[44px] outline-none appearance-none text-gray-700"
       value={travelDate}
-      onFocus={(e) => (e.target.type = "date")}
-      onBlur={(e) => {
-        if (!travelDate) e.target.type = "text";
-      }}
       onChange={(e) => setTravelDate(e.target.value)}
     />
   </div>
