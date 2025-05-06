@@ -265,7 +265,7 @@ export default function CharDhamYatra() {
                       )}
                     </button>
                     {isOpen && (
-                      <div className="px-5 pb-4 text-gray-600 whitespace-pre-line text-sm md:text-base">
+                      <div className="px-5 md:py-4 pb-4 text-gray-600 whitespace-pre-line text-sm md:text-base">
                         {item.content}
                       </div>
                     )}

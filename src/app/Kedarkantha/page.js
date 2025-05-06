@@ -623,7 +623,7 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
                       {isOpen ? <FaChevronUp className="text-orange-500" /> : <FaChevronDown className="text-orange-500" />}
                     </button>
                     {isOpen && (
-                      <div className="px-5 pb-4 text-gray-600 whitespace-pre-line text-sm md:text-base">
+                      <div className="px-5 md:py-4 pb-4 text-gray-600 whitespace-pre-line text-sm md:text-base">
                         {item.content}
                       </div>
                     )}

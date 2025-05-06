@@ -229,7 +229,7 @@ export default function BaliPassTrekAdventure() {
                       )}
                     </button>
                     {isOpen && (
-                      <div className="px-5 pb-4 text-gray-600 whitespace-pre-line">
+                      <div className="px-5 md:py-4 pb-4 text-gray-600 whitespace-pre-line">
                         {item.content}
                       </div>
                     )}

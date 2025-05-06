@@ -545,7 +545,7 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
                     )}
                   </button>
                   {openIndex.includes(index) && (
-                    <div className="px-5 pb-4 text-gray-600 whitespace-pre-line text-sm md:text-base">
+                    <div className="px-5 md:py-4 pb-4 text-gray-600 whitespace-pre-line text-sm md:text-base">
                       {item.content}
                     </div>
                   )}
