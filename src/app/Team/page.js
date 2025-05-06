@@ -320,7 +320,7 @@ const teamMembers = [
     name: "Kapil Rana",
     role: "Cook",
     bio: "Keeps trekkers energized with delicious and nourishing meals on every adventure.",
-    image: "/Kapil.jpg",
+    image: "/kapil.jpg",
   },
   {
     name: "Pardeep Sherpa",
