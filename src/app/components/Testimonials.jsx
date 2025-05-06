@@ -52,16 +52,16 @@ const Testimonials = () => {
     setIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
 
   return (
-    <section className="bg-white px-6 py-4 md:py-8 lg:py-12 text-gray-800 overflow-hidden">
+    <section className="bg-white px-6  md:py-8 lg:py-12 text-gray-800 overflow-hidden">
       <div className="text-center mb-8">
         <h2 className="text-2xl md:text-4xl font-bold uppercase tracking-wider relative inline-block">
           {/* <span className="absolute text-6xl md:text-5xl opacity-10 top-[-20px] left-1/2 transform -translate-x-1/2 z-0">
             Testimonials
           </span> */}
-          <p className="text-3xl text-orange-500 font-semibold uppercase tracking-wide">
+          <p className="text-xl md:py-2 md:text-2xl text-orange-500 font-semibold uppercase tracking-wide">
             Testimonials
           </p>
-          <span className="text-[#393849] relative z-10">
+          <span className="text-black  text-2xl sm:text-3xl md:text-4xl font-bold relative z-10">
             What They Say About MountainMyTrip
           </span>
           {/* <span className="absolute text-6xl md:text-5xl opacity-10 top-[-20px] left-1/2 transform -translate-x-1/2 z-0">
@@ -74,7 +74,7 @@ const Testimonials = () => {
       </div>
 
       {/* Testimonial Slider */}
-      <div className="max-w-4xl mx-auto bg-gray-50 rounded-xl shadow-md p-6 md:p-10 relative">
+      <div className="max-w-4xl  mx-auto bg-gray-50 rounded-xl shadow-md p-6 md:p-10 relative">
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
@@ -131,7 +131,7 @@ const Testimonials = () => {
       </div>
 
       {/* Achievements */}
-      <div className="grid grid-cols-2 md:grid-cols-4 md:px-12 md:mt-[77px] text-center mt-12">
+      {/* <div className="grid pb-6 py-4 grid-cols-2 md:grid-cols-4 md:px-12 md:mt-[77px] text-center mt-12">
         <div>
           <PiBackpackFill className="text-orange-500 text-4xl mx-auto mb-2" />
           <h3 className="text-2xl font-bold">
@@ -155,6 +155,39 @@ const Testimonials = () => {
         </div>
         <div>
           <PiMapTrifoldFill className="text-orange-500 text-4xl mx-auto mb-2" />
+          <h3 className="text-2xl font-bold">
+            30<span className="text-orange-500">+</span>
+          </h3>
+          <p className="text-gray-500">Certified Guides</p>
+        </div>
+      </div> */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 md:gap-y-0 text-center py-8 px-4 md:px-12 mt-12 md:mt-[77px]">
+        <div className="flex flex-col items-center">
+          <PiBackpackFill className="text-orange-500 text-4xl mb-2" />
+          <h3 className="text-2xl font-bold">
+            15<span className="text-orange-500">+</span>
+          </h3>
+          <p className="text-gray-500">Years Of Experiences</p>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <PiMapPinFill className="text-orange-500 text-4xl mb-2" />
+          <h3 className="text-2xl font-bold">
+            60<span className="text-orange-500">+</span>
+          </h3>
+          <p className="text-gray-500">Best Destinations</p>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <PiBootFill className="text-orange-500 text-4xl mb-2" />
+          <h3 className="text-2xl font-bold">
+            3,210<span className="text-orange-500">+</span>
+          </h3>
+          <p className="text-gray-500">Satisfied Hikers</p>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <PiMapTrifoldFill className="text-orange-500 text-4xl mb-2" />
           <h3 className="text-2xl font-bold">
             30<span className="text-orange-500">+</span>
           </h3>

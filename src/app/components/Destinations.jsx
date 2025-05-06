@@ -110,10 +110,10 @@ export default function Destinations() {
   return (
     <section className="px-8 md:px-36 py-12 text-center">
       {/* Header */}
-      <p className="text-3xl text-orange-500 font-semibold uppercase tracking-wide">
+      <p className="text-xl md:text-2xl text-orange-500 font-semibold uppercase tracking-wide">
         Best Destinations
       </p>
-      <h2 className="text-2xl md:text-5xl font-bold mt-2">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2">
         Discover Luxury with Push
       </h2>
       <p className="text-gray-600 mt-4 leading-relaxed max-w-2xl mx-auto">

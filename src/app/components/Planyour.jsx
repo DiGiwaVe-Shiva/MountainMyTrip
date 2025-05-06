@@ -10,9 +10,9 @@ export default function DiscountSection() {
       {/* Text Content - Shows First on Mobile */}
       <div className="w-full md:w-1/2 text-center md:pl-4 md:text-left mt-10 md:mt-0 order-1 md:order-2">
         <h3 className="text-[#F54900] italic text-lg">Get to know us</h3>
-        <h2 className="text-xl font-bold text-gray-900 mt-2">
-          Plan Your Adventure with{" "}
-          <span className="text-[#F54900]">MountainMyTrip</span>
+        <h2 className="text-xl md:text-2xl font-bold text-gray-900 mt-2">
+          Plan Your Adventure with
+          <span className="text-[#F54900] font-bold">MountainMyTrip</span>
         </h2>
         <p className="text-gray-600 mt-4">
           Get ready for an unforgettable adventure with MountainMyTrip, your
