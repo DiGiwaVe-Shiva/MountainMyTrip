@@ -331,48 +331,7 @@ const teamMembers = [
     image: "/deal 103.jpg",
   },
 
-  // {
-  //   name:"Vikash panwar",
-  //   role: "Founder Ceo",
-  //   bio: "Visionary trekker, passionate about creating unforgettable experiences in the Himalayas.",
-  //   image: "/vikash.jpg",
-  // },
-  // {
-  //   name: "Akhil Panwar",
-  //   role: "Trek Leader",
-  //   bio: "Visionary trekker, passionate about creating unforgettable experiences in the Himalayas.",
-  //   image: "/1.webp",
-  // },
-  // {
-  //   name: "Deepika",
-  //   role: "assistant trek leader",
-  //   bio: "Certified mountaineer with a love for nature and guiding adventurers safely.",
-  //   image: "/Dipika.webp",
-  // },
-  // {
-  //   name: "Deepak Singh",
-  //   role: "Guide",
-  //   bio: "Manages logistics with precision and ensures every trek is smooth and safe.",
-  //   image: "/Deepak.webp",
-  // },
-  // {
-  //   name: "Shubham Panwar",
-  //   role: "Marketing Manager",
-  //   bio: "Crafts compelling campaigns to bring trekking adventures to the world.",
-  //   image: "/Slot.webp",
-  // },
-  // {
-  //   name: "Kapil Rana",
-  //   role: "cook",
-  //   bio: "Crafts compelling campaigns to bring trekking adventures to the world.",
-  //   image: "/Kapil.jpg",
-  // },
-  // {
-  //   name: "Pardeep Sherpa",
-  //   role: "High altitude Porter",
-  //   bio: "Crafts compelling campaigns to bring trekking adventures to the world.",
-  //   image: "/deal 103.jpg",
-  // },
+  
 ];
 
 const TeamCarousel = () => {
@@ -394,7 +353,7 @@ const TeamCarousel = () => {
       </div>
 
       {/* Carousel Section */}
-      <section className="py-12 px-4 sm:px-6 md:px-8 lg:px-20 bg-white max-w-[1440px] mx-auto">
+      {/* <section className="py-12 px-4 sm:px-6 md:px-8 lg:px-20 bg-white max-w-[1440px] mx-auto">
         <h2 className="text-3xl font-semibold mb-10 text-center text-gray-800">
           Our Team
         </h2>
@@ -413,7 +372,7 @@ const TeamCarousel = () => {
         >
           {teamMembers.map((member, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white max-w-sm mx-auto rounded-2xl shadow-md border border-gray-100 p-6 flex flex-col items-center text-center transition-transform hover:scale-[1.03] duration-300">
+              <div className="bg-white max-w-sm mx-auto rounded-2xl  border-orange-500 p-6 flex flex-col items-center text-center transition-transform hover:scale-[1.03] duration-300">
                 <img
                   src={member.image}
                   alt={member.name}
@@ -430,7 +389,44 @@ const TeamCarousel = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </section>
+      </section> */}
+       <section className="py-12 px-4 sm:px-6 md:px-8 lg:px-20 bg-white max-w-[1440px] mx-auto">
+      <h2 className="text-3xl font-semibold mb-10 text-center text-gray-800">
+        Meet Our Team
+      </h2>
+
+      <Swiper
+        modules={[Autoplay]}
+        loop={true}
+        autoplay={{ delay: 3500, disableOnInteraction: false }}
+        spaceBetween={20}
+        breakpoints={{
+          320: { slidesPerView: 1 },
+          640: { slidesPerView: 1.2 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+      >
+        {teamMembers.map((member, index) => (
+          <SwiperSlide key={index}>
+            <div className="bg-white max-w-sm mx-auto rounded-2xl border-2 border-orange-500 p-6 flex flex-col items-center text-center transition-transform">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-32 h-32 object-cover rounded-full mb-4 border-4 border-orange-100"
+              />
+              <h3 className="text-lg font-bold text-gray-800 mb-1">
+                {member.name}
+              </h3>
+              <p className="text-sm text-orange-600 font-medium mb-2">
+                {member.role}
+              </p>
+              <p className="text-sm text-gray-600 mb-2 px-2">{member.bio}</p>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
 
       <HimTrek />
     </>
