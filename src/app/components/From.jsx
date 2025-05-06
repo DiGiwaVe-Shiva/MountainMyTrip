@@ -171,25 +171,26 @@ export default function Form() {
 
           {/* Travel Date */}
           <div className="flex flex-col w-full items-start">
-            <label htmlFor="travelDate" className="text-xs text-gray-500 mb-1 block">
-              Travel Date
-            </label>
-            <div className="relative w-full">
-              <FaCalendarAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
-              {!travelDate && (
-                <span className="absolute left-10 top-1/2 -translate-y-1/2 text-gray-400 text-sm pointer-events-none">
-                  Select travel date
-                </span>
-              )}
-              <input
-                id="travelDate"
-                type="date"
-                className="w-full border appearance-none border-gray-300 rounded-md pl-10 pr-3 py-2 bg-white text-sm min-h-[44px] outline-none"
-                value={travelDate}
-                onChange={(e) => setTravelDate(e.target.value)}
-              />
-            </div>
-          </div>
+  <label htmlFor="travelDate" className="text-xs text-gray-500 mb-1 block">
+    Travel Date
+  </label>
+  <div className="relative w-full">
+    <FaCalendarAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
+    <input
+      id="travelDate"
+      type={travelDate ? "date" : "text"} // dynamic switch
+      placeholder="Select travel date"
+      className="w-full border border-gray-300 rounded-md pl-10 pr-3 py-2 bg-white text-sm min-h-[44px] outline-none text-gray-700"
+      value={travelDate}
+      onFocus={(e) => (e.target.type = "date")}
+      onBlur={(e) => {
+        if (!travelDate) e.target.type = "text";
+      }}
+      onChange={(e) => setTravelDate(e.target.value)}
+    />
+  </div>
+</div>
+
 
           {/* Number of Travellers */}
           <div className="flex flex-col w-full items-start">
