@@ -1,4 +1,126 @@
-"use client";
+        
+         {/* Image Gallery */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 mt-4">
+        {/* Mobile Layout */}
+        <div className="flex flex-col gap-2 sm:hidden">
+          {[1, 2, 3, 4].map(
+            (i) =>
+              i % 2 === 1 && (
+                <div className="flex gap-2" key={i}>
+                  {[i, i + 1].map(
+                    (j) =>
+                      destinations[j] && (
+                        <div
+                          key={j}
+                          className="w-1/2 h-[200px] relative rounded-xl overflow-hidden shadow-md"
+                        >
+                          <Image
+                            src={destinations[j].src}
+                            alt={`Dayara Trek ${j + 1}`}
+                            fill
+                            className="object-cover"
+                            sizes="50vw"
+                          />
+                        </div>
+                      )
+                  )}
+                </div>
+              )
+          )}
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden sm:grid grid-cols-2 md:grid-cols-3 gap-2 auto-rows-[250px]">
+          {destinations.map((item, index) => (
+            <div
+              key={index}
+              className={`relative rounded-xl overflow-hidden shadow-md ${
+                item.gridClass || ""
+              }`}
+            >
+              <Image
+                src={item.src}
+                alt={`Dayara Trek ${index + 1}`}
+                fill
+                className="object-cover hover:scale-110 transition-transform duration-500"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+        
+        {/* Booking Form */}
+        {/* <div className="w-full md:w-[350px] lg:w-[400px] flex-shrink-0">
+          <div className="sticky top-24">
+            <div className="bg-white shadow-lg rounded-2xl p-6 border">
+              <h3 className="text-lg font-semibold text-gray-800 mb-1">
+                Book Your Trek Today
+              </h3>
+              <div className="text-sm text-green-600 font-bold mb-2">
+                Limited Slots Available
+              </div>
+              <div className="text-xl font-bold text-red-600 mb-4">
+                Starting From: <span className="text-gray-600">₹6,999</span>
+                /Person
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-3">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email (optional)"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
+                />
+                <input
+                  type="text"
+                  name="tripName"
+                  value={formData.tripName}
+                  readOnly
+                  className="w-full border rounded-lg px-4 py-2 bg-gray-100 text-gray-600"
+                />
+                <input
+                  type="number"
+                  name="travellers"
+                  placeholder="No. of Travellers"
+                  value={formData.travellers}
+                  onChange={handleChange}
+                  required
+                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
+                />
+                <button
+                  type="submit"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-lg"
+                >
+                  Send Booking via WhatsApp
+                </button>
+              </form>
+            </div>
+          </div>
+        </div> */}
+
+
+        "use client";
 
 import Image from "next/image";
 import { useState } from "react";
@@ -11,7 +133,6 @@ import {
 } from "react-icons/fa";
 import HimaliyeMyTripCarousel from "../components/HimaliyeMyTrip";
 import HimTrek from "../components/HimTrek";
-
 
 const destinations = [
   { src: "/deal61.webp", gridClass: "lg:col-span-2" },
@@ -66,45 +187,24 @@ export default function DayaraBugyalTrek() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const { name, phone, email, tripName, travellers } = formData;
-
-    // Phone validation: Indian 10-digit starting from 6–9
-    const phoneRegex = /^[6-9]\d{9}$/;
-    if (!phoneRegex.test(phone)) {
-      alert("Please enter a valid 10-digit Indian phone number.");
-      return;
-    }
-
-    if (!name.trim()) {
-      alert("Please enter your full name.");
-      return;
-    }
-
-    if (!travellers || isNaN(travellers) || Number(travellers) <= 0) {
-      alert("Please enter a valid number of travellers.");
-      return;
-    }
-
     const message = `*New Trek Booking Request* 🏔️✨
 
-*Name:* ${name}
-*Phone:* ${phone}
-${email ? `*Email:* ${email}\n` : ""}
-*Trip:* ${tripName}
-*No. of Travellers:* ${travellers}
+*Name:* ${formData.name}
+*Phone:* ${formData.phone}
+${formData.email ? `*Email:* ${formData.email}\n` : ""}
+*Trip:* ${formData.tripName}
+*No. of Travellers:* ${formData.travellers}
 
 📌 Please follow up for confirmation and details.`;
 
     const whatsappURL = `https://wa.me/9123456156?text=${encodeURIComponent(
       message
-    )}`; // Replace with your WhatsApp number
+    )}`;
     window.open(whatsappURL, "_blank");
   };
 
   return (
-   
-     <>
+    <>
       {/* Image Gallery */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 mt-4">
         {/* Mobile Layout */}
@@ -155,10 +255,11 @@ ${email ? `*Email:* ${email}\n` : ""}
           ))}
         </div>
       </section>
-      <section className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row gap-10">
 
-      {/* the desired change starts */}
-      <div className="flex-1">
+      {/* Content + Form */}
+      <section className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row gap-10">
+        {/* Content */}
+        <div className="flex-1">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
             DAYARA BUGYAL TREK – ALPINE MEADOWS ADVENTURE
           </h1>
@@ -264,78 +365,73 @@ ${email ? `*Email:* ${email}\n` : ""}
   </div>
 </div>          
         </div>
-
-      {/* the desired change ends */}
-        <div className="w-full md:w-[350px] lg:w-[400px] flex-shrink-0">
-          <div className="sticky top-24">
-            <div className="bg-white shadow-lg rounded-2xl p-6 border">
-              <h3 className="text-lg font-semibold text-gray-800 mb-1">
-                Book Your Trek Today
-              </h3>
-              <div className="text-sm text-green-600 font-bold mb-2">
-                Limited Slots Available
-              </div>
-              <div className="text-xl font-bold text-red-600 mb-4">
-                Starting From: <span className="text-gray-600">₹6,999</span>/
-                Person
-              </div>
-
-              <form onSubmit={handleSubmit} className="space-y-3">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Full Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  pattern="^[A-Za-z\s]+$"
-                  title="Please enter letters and spaces only"
-                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
-                />
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone Number"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email (optional)"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
-                />
-                <input
-                  type="text"
-                  name="tripName"
-                  value={formData.tripName}
-                  readOnly
-                  className="w-full border rounded-lg px-4 py-2 bg-gray-100 text-gray-600"
-                />
-                <input
-                  type="number"
-                  name="travellers"
-                  placeholder="No. of Travellers"
-                  value={formData.travellers}
-                  onChange={handleChange}
-                  required
-                  min="1"
-                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
-                />
-                <button
-                  type="submit"
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-lg"
-                >
-                  Send Booking via WhatsApp
-                </button>
-              </form>
-            </div>
+            <div className="w-full md:w-[350px] lg:w-[400px] flex-shrink-0">
+      <div className="sticky top-24">
+        <div className="bg-white shadow-lg rounded-2xl p-6 border">
+          <h3 className="text-lg font-semibold text-gray-800 mb-1">
+            Book Your Trek Today
+          </h3>
+          <div className="text-sm text-green-600 font-bold mb-2">
+            Limited Slots Available
           </div>
+          <div className="text-xl font-bold text-red-600 mb-4">
+            Starting From: <span className="text-gray-600">₹6,999</span>/Person
+          </div>
+
+          <form onSubmit={handleSubmit} className="space-y-3">
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+              className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email (optional)"
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
+            />
+            <input
+              type="text"
+              name="tripName"
+              value={formData.tripName}
+              readOnly
+              className="w-full border rounded-lg px-4 py-2 bg-gray-100 text-gray-600"
+            />
+            <input
+              type="number"
+              name="travellers"
+              placeholder="No. of Travellers"
+              value={formData.travellers}
+              onChange={handleChange}
+              required
+              min="1"
+              className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
+            />
+            <button
+              type="submit"
+              className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-lg"
+            >
+              Send Booking via WhatsApp
+            </button>
+          </form>
         </div>
+      </div>
+    </div>
       </section>
 
       {/* Carousels and Additional Info */}

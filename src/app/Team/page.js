@@ -302,7 +302,7 @@ const teamMembers = [
     name: "Deepika",
     role: "Assistant Trek Leader",
     bio: "Certified mountaineer committed to guiding and inspiring trekkers through every step.",
-    image: "/Dipika.webp",
+    image: "/dipika2.jpeg",
   },
   // {
   //   name: "Deepak Singh",
