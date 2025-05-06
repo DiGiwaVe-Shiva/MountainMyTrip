@@ -28,7 +28,7 @@ export default function Form() {
     "BaliPass Trek",
     "Dodital Trek",
     "Chandrashila Trek",
-    "Harki Trek",
+    "Har ki Doon Trek",
     "Dinara Bugyal Trek",
     "Sarutal Trek",
     "Vally of Flowers Trek",
