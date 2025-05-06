@@ -585,7 +585,7 @@ ${email ? `*Email:* ${email}\n` : ""}
                 Limited Slots Available
               </div> */}
               <div className="text-xl font-bold text-red-600 mb-4">
-                Starting From: <span className="text-gray-600">₹6,999</span>/
+                Starting From: <span className="text-gray-600">₹9,999</span>/
                 Person
               </div>
               <div className="text-sm text-green-600 font-semibold mb-2"> +5% gst</div>
