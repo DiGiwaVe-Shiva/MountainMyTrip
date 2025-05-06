@@ -1134,7 +1134,7 @@ export default function Form() {
   const [activeTab, setActiveTab] = useState("uttarakhand");
   const [location, setLocation] = useState("");
   const [travelDate, setTravelDate] = useState("");
-  const [passengers, setPassengers] = useState("");
+  const [Travellers,setTravellers] = useState("");
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   const uttarakhandLocations = [
@@ -1309,7 +1309,7 @@ export default function Form() {
           {/* Passengers */}
           <div className="flex flex-col">
             <label htmlFor="passengers" className="text-xs text-gray-500 mb-1">
-              Number of Passengers
+              Number of Travellers
             </label>
             <input
               id="passengers"
@@ -1317,8 +1317,8 @@ export default function Form() {
               min={1}
               placeholder="e.g. 2"
               className="w-full border border-gray-300 rounded-md px-3 py-2 bg-white text-sm min-h-[44px] outline-none"
-              value={passengers}
-              onChange={(e) => setPassengers(e.target.value)}
+              value={Travellers}
+              onChange={(e) => setTravellers(e.target.value)}
             />
           </div>
 

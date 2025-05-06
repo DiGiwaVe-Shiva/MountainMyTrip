@@ -304,12 +304,12 @@ const teamMembers = [
     bio: "Certified mountaineer committed to guiding and inspiring trekkers through every step.",
     image: "/Dipika.webp",
   },
-  {
-    name: "Deepak Singh",
-    role: "Guide",
-    bio: "Experienced guide focused on flawless logistics and trek safety.",
-    image: "/Deepak.webp",
-  },
+  // {
+  //   name: "Deepak Singh",
+  //   role: "Guide",
+  //   bio: "Experienced guide focused on flawless logistics and trek safety.",
+  //   image: "/Deepak.webp",
+  // },
   {
     name: "Shubham Panwar",
     role: "Marketing Manager",
