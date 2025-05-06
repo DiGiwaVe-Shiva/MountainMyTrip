@@ -124,6 +124,18 @@ const teamMembers = [
     image: "/vikash.jpg",
   },
   {
+    name: "Avtar Panwar",
+    role: "Slot Manager",
+    bio: "Expert trek scheduler ensuring smooth coordination, timing, and team flow.",
+    image: "/Avtar.jpg",
+  },
+  {
+    name: "Kunal Gosh",
+    role: "Founder",
+    bio: "Founder & certified mountaineer leading with passion, purpose, and mountain wisdom.",
+    image: "/kunal.jpg",
+  },
+  {
     name: "Akhil Panwar",
     role: "Trek Leader",
     bio: "Expert trekker who ensures every journey is adventurous, safe, and memorable.",
@@ -135,12 +147,7 @@ const teamMembers = [
     bio: "Certified mountaineer committed to guiding and inspiring trekkers through every step.",
     image: "/Dipika.webp",
   },
-  // {
-  //   name: "Deepak Singh",
-  //   role: "Guide",
-  //   bio: "Experienced guide focused on flawless logistics and trek safety.",
-  //   image: "/Deepak.webp",
-  // },
+ 
   {
     name: "Shubham Panwar",
     role: "Marketing Manager",

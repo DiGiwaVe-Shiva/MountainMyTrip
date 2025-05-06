@@ -48,11 +48,11 @@ export default function BaliPassTrekAdventure() {
     name: "",
     phone: "",
     email: "",
-    tripName: "Bali Pass Trek Adventure",
+    tripName: "BaliPass Trek",
     travellers: "",
   });
 
-  const handleAccordion = (index) => {
+  const toggleAccordion = (index) => {
     setOpenIndex((prev) =>
       prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
     );
@@ -65,19 +65,38 @@ export default function BaliPassTrekAdventure() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const message = `*New Trip Booking Request* 🚶‍♂️🏔️
+    const { name, phone, email, tripName, travellers } = formData;
 
-*Name:* ${formData.name}
-*Phone:* ${formData.phone}
-*Email:* ${formData.email || "N/A"}
-*Trip:* ${formData.tripName}
-*No. of Travellers:* ${formData.travellers}
+    // Phone validation: Indian 10-digit starting from 6–9
+    const phoneRegex = /^[6-9]\d{9}$/;
+    if (!phoneRegex.test(phone)) {
+      alert("Please enter a valid 10-digit Indian phone number.");
+      return;
+    }
 
-📌 Please reach out for confirmation and next steps.`;
+    if (!name.trim()) {
+      alert("Please enter your full name.");
+      return;
+    }
 
-    const whatsappURL = `https://wa.me/6239092532?text=${encodeURIComponent(
+    if (!travellers || isNaN(travellers) || Number(travellers) <= 0) {
+      alert("Please enter a valid number of travellers.");
+      return;
+    }
+
+    const message = `*New Trek Booking Request* 🏔️✨
+
+*Name:* ${name}
+*Phone:* ${phone}
+${email ? `*Email:* ${email}\n` : ""}
+*Trip:* ${tripName}
+*No. of Travellers:* ${travellers}
+
+📌 Please follow up for confirmation and details.`;
+
+    const whatsappURL = `https://wa.me/9123456156?text=${encodeURIComponent(
       message
-    )}`;
+    )}`; // Replace with your WhatsApp number
     window.open(whatsappURL, "_blank");
   };
 
@@ -242,69 +261,74 @@ export default function BaliPassTrekAdventure() {
 
         {/* Booking Form */}
         <div className="w-full md:w-[350px] lg:w-[400px] flex-shrink-0">
-          <div className="sticky top-24 bg-white shadow-lg rounded-2xl p-6 border">
-            <h3 className="text-lg font-semibold text-gray-800 mb-1">
-              Book Your Slot Now!
-            </h3>
-            {/* <div className="text-sm text-green-600 font-bold mb-2">
-              Limited Period Offer: Save 10%
-            </div> */}
-            <div className="text-xl font-bold text-red-600 mb-1">
-              Starting From: <span className="text-gray-600">₹22,999</span> /Per
-              Person
-            </div>
-            <div className="text-sm text-green-600 font-semibold mb-2"> +5% gst</div>
+          <div className="sticky top-24">
+            <div className="bg-white shadow-lg rounded-2xl p-6 border">
+              <h3 className="text-lg font-semibold text-gray-800 mb-1">
+                Book Your Trek Today
+              </h3>
+              {/* <div className="text-sm text-green-600 font-bold mb-2">
+                Limited Slots Available
+              </div> */}
+              <div className="text-xl font-bold text-red-600 mb-4">
+                Starting From: <span className="text-gray-600">₹6,999</span>/
+                Person
+              </div>
+              <div className="text-sm text-green-600 font-semibold mb-2"> +5% gst</div>
 
-            <form onSubmit={handleSubmit} className="space-y-3">
-              <input
-                type="text"
-                name="name"
-                placeholder="Full Name" 
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
-              />
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email (optional)"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
-              />
-              <input
-                type="text"
-                name="tripName"
-                value={formData.tripName}
-                readOnly
-                className="w-full border rounded-lg px-4 py-2 bg-gray-100 text-gray-600"
-              />
-              <input
-                type="number"
-                name="travellers"
-                placeholder="No. of Travellers"
-                value={formData.travellers}
-                onChange={handleChange}
-                required
-                className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
-              />
-              <button
-                type="submit"
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-lg"
-              >
-                Send Booking via WhatsApp
-              </button>
-            </form>
+              <form onSubmit={handleSubmit} className="space-y-3">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  pattern="^[A-Za-z\s]+$"
+                  title="Please enter letters and spaces only"
+                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email (optional)"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
+                />
+                <input
+                  type="text"
+                  name="tripName"
+                  value={formData.tripName}
+                  readOnly
+                  className="w-full border rounded-lg px-4 py-2 bg-gray-100 text-gray-600"
+                />
+                <input
+                  type="number"
+                  name="travellers"
+                  placeholder="No. of Travellers"
+                  value={formData.travellers}
+                  onChange={handleChange}
+                  required
+                  min="1"
+                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
+                />
+                <button
+                  type="submit"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-lg"
+                >
+                  Send Booking via WhatsApp
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>

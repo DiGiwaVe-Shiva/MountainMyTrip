@@ -272,13 +272,14 @@ ${email ? `*Email:* ${email}\n` : ""}
               <h3 className="text-lg font-semibold text-gray-800 mb-1">
                 Book Your Trek Today
               </h3>
-              <div className="text-sm text-green-600 font-bold mb-2">
+              {/* <div className="text-sm text-green-600 font-bold mb-2">
                 Limited Slots Available
-              </div>
+              </div> */}
               <div className="text-xl font-bold text-red-600 mb-4">
                 Starting From: <span className="text-gray-600">₹6,999</span>/
                 Person
               </div>
+              <div className="text-sm text-green-600 font-semibold mb-2"> +5% gst</div>
 
               <form onSubmit={handleSubmit} className="space-y-3">
                 <input

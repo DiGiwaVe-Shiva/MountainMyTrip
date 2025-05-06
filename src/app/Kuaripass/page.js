@@ -997,15 +997,13 @@ export default function KuariPassTrek() {
     name: "",
     phone: "",
     email: "",
-    tripName: "Kuari Pass Trek – Himalayan Adventure",
+    tripName: "Kuari Pass Trek",
     travellers: "",
   });
 
   const toggleAccordion = (index) => {
     setOpenIndex((prev) =>
-      prev.includes(index)
-        ? prev.filter((i) => i !== index)
-        : [...prev, index]
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
     );
   };
 
@@ -1015,21 +1013,42 @@ export default function KuariPassTrek() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const message = `*New Trip Booking Request* 🏕️✨
 
-*Name:* ${formData.name}
-*Phone:* ${formData.phone}
-${formData.email ? `*Email:* ${formData.email}\n` : ""}
-*Trip:* ${formData.tripName}
-*No. of Travellers:* ${formData.travellers}
+    const { name, phone, email, tripName, travellers } = formData;
 
-📌 Please reach out for confirmation and further details.`;
+    // Phone validation: Indian 10-digit starting from 6–9
+    const phoneRegex = /^[6-9]\d{9}$/;
+    if (!phoneRegex.test(phone)) {
+      alert("Please enter a valid 10-digit Indian phone number.");
+      return;
+    }
 
-    const whatsappURL = `https://wa.me/6239092532?text=${encodeURIComponent(
+    if (!name.trim()) {
+      alert("Please enter your full name.");
+      return;
+    }
+
+    if (!travellers || isNaN(travellers) || Number(travellers) <= 0) {
+      alert("Please enter a valid number of travellers.");
+      return;
+    }
+
+    const message = `*New Trek Booking Request* 🏔️✨
+
+*Name:* ${name}
+*Phone:* ${phone}
+${email ? `*Email:* ${email}\n` : ""}
+*Trip:* ${tripName}
+*No. of Travellers:* ${travellers}
+
+📌 Please follow up for confirmation and details.`;
+
+    const whatsappURL = `https://wa.me/9123456156?text=${encodeURIComponent(
       message
-    )}`;
+    )}`; // Replace with your WhatsApp number
     window.open(whatsappURL, "_blank");
   };
+
 
   return (
     <>
@@ -1216,10 +1235,11 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
                 Book Your Trek Today
               </h3>
               {/* <div className="text-sm text-green-600 font-bold mb-2">
-                Weekend Departure Available
+                Limited Slots Available
               </div> */}
-              <div className="text-xl font-bold text-red-600 mb-1">
-                Starting From: <span className="text-gray-600">₹7,000</span>/Per Person
+              <div className="text-xl font-bold text-red-600 mb-4">
+                Starting From: <span className="text-gray-600">₹6,999</span>/
+                Person
               </div>
               <div className="text-sm text-green-600 font-semibold mb-2"> +5% gst</div>
 
@@ -1231,6 +1251,8 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  pattern="^[A-Za-z\s]+$"
+                  title="Please enter letters and spaces only"
                   className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
                 />
                 <input
@@ -1264,6 +1286,7 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
                   value={formData.travellers}
                   onChange={handleChange}
                   required
+                  min="1"
                   className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
                 />
                 <button

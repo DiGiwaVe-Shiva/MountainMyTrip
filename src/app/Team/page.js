@@ -148,7 +148,6 @@
 
 // export default TeamCarousel;
 
-
 // "use client";
 
 // import React from "react";
@@ -265,7 +264,7 @@
 //             </SwiperSlide>
 //           ))}
 //         </Swiper>
-      
+
 //       </section>
 //       <HimTrek/>
 //     </>
@@ -273,9 +272,6 @@
 // };
 
 // export default TeamCarousel;
-
-
-
 
 "use client";
 
@@ -304,12 +300,18 @@ const teamMembers = [
     bio: "Certified mountaineer committed to guiding and inspiring trekkers through every step.",
     image: "/dipika2.jpeg",
   },
-  // {
-  //   name: "Deepak Singh",
-  //   role: "Guide",
-  //   bio: "Experienced guide focused on flawless logistics and trek safety.",
-  //   image: "/Deepak.webp",
-  // },
+  {
+    name: "Kunal Gosh",
+    role: "Founder",
+    bio: "Founder & certified mountaineer leading with passion, purpose, and mountain wisdom.",
+    image: "/kunal.jpg",
+  },
+  {
+    name: "Avtar Panwar",
+    role: "Slot Manager",
+    bio: "Expert trek scheduler ensuring smooth coordination, timing, and team flow.",
+    image: "/Avtar.jpg",
+  },
   {
     name: "Shubham Panwar",
     role: "Marketing Manager",
@@ -327,8 +329,8 @@ const teamMembers = [
     role: "High Altitude Porter",
     bio: "Strong and reliable, he supports high-altitude treks with unmatched endurance.",
     image: "/deal 103.jpg",
-  }
-  
+  },
+
   // {
   //   name:"Vikash panwar",
   //   role: "Founder Ceo",
@@ -436,9 +438,6 @@ const TeamCarousel = () => {
 };
 
 export default TeamCarousel;
-
-
-
 
 // "use client";
 
@@ -573,9 +572,6 @@ export default TeamCarousel;
 // };
 
 // export default TeamCarousel;
-
-
-
 
 // "use client";
 
@@ -735,4 +731,3 @@ export default TeamCarousel;
 // };
 
 // export default TeamCarousel;
-
