@@ -186,7 +186,8 @@ export default function Blog() {
                     <span className="text-sm">{post.author.name}</span>
                   </div>
                   <Link
-                    href={`/blog/${post.slug}`}
+                    // href={`/blog/${post.slug}`}
+                    href={`/Home`}
                     className="text-[#F54A00] hover:underline text-sm font-medium"
                   >
                     Read More →

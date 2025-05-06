@@ -188,7 +188,7 @@ export default function ChandrashilaTrek() {
           </div>
 
           {/* Itinerary Accordion */}
-          <div className="my-8">
+          {/* <div className="my-8">
             <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800">
               Itinerary
             </h2>
@@ -234,7 +234,59 @@ export default function ChandrashilaTrek() {
                 );
               })}
             </div>
-          </div>
+          </div> */}
+          {/* Itinerary Accordion */}
+<div className="my-8">
+  <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800">
+    Itinerary
+  </h2>
+  <button
+    onClick={() =>
+      setOpenIndex(
+        openIndex.length === itinerary.length
+          ? []
+          : itinerary.map((_, i) => i)
+      )
+    }
+    className="mb-4 text-orange-600 font-medium hover:underline"
+  >
+    {openIndex.length === itinerary.length ? "Close All" : "Open All"}
+  </button>
+
+  <div className="flex flex-col gap-4">
+    {itinerary.map((item, index) => {
+      const isOpen = openIndex.includes(index);
+      return (
+        <div
+          key={index}
+          className="border border-gray-200 rounded-xl shadow-sm bg-white"
+        >
+          <button
+            onClick={() => toggleAccordion(index)}
+            className="w-full flex justify-between gap-2 items-start text-left px-4 py-4 hover:bg-gray-50 rounded-t-xl"
+          >
+            <span className="flex-1 text-base md:text-lg font-semibold text-gray-800 leading-snug">
+              {item.title}
+            </span>
+            <span className="pt-1">
+              {isOpen ? (
+                <FaChevronUp className="text-orange-500" />
+              ) : (
+                <FaChevronDown className="text-orange-500" />
+              )}
+            </span>
+          </button>
+          {isOpen && (
+            <div className="px-5 pb-4 text-gray-600 whitespace-pre-line text-sm md:text-base">
+              {item.content}
+            </div>
+          )}
+        </div>
+      );
+    })}
+  </div>
+</div>
+
         </div>
 
         {/* Sticky Booking Form */}

@@ -126,7 +126,7 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
         </p>
       </section> */}
 
-      <section className="max-w-6xl mx-auto px-6 py-14">
+      {/* <section className="max-w-6xl mx-auto px-6 py-14">
         <div className="w-full space-y-6 text-left">
           <h2 className="text-3xl font-semibold mb-2 text-gray-800">
             Authentic Homestays in Uttarakhand
@@ -202,6 +202,83 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
               complete Himalayan experience.
             </p>
           </div>
+        </div>
+      </section> */}
+      <section className="w-full bg-white px-4 py-16 sm:px-8 lg:px-20 xl:px-40">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Authentic Homestays in Uttarakhand
+          </h2>
+          <p className="text-xl font-semibold text-orange-600 mb-6">
+            Experience Local Living in the Heart of the Himalayas
+          </p>
+
+          <p className="text-gray-700 text-lg mb-4">
+            At Uttarakhand Treks, your journey doesn’t end when the trek does—it
+            deepens. Our carefully selected homestays in Uttarakhand offer more
+            than just a place to rest—they offer a genuine Himalayan experience.
+          </p>
+          <p className="text-gray-700 text-lg mb-6">
+            Whether you’re in a remote mountain village, sipping tea on a porch
+            overlooking the valley, or sharing stories around a bonfire, staying
+            with us means you’re part of the community.
+          </p>
+
+          <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+            Why Choose a Homestay in Uttarakhand?
+          </h3>
+
+          <ul className="space-y-4 text-gray-700 text-base mb-8">
+            <li>
+              🏡 <strong>Authentic Village Experience:</strong> Live in
+              traditional Kumaoni or Garhwali homes with natural materials and
+              warm aesthetics.
+            </li>
+            <li>
+              🍲 <strong>Home-Cooked Local Cuisine:</strong> Enjoy mandua rotis,
+              pahadi dal, buransh juice—farm-to-table meals made with love.
+            </li>
+            <li>
+              🧡 <strong>Cultural Immersion:</strong> Join local festivals, folk
+              music, and explore traditions and handicrafts.
+            </li>
+            <li>
+              🏞️ <strong>Comfort Meets Simplicity:</strong> Cozy rooms, basic
+              amenities, and warm hospitality make your stay peaceful and
+              meaningful.
+            </li>
+          </ul>
+
+          <ul className="space-y-4 text-gray-700 text-base mb-8">
+            <li>
+              🌵 <strong>Riverside Homestay – Bhagirathi Valley:</strong> A
+              retreat by the river with orchards and terraced fields—perfect for
+              families.
+            </li>
+            <li>
+              🌲 <strong>Forest-Edge Cottage – Binsar:</strong> Live amidst
+              forests with bird watching and nature trails—a peaceful gem.
+            </li>
+          </ul>
+
+          <p className="text-gray-800 text-lg font-semibold mb-2">
+            More Than Just a Stay—It’s a Connection
+          </p>
+          <p className="text-gray-700 text-base mb-6">
+            When you choose to stay with us in Uttarakhand, you support local
+            families, help preserve mountain culture, and become part of a
+            sustainable travel movement. Our homestays offer a rare blend of
+            warmth, wisdom, and wonder—exactly what travel should be.
+          </p>
+
+          <p className="text-gray-800 font-semibold text-lg mb-2">
+            Book Your Homestay in Uttarakhand Today
+          </p>
+          <p className="text-gray-700 text-base">
+            Get in touch to check availability, build your customized stay
+            itinerary, or combine your trek with a village retreat for a
+            complete Himalayan experience.
+          </p>
         </div>
       </section>
 
@@ -320,4 +397,3 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
 };
 
 export default StayWithUs;
-

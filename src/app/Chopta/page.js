@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import Image from "next/image";
@@ -43,7 +41,8 @@ export default function ChoptaTungnathTrek() {
     name: "",
     phone: "",
     email: "",
-    tripName: "Chopta Tungnath Chandrashila Trek – Mini Himalayan Summit Adventure",
+    tripName:
+      "Chopta Tungnath Chandrashila Trek – Mini Himalayan Summit Adventure",
     travellers: "",
   });
 
@@ -71,7 +70,9 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
 
 📌 Please reach out for confirmation and further details.`;
 
-    const whatsappURL = `https://wa.me/6239092532?text=${encodeURIComponent(message)}`;
+    const whatsappURL = `https://wa.me/6239092532?text=${encodeURIComponent(
+      message
+    )}`;
     window.open(whatsappURL, "_blank");
   };
 
@@ -80,32 +81,39 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
       {/* Image Gallery */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 mt-8">
         <div className="flex flex-col gap-2 sm:hidden">
-          {[1, 2, 3, 4].map((i) => (
-            i % 2 === 1 && (
-              <div className="flex gap-2" key={i}>
-                {[i, i + 1].map((j) => (
-                  destinations[j] && (
-                    <div key={j} className="w-1/2 h-[200px] relative rounded-xl overflow-hidden shadow-md">
-                      <Image
-                        src={destinations[j].src}
-                        alt={`Chopta Trek ${j + 1}`}
-                        fill
-                        className="object-cover"
-                        sizes="50vw"
-                      />
-                    </div>
-                  )
-                ))}
-              </div>
-            )
-          ))}
+          {[1, 2, 3, 4].map(
+            (i) =>
+              i % 2 === 1 && (
+                <div className="flex gap-2" key={i}>
+                  {[i, i + 1].map(
+                    (j) =>
+                      destinations[j] && (
+                        <div
+                          key={j}
+                          className="w-1/2 h-[200px] relative rounded-xl overflow-hidden shadow-md"
+                        >
+                          <Image
+                            src={destinations[j].src}
+                            alt={`Chopta Trek ${j + 1}`}
+                            fill
+                            className="object-cover"
+                            sizes="50vw"
+                          />
+                        </div>
+                      )
+                  )}
+                </div>
+              )
+          )}
         </div>
 
         <div className="hidden sm:grid grid-cols-2 md:grid-cols-3 gap-2 auto-rows-[250px]">
           {destinations.map((item, index) => (
             <div
               key={index}
-              className={`relative w-full h-full rounded-xl overflow-hidden group shadow-md ${item.gridClass || ""}`}
+              className={`relative w-full h-full rounded-xl overflow-hidden group shadow-md ${
+                item.gridClass || ""
+              }`}
             >
               <div className="w-full h-full transition-transform duration-500 ease-in-out transform group-hover:scale-110">
                 <Image
@@ -130,21 +138,37 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
           </h1>
 
           <div className="flex flex-wrap gap-4 mb-6 text-gray-600">
-            <div className="flex items-center gap-2"><FaRegClock className="text-orange-500" />2 Nights 3 Days</div>
-            <div className="flex items-center gap-2"><FaUsers className="text-orange-500" />Easy & Family Friendly</div>
-            <div className="flex items-center gap-2"><FaUndo className="text-orange-500" />Free Cancellation: Upto 5 Days</div>
+            <div className="flex items-center gap-2">
+              <FaRegClock className="text-orange-500" />2 Nights 3 Days
+            </div>
+            <div className="flex items-center gap-2">
+              <FaUsers className="text-orange-500" />
+              Easy & Family Friendly
+            </div>
+            <div className="flex items-center gap-2">
+              <FaUndo className="text-orange-500" />
+              Free Cancellation: Upto 5 Days
+            </div>
           </div>
 
-          <h2 className="text-xl font-semibold text-gray-700 mb-2">About this Trek</h2>
+          <h2 className="text-xl font-semibold text-gray-700 mb-2">
+            About this Trek
+          </h2>
           <p className="text-gray-600 mb-4">
-            The Chopta Tungnath Chandrashila Trek is one of the most accessible and rewarding Himalayan adventures.
-            Explore the world’s highest Shiva temple at Tungnath and summit Chandrashila for 360° views of the Garhwal Himalayas.
+            The Chopta Tungnath Chandrashila Trek is one of the most accessible
+            and rewarding Himalayan adventures. Explore the world’s highest
+            Shiva temple at Tungnath and summit Chandrashila for 360° views of
+            the Garhwal Himalayas.
           </p>
 
-          <h2 className="text-xl font-semibold text-gray-700 mb-2">Highlights</h2>
+          <h2 className="text-xl font-semibold text-gray-700 mb-2">
+            Highlights
+          </h2>
           <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
             <li>Visit the ancient Tungnath Temple.</li>
-            <li>Climb the Chandrashila summit for breathtaking sunrise views.</li>
+            <li>
+              Climb the Chandrashila summit for breathtaking sunrise views.
+            </li>
             <li>Ideal for beginners, families, and solo travelers.</li>
             <li>Scenic forest trails through Kedarnath Wildlife Sanctuary.</li>
             <li>Short and budget-friendly Himalayan trek.</li>
@@ -167,7 +191,7 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
               <li>Anything not mentioned above</li>
             </ul>
           </div>
-
+          {/* 
           <div className="my-8">
             <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800">Itinerary</h2>
             <button
@@ -205,6 +229,56 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
                 );
               })}
             </div>
+          </div> */}
+          <div className="my-8">
+            <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800">
+              Itinerary
+            </h2>
+            <button
+              onClick={() =>
+                setOpenIndex(
+                  openIndex.length === itinerary.length
+                    ? []
+                    : itinerary.map((_, i) => i)
+                )
+              }
+              className="mb-4 text-orange-600 font-medium hover:underline"
+            >
+              {openIndex.length === itinerary.length ? "Close All" : "Open All"}
+            </button>
+
+            <div className="flex flex-col gap-4">
+              {itinerary.map((item, index) => {
+                const isOpen = openIndex.includes(index);
+                return (
+                  <div
+                    key={index}
+                    className="border border-gray-200 rounded-xl shadow-sm bg-white"
+                  >
+                    <button
+                      onClick={() => toggleAccordion(index)}
+                      className="w-full flex items-start justify-between px-4 py-4 text-left hover:bg-gray-50 rounded-t-xl"
+                    >
+                      <span className="flex-1 text-base md:text-lg font-semibold text-gray-800 leading-snug">
+                        {item.title}
+                      </span>
+                      <span className="pl-3 pt-1">
+                        {isOpen ? (
+                          <FaChevronUp className="text-orange-500" />
+                        ) : (
+                          <FaChevronDown className="text-orange-500" />
+                        )}
+                      </span>
+                    </button>
+                    {isOpen && (
+                      <div className="px-5 pb-4 text-gray-600 whitespace-pre-line text-sm md:text-base">
+                        {item.content}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
 
@@ -219,9 +293,13 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
                 Weekend Departure Available
               </div> */}
               <div className="text-xl font-bold text-red-600 mb-1">
-                Starting From: <span className="text-gray-600">₹7,999</span>/Per Person
+                Starting From: <span className="text-gray-600">₹7,999</span>/Per
+                Person
               </div>
-              <div className="text-sm text-green-600 font-semibold mb-2"> +5% gst</div>
+              <div className="text-sm text-green-600 font-semibold mb-2">
+                {" "}
+                +5% gst
+              </div>
 
               <form onSubmit={handleSubmit} className="space-y-3">
                 <input
@@ -284,5 +362,3 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
     </>
   );
 }
-
-

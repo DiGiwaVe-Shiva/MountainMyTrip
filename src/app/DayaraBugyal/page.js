@@ -507,7 +507,7 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
               <li>Anything not mentioned</li>
             </ul>
           </div>
-
+{/* 
           <div className="my-8">
             <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800">
               Itinerary
@@ -555,7 +555,58 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
                 );
               })}
             </div>
-          </div>
+          </div> */}
+          <div className="my-8">
+  <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800">
+    Itinerary
+  </h2>
+
+  <button
+    onClick={() =>
+      setOpenIndex(
+        openIndex.length === itinerary.length
+          ? []
+          : itinerary.map((_, i) => i)
+      )
+    }
+    className="mb-4 text-orange-600 font-medium hover:underline"
+  >
+    {openIndex.length === itinerary.length ? "Close All" : "Open All"}
+  </button>
+
+  <div className="flex flex-col gap-4">
+    {itinerary.map((item, index) => {
+      const isOpen = openIndex.includes(index);
+      return (
+        <div key={index} className="border rounded-xl shadow bg-white">
+          <button
+            onClick={() => toggleAccordion(index)}
+            className="w-full flex justify-between items-start gap-2 px-5 py-4 hover:bg-gray-50 text-left rounded-t-xl"
+          >
+            <span className="text-base md:text-lg font-semibold text-gray-800 flex-1">
+              {item.title}
+            </span>
+            <span className="pt-1">
+              {isOpen ? (
+                <FaChevronUp className="text-orange-500" />
+              ) : (
+                <FaChevronDown className="text-orange-500" />
+              )}
+            </span>
+          </button>
+
+          {isOpen && (
+            <div className="px-5 pb-5 pt-2 text-gray-700 text-sm md:text-base leading-relaxed whitespace-pre-line">
+              {item.content}
+            </div>
+          )}
+        </div>
+      );
+    })}
+  </div>
+</div>
+
+          
         </div>
 
         {/* Booking Form */}

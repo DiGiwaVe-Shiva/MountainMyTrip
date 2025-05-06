@@ -454,7 +454,7 @@ const itinerary = [
 • Overnight stay in guesthouse at Sankri.`,
   },
   {
-    title: "Day 2: Sankri to Taluka and Trek to Seema",
+    title: "Day 2:Sankri to Taluka & Trek to Seema",
     content: `• Drive to Taluka (12 km), then trek to Seema (12 km).
 • Trail follows Supin River through forests and villages.
 • Overnight stay in tents at Seema.`,

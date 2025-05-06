@@ -118,29 +118,48 @@ import "swiper/css";
 
 const teamMembers = [
   {
-    name: "Avtar Panwar",
+    name: "Vikash Panwar",
     role: "Founder & CEO",
-    bio: "Visionary trekker, passionate about creating unforgettable experiences in the Himalayas.",
-    image: "/Avtar.webp",
+    bio: "Leads the vision and operations behind every Himalayan adventure.",
+    image: "/vikash.jpg",
+  },
+  {
+    name: "Akhil Panwar",
+    role: "Trek Leader",
+    bio: "Expert trekker who ensures every journey is adventurous, safe, and memorable.",
+    image: "/1.webp",
   },
   {
     name: "Deepika",
-    role: "Trek Leader",
-    bio: "Certified mountaineer with a love for nature and guiding adventurers safely.",
+    role: "Assistant Trek Leader",
+    bio: "Certified mountaineer committed to guiding and inspiring trekkers through every step.",
     image: "/Dipika.webp",
   },
   {
     name: "Deepak Singh",
     role: "Guide",
-    bio: "Manages logistics with precision and ensures every trek is smooth and safe.",
+    bio: "Experienced guide focused on flawless logistics and trek safety.",
     image: "/Deepak.webp",
   },
   {
-    name: "Rohit Verma",
-    role: "Marketing & Outreach",
-    bio: "Crafts compelling campaigns to bring trekking adventures to the world.",
+    name: "Shubham Panwar",
+    role: "Marketing Manager",
+    bio: "Drives marketing efforts to bring treks to passionate explorers.",
     image: "/Slot.webp",
   },
+  {
+    name: "Kapil Rana",
+    role: "Cook",
+    bio: "Keeps trekkers energized with delicious and nourishing meals on every adventure.",
+    image: "/Kapil.jpg",
+  },
+  {
+    name: "Pardeep Sherpa",
+    role: "High Altitude Porter",
+    bio: "Strong and reliable, he supports high-altitude treks with unmatched endurance.",
+    image: "/deal 103.jpg",
+  }
+  
 ];
 
 const TeamCarousel = () => {

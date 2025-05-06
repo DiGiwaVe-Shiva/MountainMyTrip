@@ -1125,7 +1125,7 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
             </ul>
           </div>
 
-          <div className="my-8">
+          {/* <div className="my-8">
             <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800">Itinerary</h2>
             <button
               onClick={() =>
@@ -1162,7 +1162,50 @@ ${formData.email ? `*Email:* ${formData.email}\n` : ""}
                 );
               })}
             </div>
-          </div>
+          </div> */}
+          <div className="my-8">
+  <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800">Itinerary</h2>
+  <button
+    onClick={() =>
+      setOpenIndex(openIndex.length === itinerary.length ? [] : itinerary.map((_, i) => i))
+    }
+    className="mb-4 text-orange-600 font-medium hover:underline"
+  >
+    {openIndex.length === itinerary.length ? "Close All" : "Open All"}
+  </button>
+
+  <div className="flex flex-col gap-4">
+    {itinerary.map((item, index) => {
+      const isOpen = openIndex.includes(index);
+      return (
+        <div
+          key={index}
+          className="w-full border border-gray-200 rounded-xl shadow-sm bg-white"
+        >
+          <button
+            onClick={() => toggleAccordion(index)}
+            className="w-full flex justify-between items-center px-5 py-4 rounded-t-xl hover:bg-gray-50"
+          >
+            <span className="text-base md:text-lg font-semibold text-left text-gray-800">
+              {item.title}
+            </span>
+            {isOpen ? (
+              <FaChevronUp className="text-orange-500" />
+            ) : (
+              <FaChevronDown className="text-orange-500" />
+            )}
+          </button>
+          {isOpen && (
+            <div className="px-5 pb-5 pt-2 text-gray-700 text-sm md:text-base whitespace-pre-line leading-relaxed">
+              {item.content}
+            </div>
+          )}
+        </div>
+      );
+    })}
+  </div>
+</div>
+
         </div>
 
         {/* Right Booking Form */}

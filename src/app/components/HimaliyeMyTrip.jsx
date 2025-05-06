@@ -24,7 +24,7 @@ const tourPackages = [
     days: 6,
     price: "9,499",
     discount: "10%",
-    tag: "Seasonal Monsoon Trek",
+    tag: "Winter Special Trek",
     image: "/deal47.webp",
     link: "/GulabiKantha",
   },
