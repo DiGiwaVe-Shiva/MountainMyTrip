@@ -219,7 +219,7 @@ ${email ? `*Email:* ${email}\n` : ""}
           </div>
 
           {/* Itinerary Accordion */}
-          <div className="my-8">
+          {/* <div className="my-8">
             <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800">
               Itinerary
             </h2>
@@ -265,6 +265,56 @@ ${email ? `*Email:* ${email}\n` : ""}
                   </div>
                 );
               })}
+            </div>
+          </div> */}
+          <div className="my-8 px-2">
+            <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800 text-center md:text-left">
+              Itinerary
+            </h2>
+
+            <div className="flex justify-center md:justify-start">
+              <button
+                onClick={() =>
+                  setOpenIndex(
+                    openIndex.length === itinerary.length
+                      ? []
+                      : itinerary.map((_, i) => i)
+                  )
+                }
+                className="mb-4 text-orange-600 font-medium hover:underline"
+              >
+                {openIndex.length === itinerary.length
+                  ? "Close All"
+                  : "Open All"}
+              </button>
+            </div>
+
+            <div className="flex flex-col gap-4">
+              {itinerary.map((item, index) => (
+                <div
+                  key={index}
+                  className="w-full border border-gray-200 rounded-xl shadow-sm bg-white"
+                >
+                  <button
+                    onClick={() => toggleAccordion(index)}
+                    className="w-full px-4 py-4 flex justify-between items-center rounded-xl hover:bg-gray-100"
+                  >
+                    <span className="text-base md:text-lg font-semibold text-gray-800 text-left">
+                      {item.title}
+                    </span>
+                    {openIndex.includes(index) ? (
+                      <FaChevronUp className="text-orange-500" />
+                    ) : (
+                      <FaChevronDown className="text-orange-500" />
+                    )}
+                  </button>
+                  {openIndex.includes(index) && (
+                    <div className="px-4 py-3 md:px-6 text-gray-600 whitespace-pre-line text-sm md:text-base">
+                      {item.content}
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </div>
