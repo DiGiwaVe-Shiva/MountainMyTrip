@@ -374,26 +374,26 @@ const destinations = [
 
 const itinerary = [
   {
-    title: "Day 1:Arrival in  Mhedesh Village",
-    content: `• Travel from Dehradun to  Mheesh village, covering approximately 165 km .\n• The journey takes around 6–7 hours by vehicle. \n• Bhatwari is located at an altitude of 2,400 meters in the Himalayan region. \n• Check into a local homestay or campsite and rest.\n• Explore nearby sites like Bhairav Temple and the Kalp Kedar Temple in the evening. \n• The Gulabi Kancha Trek begins from here and spans 3 days.`,
+    title: "Day 1: Arrival in Mhedesh Village",
+    content: `• Travel from Dehradun to Mhedesh village, covering approximately 165 km.\n• The journey takes around 6–7 hours by vehicle.\n• Bhatwari is located at an altitude of 2,400 meters in the Himalayan region.\n• Check into a local homestay or campsite and rest.\n• Explore nearby sites like Bhairav Temple and the Kalp Kedar Temple in the evening.\n• The Gulabi Kancha Trek begins from here and spans 3 days.`,
   },
   {
-    title: "Day 2:Trek from Mhedesh Village to Sima Thach Gulabi Kancha Trek",
-    content: `• Begin your trek from Mhedesh village to Sima Thach, covering approximately 7 km.\n• The trail takes around 5–6 hours to complete.\n• Gradual ascent through forest and alpine terrain.\n• Reach Sima Thach, located at an altitude of 3,500 meters.\n• Camp overnight at this scenic high-altitude meadow. `,
+    title:
+      "Day 2: Trek from Mhedesh Village to Sima Thach (Gulabi Kancha Trek)",
+    content: `• Begin your trek from Mhedesh village to Sima Thach, covering approximately 7 km.\n• The trail takes around 5–6 hours to complete.\n• Gradual ascent through forest and alpine terrain.\n• Reach Sima Thach, located at an altitude of 3,500 meters.\n• Camp overnight at this scenic high-altitude meadow.`,
   },
   {
-    title: "Day 3:Trek from Sima Thach to Gulabi Kancha Summit",
-    content: `• Start your ascent from Sima Thach to Gulabi Kancha.\n• Trek distance is approximately 5 km. \n• The route takes around 4–5 hours to reach the summit. \n• Gulabi Kancha is located at an altitude of around 4,000 meters. `,
+    title: "Day 3: Trek from Sima Thach to Gulabi Kancha Summit",
+    content: `• Start your ascent from Sima Thach to Gulabi Kancha.\n• Trek distance is approximately 5 km.\n• The route takes around 4–5 hours to reach the summit.\n• Gulabi Kancha is located at an altitude of around 4,000 meters.`,
   },
   {
-    title: "Day 4:Return Trek from Sima Thach to Mhedesh ",
-    content: `• Begin your descent from Sima Thach to Mhedesh village.\n• The trek covers approximately 7 km. \n• Enjoy the scenic downhill trail and reach Mhedesh by afternoon.`,
+    title: "Day 4: Return Trek from Sima Thach to Mhedesh",
+    content: `• Begin your descent from Sima Thach to Mhedesh village.\n• The trek covers approximately 7 km.\n• Enjoy the scenic downhill trail and reach Mhedesh by afternoon.`,
   },
   {
-    title: "Day 5:Drive Back to Dehradun",
-    content: `•  Depart from Mhedesh village for Dehradun by vehicle.\n• You are expected to arrive in Dehradun by 5 PM.`,
+    title: "Day 5: Drive Back to Dehradun",
+    content: `• Depart from Mhedesh village for Dehradun by vehicle.\n• You are expected to arrive in Dehradun by 5 PM.`,
   },
- 
 ];
 
 export default function GulabiKanthaTrek() {
@@ -565,7 +565,7 @@ ${email ? `*Email:* ${email}\n` : ""}
           </div>
 
           {/* Itinerary Accordion */}
-          <div className="my-8">
+          {/* <div className="my-8">
             <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800 ">
               Itinerary
             </h2>
@@ -609,7 +609,55 @@ ${email ? `*Email:* ${email}\n` : ""}
                 </div>
               ))}
             </div>
+          </div> */}
+           <div className="my-8 px-2 md:px-4">
+      <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800 text-center md:text-left">
+        Itinerary
+      </h2>
+
+      <div className="flex justify-center md:justify-start">
+        <button
+          onClick={() =>
+            setOpenIndex(
+              openIndex.length === itinerary.length
+                ? []
+                : itinerary.map((_, i) => i)
+            )
+          }
+          className="mb-4 text-orange-600 font-medium hover:underline"
+        >
+          {openIndex.length === itinerary.length ? "Close All" : "Open All"}
+        </button>
+      </div>
+
+      <div className="flex flex-col gap-4">
+        {itinerary.map((item, index) => (
+          <div
+            key={index}
+            className="w-full border border-gray-200 rounded-xl shadow-sm bg-white"
+          >
+            <button
+              onClick={() => toggleAccordion(index)}
+              className="w-full px-4 py-4 flex justify-between items-center rounded-xl hover:bg-gray-100"
+            >
+              <span className="text-base md:text-lg font-semibold text-gray-800 text-left">
+                {item.title}
+              </span>
+              {openIndex.includes(index) ? (
+                <FaChevronUp className="text-orange-500" />
+              ) : (
+                <FaChevronDown className="text-orange-500" />
+              )}
+            </button>
+            {openIndex.includes(index) && (
+              <div className="px-4 py-3 md:px-6 text-gray-600 whitespace-pre-line text-sm md:text-base">
+                {item.content}
+              </div>
+            )}
           </div>
+        ))}
+      </div>
+    </div>
         </div>
 
         {/* Booking Form */}
@@ -619,9 +667,7 @@ ${email ? `*Email:* ${email}\n` : ""}
               <h3 className="text-lg font-semibold text-gray-800 mb-1">
                 Book Your Trek Today
               </h3>
-              {/* <div className="text-sm text-green-600 font-bold mb-2">
-                Limited Slots Available
-              </div> */}
+              
               <div className="text-xl font-bold text-red-600 mb-4">
                 Starting From: <span className="text-gray-600">₹9,499</span>/
                 Person
