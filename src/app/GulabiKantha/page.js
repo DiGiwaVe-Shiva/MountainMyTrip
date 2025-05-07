@@ -374,29 +374,26 @@ const destinations = [
 
 const itinerary = [
   {
-    title: "Day 1: Arrival and Trek to Basecamp",
-    content: `• Meet at the base location and get briefed by the trek leader.\n• Light trek to the basecamp surrounded by lush greenery.\n• Settle in for the night amidst the serene Himalayan foothills.`,
+    title: "Day 1:Arrival in  Mhedesh Village",
+    content: `• Travel from Dehradun to  Mheesh village, covering approximately 165 km .\n• The journey takes around 6–7 hours by vehicle. \n• Bhatwari is located at an altitude of 2,400 meters in the Himalayan region. \n• Check into a local homestay or campsite and rest.\n• Explore nearby sites like Bhairav Temple and the Kalp Kedar Temple in the evening. \n• The Gulabi Kancha Trek begins from here and spans 3 days.`,
   },
   {
-    title: "Day 2: Trek to Gulabi Kantha",
-    content: `• Hike through pine-oak forests.\n• Stunning Himalayan views.\n• Meadows dotted with wildflowers.`,
+    title: "Day 2:Trek from Mhedesh Village to Sima Thach Gulabi Kancha Trek",
+    content: `• Begin your trek from Mhedesh village to Sima Thach, covering approximately 7 km.\n• The trail takes around 5–6 hours to complete.\n• Gradual ascent through forest and alpine terrain.\n• Reach Sima Thach, located at an altitude of 3,500 meters.\n• Camp overnight at this scenic high-altitude meadow. `,
   },
   {
-    title: "Day 3: Explore & Return",
-    content: `• Explore Gulabi Kantha area.\n• Descend to basecamp.\n• Depart with lasting memories.`,
+    title: "Day 3:Trek from Sima Thach to Gulabi Kancha Summit",
+    content: `• Start your ascent from Sima Thach to Gulabi Kancha.\n• Trek distance is approximately 5 km. \n• The route takes around 4–5 hours to reach the summit. \n• Gulabi Kancha is located at an altitude of around 4,000 meters. `,
   },
   {
-    title: "Day 4: Exploration and Return",
-    content: `• Morning exploration of Gulabi Kantha peak area.\n• Begin descent back to basecamp.\n• Share experiences and depart with memories.`,
+    title: "Day 4:Return Trek from Sima Thach to Mhedesh ",
+    content: `• Begin your descent from Sima Thach to Mhedesh village.\n• The trek covers approximately 7 km. \n• Enjoy the scenic downhill trail and reach Mhedesh by afternoon.`,
   },
   {
-    title: "Day 5: Basecamp to Village",
-    content: `• Trek down to nearby village.\n• Interact with locals & enjoy traditional food.\n• Overnight in homestay or camp.`,
+    title: "Day 5:Drive Back to Dehradun",
+    content: `•  Depart from Mhedesh village for Dehradun by vehicle.\n• You are expected to arrive in Dehradun by 5 PM.`,
   },
-  {
-    title: "Day 6: Cultural Walk & Leisure",
-    content: `• Easy walk around village area.\n• Explore local lifestyle & customs.\n• Relax with scenic sunset views.`,
-  },
+ 
 ];
 
 export default function GulabiKanthaTrek() {
@@ -463,26 +460,27 @@ ${email ? `*Email:* ${email}\n` : ""}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 mt-8">
         {/* Mobile view */}
         <div className="flex flex-col gap-2 sm:hidden">
-          {[1, 2, 3, 4].map((i, idx) => (
-            idx % 2 === 0 && (
-              <div className="flex gap-2" key={i}>
-                {[i, i + 1].map((j) => (
-                  <div
-                    key={j}
-                    className="w-1/2 h-[200px] relative rounded-xl overflow-hidden shadow-md"
-                  >
-                    <Image
-                      src={destinations[j].src}
-                      alt={`MountainMyTrip Vinayak Top ${j + 1}`}
-                      fill
-                      className="object-cover"
-                      sizes="50vw"
-                    />
-                  </div>
-                ))}
-              </div>
-            )
-          ))}
+          {[1, 2, 3, 4].map(
+            (i, idx) =>
+              idx % 2 === 0 && (
+                <div className="flex gap-2" key={i}>
+                  {[i, i + 1].map((j) => (
+                    <div
+                      key={j}
+                      className="w-1/2 h-[200px] relative rounded-xl overflow-hidden shadow-md"
+                    >
+                      <Image
+                        src={destinations[j].src}
+                        alt={`MountainMyTrip Vinayak Top ${j + 1}`}
+                        fill
+                        className="object-cover"
+                        sizes="50vw"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )
+          )}
         </div>
 
         {/* Desktop view */}
@@ -490,7 +488,9 @@ ${email ? `*Email:* ${email}\n` : ""}
           {destinations.map((item, index) => (
             <div
               key={index}
-              className={`relative w-full h-full rounded-xl overflow-hidden group shadow-md ${item.gridClass || ""}`}
+              className={`relative w-full h-full rounded-xl overflow-hidden group shadow-md ${
+                item.gridClass || ""
+              }`}
             >
               <Image
                 src={item.src}
@@ -537,7 +537,9 @@ ${email ? `*Email:* ${email}\n` : ""}
             views, making it a paradise for nature lovers and adventurers alike.
           </p>
 
-          <h2 className="text-xl font-semibold text-gray-700 mb-2">Highlights</h2>
+          <h2 className="text-xl font-semibold text-gray-700 mb-2">
+            Highlights
+          </h2>
           <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
             <li>Unexplored beauty with serene Himalayan landscapes.</li>
             <li>Panoramic views of Bandarpoonch, Black Peak, and more.</li>
@@ -569,7 +571,11 @@ ${email ? `*Email:* ${email}\n` : ""}
             </h2>
             <button
               onClick={() =>
-                setOpenIndex(openIndex.length === itinerary.length ? [] : itinerary.map((_, i) => i))
+                setOpenIndex(
+                  openIndex.length === itinerary.length
+                    ? []
+                    : itinerary.map((_, i) => i)
+                )
               }
               className="mb-4 text-orange-600 font-medium hover:underline"
             >
@@ -687,4 +693,3 @@ ${email ? `*Email:* ${email}\n` : ""}
     </>
   );
 }
-

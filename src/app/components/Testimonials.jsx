@@ -58,7 +58,7 @@ const Testimonials = () => {
           {/* <span className="absolute text-6xl md:text-5xl opacity-10 top-[-20px] left-1/2 transform -translate-x-1/2 z-0">
             Testimonials
           </span> */}
-          <p className="text-xl md:py-2 md:text-2xl text-orange-500 font-semibold uppercase tracking-wide">
+          <p className="text-xl md:py-2 md:text-2xl text-orange-500 font-bold uppercase tracking-wide">
             Testimonials
           </p>
           <span className="text-black  text-2xl sm:text-3xl md:text-4xl font-bold relative z-10">
