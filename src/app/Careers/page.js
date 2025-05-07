@@ -588,7 +588,7 @@ ${email ? `*Email:* ${email}\n` : ""}
       {/* Hero Section */}
       <div
         className="bg-cover mt-12 bg-center h-[400px] flex items-center justify-center text-white text-center shadow-lg"
-        style={{ backgroundImage: "url('deal112.webp')" }}
+        style={{ backgroundImage: "url('deal2.webp')" }}
       >
         <div className="bg-opacity-50 p-12 rounded-xl">
           <h1 className="text-4xl sm:text-5xl text-white font-extrabold drop-shadow-lg">
