@@ -22,105 +22,75 @@ const destinations = [
 
 const itinerary = [
   {
-    title: "Day 1: Dehradun to Sankri (8-9 hrs drive)",
-    content: `• Scenic drive through Mussoorie and Purola.\n• Arrive at Sankri – a quaint village in Uttarkashi.\n• Check-in to guesthouse and briefing over dinner.`,
+    title: "Day 1:Travel from Dehradun to Mhedesh Village",
+    content: `• Depart from Dehradun to Mhedesh Village, which is approximately 165 kilometers away.\n• The drive will take around 6–7 hours via scenic mountain roads.\n• Mhedesh village is located at an altitude of 2,400 meters above sea level. \n• Upon arrival, settle into your homestay or campsite accommodation.\n• Visit local attractions like Bhairav Temple and Kalp Kedar Temple. \n• The journey will start the next morning from Kalp Kedar. `,
   },
   {
-    title: "Day 2: Sankri to Taluka and trek to Gangaad",
-    content: `• Drive to Taluka, trek starts here (approx. 10 km).\n• Walk through forests and riverside trails to reach Gangaad village.\n• Stay overnight in camps or homestay.`,
+    title: "Day 2: Trek begins from Suralin Waterfall",
+    content: `• The trek starts from here after breakfast.\n• A 5 km trek will take you to the Suralin Waterfall area.\n• Camps will be set up near the waterfall.\n• The altitude here is approximately 3,200 meters.\n• Enjoy various activities like photography, team games, and nature exploration.`,
+  },
+
+  {
+    title: "Day 3: Waterfall to Bugyal (Meadow) Campsite",
+    content: `• Trek from the waterfall campsite to the bugyal (meadow).\n• Trail is scenic and passes through forest patches.\n• Approx. 6 km trek with beautiful surroundings.\n• Overnight stay in tents at the meadow.`,
   },
   {
-    title: "Day 3: Gangaad to Dinara Top and back to Gangaad",
-    content: `• Early start for summit push to Dinara Top.\n• Witness breathtaking views of Swargarohini range.\n• Return to Gangaad for overnight stay.`,
+    title: "Day 4: Sunset Point Experience",
+    content: `• Visit sunset point near the meadow campsite.\n• Experience a breathtaking view of the setting sun over the Himalayas.`,
   },
+  // {
+  //   title: "Day :Morning View",
+  //   content: `• Enjoy stunning sunrise and panoramic mountain views.\n• Peaks like Bandarpoonch and Black Peak (Kala Nag) are visible.\n• The campsite is located at approx. 3500 feet elevation.`,
+  // },
   {
-    title: "Day 4: Gangaad to Taluka and drive to Dehradun",
-    content: `• Trek back to Taluka and drive to Sankri.\n• Continue journey back to Dehradun.\n• Trip ends with scenic memories.`,
+    title: "Day 5: Return Trek to Mhedesh Village",
+    content: `• Trek back from meadow campsite to Mhedesh Village.\n• Drive back to Dehradun.\n• Trip concludes with unforgettable mountain memories.`,
   },
 ];
 
 export default function DinaraTopTrek() {
-//   const [openIndex, setOpenIndex] = useState([]);
-//   const [formData, setFormData] = useState({
-//     name: "",
-//     phone: "",
-//     email: "",
-//     tripName: "Dinara Top Trek – Hidden Gem of Uttarakhand",
-//     travellers: "",
-//   });
+  const [openIndex, setOpenIndex] = useState([]);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    tripName: "DinaraTop Trek",
+    travellers: "",
+  });
 
-//   const toggleAccordion = (index) => {
-//     if (openIndex.includes(index)) {
-//       setOpenIndex(openIndex.filter((i) => i !== index));
-//     } else {
-//       setOpenIndex([...openIndex, index]);
-//     }
-//   };
+  const toggleAccordion = (index) => {
+    setOpenIndex((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+    );
+  };
 
-//   const handleChange = (e) => {
-//     setFormData({ ...formData, [e.target.name]: e.target.value });
-//   };
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     const message = `*New Trip Booking Request* 🏞️✨
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-// *Name:* ${formData.name}
-// *Phone:* ${formData.phone}
-// ${formData.email ? `*Email:* ${formData.email}\n` : ""}
-// *Trip:* ${formData.tripName}
-// *No. of Travellers:* ${formData.travellers}
+    const { name, phone, email, tripName, travellers } = formData;
 
-// 📌 Please reach out for confirmation and further details.`;
+    // Phone validation: Indian 10-digit starting from 6–9
+    const phoneRegex = /^[6-9]\d{9}$/;
+    if (!phoneRegex.test(phone)) {
+      alert("Please enter a valid 10-digit Indian phone number.");
+      return;
+    }
 
-//     const whatsappURL = `https://wa.me/6239092532?text=${encodeURIComponent(
-//       message
-//     )}`;
-//     window.open(whatsappURL, "_blank");
-//   };
+    if (!name.trim()) {
+      alert("Please enter your full name.");
+      return;
+    }
 
-const [openIndex, setOpenIndex] = useState([]);
-const [formData, setFormData] = useState({
-  name: "",
-  phone: "",
-  email: "",
-  tripName: "DinaraTop Trek",
-  travellers: "",
-});
+    if (!travellers || isNaN(travellers) || Number(travellers) <= 0) {
+      alert("Please enter a valid number of travellers.");
+      return;
+    }
 
-const toggleAccordion = (index) => {
-  setOpenIndex((prev) =>
-    prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
-  );
-};
-
-const handleChange = (e) => {
-  setFormData({ ...formData, [e.target.name]: e.target.value });
-};
-
-const handleSubmit = (e) => {
-  e.preventDefault();
-
-  const { name, phone, email, tripName, travellers } = formData;
-
-  // Phone validation: Indian 10-digit starting from 6–9
-  const phoneRegex = /^[6-9]\d{9}$/;
-  if (!phoneRegex.test(phone)) {
-    alert("Please enter a valid 10-digit Indian phone number.");
-    return;
-  }
-
-  if (!name.trim()) {
-    alert("Please enter your full name.");
-    return;
-  }
-
-  if (!travellers || isNaN(travellers) || Number(travellers) <= 0) {
-    alert("Please enter a valid number of travellers.");
-    return;
-  }
-
-  const message = `*New Trek Booking Request* 🏔️✨
+    const message = `*New Trek Booking Request* 🏔️✨
 
 *Name:* ${name}
 *Phone:* ${phone}
@@ -130,12 +100,11 @@ ${email ? `*Email:* ${email}\n` : ""}
 
 📌 Please follow up for confirmation and details.`;
 
-  const whatsappURL = `https://wa.me/9123456156?text=${encodeURIComponent(
-    message
-  )}`; // Replace with your WhatsApp number
-  window.open(whatsappURL, "_blank");
-};
-
+    const whatsappURL = `https://wa.me/9123456156?text=${encodeURIComponent(
+      message
+    )}`; // Replace with your WhatsApp number
+    window.open(whatsappURL, "_blank");
+  };
 
   return (
     <>
@@ -289,7 +258,7 @@ ${email ? `*Email:* ${email}\n` : ""}
                       )}
                     </button>
                     {isOpen && (
-                      <div className="px-5 md:py-4 pb-4 text-gray-600 whitespace-pre-line text-sm md:text-base">
+                      <div className="px-4 md:py-4 pb-4 text-gray-600 whitespace-pre-line text-sm md:text-base">
                         {item.content}
                       </div>
                     )}
@@ -300,84 +269,13 @@ ${email ? `*Email:* ${email}\n` : ""}
           </div>
         </div>
 
-        {/* Right Booking Form */}
-        {/* <div className="w-full md:w-[350px] lg:w-[400px] flex-shrink-0">
+        <div className="w-full md:w-[350px] lg:w-[400px] flex-shrink-0">
           <div className="sticky top-24">
             <div className="bg-white shadow-lg rounded-2xl p-6 border">
               <h3 className="text-lg font-semibold text-gray-800 mb-1">
                 Book Your Trek Today
               </h3>
-              <div className="text-xl font-bold text-red-600 mb-1">
-                Starting From: <span className="text-gray-600">₹10,499</span>
-                /Per Person
-              </div>
-              <div className="text-sm text-green-600 font-semibold mb-2">
-                {" "}
-                +5% gst
-              </div>
 
-              <form onSubmit={handleSubmit} className="space-y-3">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Full Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
-                />
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone Number"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email (optional)"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
-                />
-                <input
-                  type="text"
-                  name="tripName"
-                  value={formData.tripName}
-                  readOnly
-                  className="w-full border rounded-lg px-4 py-2 bg-gray-100 text-gray-600"
-                />
-                <input
-                  type="number"
-                  name="travellers"
-                  placeholder="No. of Travellers"
-                  value={formData.travellers}
-                  onChange={handleChange}
-                  required
-                  className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400"
-                />
-                <button
-                  type="submit"
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-lg"
-                >
-                  Send Booking via WhatsApp
-                </button>
-              </form>
-            </div>
-          </div>
-        </div> */}
-         <div className="w-full md:w-[350px] lg:w-[400px] flex-shrink-0">
-          <div className="sticky top-24">
-            <div className="bg-white shadow-lg rounded-2xl p-6 border">
-              <h3 className="text-lg font-semibold text-gray-800 mb-1">
-                Book Your Trek Today
-              </h3>
-              {/* <div className="text-sm text-green-600 font-bold mb-2">
-                Limited Slots Available
-              </div> */}
               <div className="text-xl font-bold text-red-600 mb-4">
                 Starting From: <span className="text-gray-600">₹10,499</span>/
                 Person

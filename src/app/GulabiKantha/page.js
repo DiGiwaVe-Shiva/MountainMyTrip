@@ -610,7 +610,7 @@ ${email ? `*Email:* ${email}\n` : ""}
               ))}
             </div>
           </div> */}
-           <div className="my-8 px-2 md:px-4">
+           <div className="my-8 px-2">
       <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800 text-center md:text-left">
         Itinerary
       </h2>
