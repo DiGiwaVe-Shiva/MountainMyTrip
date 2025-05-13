@@ -309,7 +309,7 @@ const StayWithUs = () => {
       title: "Scenic Homestays",
       description:
         "Immerse yourself in the local culture with our handpicked homestays nestled in the serene Himalayas. Whether you're sipping tea on a mountain porch, sharing stories around a bonfire, or waking to birdsong and river breezes, staying with us offers an authentic Himalayan experience. Enjoy farm-fresh meals, explore village life, and connect with nature in its purest form. It's more than a stay—it's a return to simplicity, warmth, and belonging. Cozy rooms, warm hospitality, and stunning views await.",
-      image: "/deal99.jpg",
+      image: "/hotel.jpg",
       nights: 4,
       days: 5,
       price: "12,499",
