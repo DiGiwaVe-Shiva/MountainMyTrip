@@ -375,7 +375,7 @@ const destinations = [
 const itinerary = [
   {
     title: "Day 1: Arrival in Mhedesh Village",
-    content: `• Travel from Dehradun to Mhedesh village, covering approximately 165 km.\n• The journey takes around 6–7 hours by vehicle.\n• Bhatwari is located at an altitude of 2,400 meters in the Himalayan region.\n• Check into a local homestay or campsite and rest.\n• Explore nearby sites like Bhairav Temple and the Kalp Kedar Temple in the evening.\n• The Gulabi Kancha Trek begins from here and spans 3 days.`,
+    content: `• Travel from Dehradun to Mhedesh village, covering approximately 165 km.\n• The journey takes around 6–7 hours by vehicle.\n• mhedesh is located at an altitude of 2,400 meters in the Himalayan region.\n• Check into a local homestay or campsite and rest.\n• Explore nearby sites like  the Kalp Kedar Temple in the evening.\n• The Gulabi Kancha Trek begins from here and spans 3 days.`,
   },
   {
     title:
@@ -515,7 +515,7 @@ ${email ? `*Email:* ${email}\n` : ""}
           <div className="flex flex-wrap gap-4 mb-6 text-gray-600">
             <div className="flex items-center gap-2">
               <FaRegClock className="text-orange-500" />
-              <span>2 Nights 3 Days</span>
+              <span>4 Nights 5 Days</span>
             </div>
             <div className="flex items-center gap-2">
               <FaUsers className="text-orange-500" />
