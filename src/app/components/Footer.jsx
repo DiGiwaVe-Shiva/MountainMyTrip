@@ -165,7 +165,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#58535359] text-[16px] font-semibold text-gray-800 py-10 px-6 md:px-20">
+    <footer className="bg-[#58535359] text-[17px] font-semibold text-gray-800 py-10 px-6 md:px-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Logo & Description */}
         <div className="flex flex-col items-start space-y-3">
@@ -176,15 +176,15 @@ export default function Footer() {
             alt="MountainMyTrip Logo"
           />
 
-          <p className="text-sm leading-relaxed">
+          <p className="text-[16px] leading-relaxed">
             Conquer the Himalayan Heights on a Budget with MountainMyTrip!
           </p>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h3 className="font-bold text-lg mb-4">Quick Links</h3>
-          <ul className="space-y-2 text-sm">
+          <h3 className="font-bold text-[19px] mb-4">Quick Links</h3>
+          <ul className="space-y-2 text-[17px]">
             {[
               { label: "Treks", href: "#" },
               { label: "Stays with us", href: "/StaysWithUs" },
@@ -204,8 +204,8 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div>
-          <h3 className="font-bold text-lg mb-4">Contact Us</h3>
-          <ul className="space-y-2 text-sm">
+          <h3 className="font-bold text-[19px] mb-4">Contact Us</h3>
+          <ul className="space-y-2 text-[17px]">
             <li>
               <a
                 href="mailto:info@mountainmytrip.com"
@@ -248,7 +248,7 @@ export default function Footer() {
         </div> */}
 
       <div>
-      <h3 className="font-semibold text-lg mb-4">Follow Us</h3>
+      <h3 className="font-bold text-[19px] mb-4">Follow Us</h3>
       <div className="flex space-x-4 mt-2">
         {socialLinks.map(({ Icon, href, hoverColor }, index) => (
           <a
@@ -266,7 +266,7 @@ export default function Footer() {
     </div>
 
       {/* Copyright */}
-      <div className="border-t mt-10 pt-4 text-center text-sm text-gray-00">
+      <div className="border-t mt-10 pt-4 text-center text-[17px] text-gray-00">
         © {new Date().getFullYear()} MountainMyTrip. All rights reserved.
       </div>
     </footer>

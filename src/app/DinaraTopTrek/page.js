@@ -23,28 +23,21 @@ const destinations = [
 const itinerary = [
   {
     title: "Day 1:Travel from Dehradun to Mhedesh Village",
-    content: `• Depart from Dehradun to Mhedesh Village, which is approximately 165 kilometers away.\n• The drive will take around 6–7 hours via scenic mountain roads.\n• Mhedesh village is located at an altitude of 2,400 meters above sea level. \n• Upon arrival, settle into your homestay or campsite accommodation.\n• Visit local attractions like Bhairav Temple and Kalp Kedar Temple. \n• The journey will start the next morning from Kalp Kedar. `,
+    content: `• To reach the Mhedesh base camp, you must first arrive in Dehradun.\n• The total distance from Dehradun to Mhedesh is approximately 165 km and takes around 6 to 7 hours by road. \n• The final stretch from Shamundrtal to Mhedesh covers an altitude of about 2,400 meters.  \n• Before starting the journey, ensure that arrangements for rations and tents are made in advance.  \n• It is also essential to coordinate with the local villagers beforehand for a smoother experience.  `,
   },
   {
-    title: "Day 2: Trek begins from Suralin Waterfall",
-    content: `• The trek starts from here after breakfast.\n• A 5 km trek will take you to the Suralin Waterfall area.\n• Camps will be set up near the waterfall.\n• The altitude here is approximately 3,200 meters.\n• Enjoy various activities like photography, team games, and nature exploration.`,
+    title: "Day 2: Trek begins from kunali Waterfall",
+    content: `• From here your trek will begin.\n• On the way, around 5 km ahead, \n• you will reach Kunali Waterfall.\n• This location is situated at an altitude of 3200 meters. \n• At Kumoli Waterfall, various activities and fun games will be organized for you. `,
   },
 
   {
     title: "Day 3: Waterfall to Bugyal (Meadow) Campsite",
-    content: `• Trek from the waterfall campsite to the bugyal (meadow).\n• Trail is scenic and passes through forest patches.\n• Approx. 6 km trek with beautiful surroundings.\n• Overnight stay in tents at the meadow.`,
+    content: `• From Kunali Waterfall, you will go to Jangli Dhani,\n• which is located around 5 km away. \n• There, you will witness natural beauty such as flowers, \n• experience the vibrant colors of nature. \n• experience the vibrant colors of nature.`,
   },
+
   {
-    title: "Day 4: Sunset Point Experience",
-    content: `• Visit sunset point near the meadow campsite.\n• Experience a breathtaking view of the setting sun over the Himalayas.`,
-  },
-  // {
-  //   title: "Day :Morning View",
-  //   content: `• Enjoy stunning sunrise and panoramic mountain views.\n• Peaks like Bandarpoonch and Black Peak (Kala Nag) are visible.\n• The campsite is located at approx. 3500 feet elevation.`,
-  // },
-  {
-    title: "Day 5: Return Trek to Mhedesh Village",
-    content: `• Trek back from meadow campsite to Mhedesh Village.\n• Drive back to Dehradun.\n• Trip concludes with unforgettable mountain memories.`,
+    title: "Day 4: Return Trek to Mhedesh Village",
+    content: `• From Kunali Waterfall,\n• you will be dropped back \n• to Mhedesh → Dehradun by vehicle.\n• `,
   },
 ];
 
@@ -194,7 +187,6 @@ ${email ? `*Email:* ${email}\n` : ""}
             Highlights
           </h2>
           <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
-            <li>Unexplored alpine beauty near Sankri region.</li>
             <li>Majestic views of Swargarohini and other peaks.</li>
             <li>Camping near forested and riverside locations.</li>
             <li>Authentic Garhwali village hospitality.</li>

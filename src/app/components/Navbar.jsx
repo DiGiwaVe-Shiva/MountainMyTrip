@@ -35,20 +35,21 @@ export default function Navbar() {
         { name: "Brahmatal Winter Trek", link: "/Bramtal" },
         { name: "Kuari Pass Trek", link: "/Kuaripass" },
         { name: "Kedarkantha Trek ", link: "/Kedarkantha" },
-        { name: "Jalsupass Trek", link: "/Jalsupass" },
+        { name: "Kalsupass Trek", link: "/Kalsupass" },
         { name: "Dayara Buygal Trek", link: "/DayaraBugyal" },
         { name: "Sarutal Trek", link: "/Sarutal" },
         { name: "Dodital Trek", link: "/Dodital" },
         { name: "Har ki Doon Trek", link: "/Hariki" },
         { name: "Valley of Flowers Trek", link: "/Valleyflowers" },
-        { name: "Chopta Tungnath  Trek", link: "/Chopta" },
-        { name: "Chandrashila Trek", link: "/Chandrashila" },
+        { name: "ChoptaTungnathChandrashila Trek", link: "/Chopta" },
+        // { name: "Chandrashila Trek", link: "/Chandrashila" },
       ],
     },
     { name: "CharDham", link: "/CharDham" },
     { name: "Stays with us", link: "/StaysWithUs" },
     { name: "Blog", link: "/Blog" },
     { name: "Contact Us", link: "/Contact" },
+    
   ];
 
   useEffect(() => {

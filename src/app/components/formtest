@@ -90,3 +90,24 @@
             </a>
           </div>
         </div>
+
+
+
+// {
+//   title: "Day 1:Travel from Dehradun to Mhedesh Village",
+//   content: `• To reach the Mhedesh base camp, you must first arrive in Dehradun.\n• The total distance from Dehradun to Mhedesh is approximately 165 km and takes around 6 to 7 hours by road. \n• The final stretch from Shamundrtal to Mhedesh covers an altitude of about 2,400 meters.  \n• Before starting the journey, ensure that arrangements for rations and tents are made in advance.  \n• It is also essential to coordinate with the local villagers beforehand for a smoother experience.  `,
+// },
+// {
+//   title: "Day 2: Trek begins from kunali Waterfall",
+//   content: `• From here your trek will begin.\n• On the way, around 5 km ahead, \n• you will reach Kunali Waterfall.\n• This location is situated at an altitude of 3200 meters. \n• At Kumoli Waterfall, various activities and fun games will be organized for you. `,
+// },
+
+// {
+//   title: "Day 3: Waterfall to Bugyal (Meadow) Campsite",
+//   content: `• From Kunali Waterfall, you will go to Jangli Dhani,\n• which is located around 5 km away. \n• There, you will witness natural beauty such as flowers, \n• experience the vibrant colors of nature. \n• experience the vibrant colors of nature.`,
+// },
+
+// {
+//   title: "Day 4: Return Trek to Mhedesh Village",
+//   content: `• From Kunali Waterfall,\n• you will be dropped back \n• to Mhedesh → Dehradun by vehicle.\n• `,
+// // }

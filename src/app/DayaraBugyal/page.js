@@ -214,7 +214,7 @@ ${email ? `*Email:* ${email}\n` : ""}
               <li>Anything not mentioned</li>
             </ul>
           </div>
-          <div className="my-8">
+          <div className="my-8 px-2">
   <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800">
     Itinerary
   </h2>
@@ -239,9 +239,9 @@ ${email ? `*Email:* ${email}\n` : ""}
         <div key={index} className="border rounded-xl shadow bg-white">
           <button
             onClick={() => toggleAccordion(index)}
-            className="w-full flex justify-between items-start gap-2 px-5 py-4 hover:bg-gray-50 text-left rounded-t-xl"
+            className="w-full flex justify-between items-start  rounded-xl gap-2 px-5 py-4 hover:bg-gray-50 text-left rounded-t-xl"
           >
-            <span className="text-base md:text-lg font-semibold text-gray-800 flex-1">
+            <span className="text-base md:text-lg font-semibold rounded-xl text-gray-800 flex-1">
               {item.title}
             </span>
             <span className="pt-1">
@@ -254,7 +254,7 @@ ${email ? `*Email:* ${email}\n` : ""}
           </button>
 
           {isOpen && (
-            <div className="px-5 pb-5 pt-2 text-gray-700 text-sm md:text-base leading-relaxed whitespace-pre-line">
+            <div className="px-5 pb-5 pt-2 text-gray-700 text-sm md:text-base leading-relaxed  whitespace-pre-line">
               {item.content}
             </div>
           )}

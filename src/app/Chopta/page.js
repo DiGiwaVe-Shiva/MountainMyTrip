@@ -20,20 +20,37 @@ const destinations = [
   { src: "/deal34.webp" },
 ];
 
-const itinerary = [
-  {
-    title: "Day 1: Rishikesh to Chopta",
-    content: `• Drive from Rishikesh to Chopta (approx. 8-9 hrs).\n• Enjoy the scenic route through Devprayag and Rudraprayag.\n• Arrive and check into camp at Chopta.`,
-  },
-  {
-    title: "Day 2: Chopta Tungnath Chandrashila Chopta",
-    content: `• Early morning start for trek to Tungnath Temple (3.5 km).\n• Continue to Chandrashila summit (1.5 km) for panoramic views.\n• Return back to Chopta for overnight stay.`,
-  },
-  {
-    title: "Day 3: Chopta to Rishikesh",
-    content: `• Morning departure for Rishikesh.\n• Drive back with memories of a beautiful Himalayan experience.\n• Trip ends in the evening.`,
-  },
-];
+  // {
+  //   title: "Day 1: Rishikesh to Chopta",
+  //   content: `• Drive from Rishikesh to Chopta (approx. 8-9 hrs).\n• Enjoy the scenic route through Devprayag and Rudraprayag.\n• Arrive and check into camp at Chopta.`,
+  // },
+  // {
+  //   title: "Day 2: Chopta Tungnath Chandrashila Chopta",
+  //   content: `• Early morning start for trek to Tungnath Temple (3.5 km).\n• Continue to Chandrashila summit (1.5 km) for panoramic views.\n• Return back to Chopta for overnight stay.`,
+  // },
+  // {
+  //   title: "Day 3: Chopta to Rishikesh",
+  //   content: `• Morning departure for Rishikesh.\n• Drive back with memories of a beautiful Himalayan experience.\n• Trip ends in the evening.`,
+  // },
+  const itinerary = [
+    {
+      title: "Day 1: Journey to Chopta",
+      content: `• Start your journey from Dehradun towards Chopta.\n• Enjoy scenic views of the mountains and green valleys en route.\n• Reach Chopta by evening and check into a tent, homestay, or guest house.\n• Relax around a fire surrounded by snow-clad mountains.`,
+    },
+    {
+      title: "Day 2: Trek to Tungnath and Chandrashila Peak",
+      content: `• Have an early breakfast and begin the trek to Tungnath – the highest Shiva temple.\n• Continue trekking to Chandrashila Peak for stunning Himalayan views.\n• Descend back to Chopta by evening to rest and recover.`,
+    },
+    {
+      title: "Day 3: Explore Chopta",
+      content: `• Spend the day exploring Chopta’s natural beauty.\n• Take easy hikes through lush forests or visit nearby villages.\n• Relax and enjoy a cozy evening by the fire.`,
+    },
+    {
+      title: "Day 4: Return to Dehradun",
+      content: `• After breakfast, begin your return journey to Dehradun.\n• Carry back unforgettable memories of snow trails, scenic peaks, and serene solitude.`,
+    },
+  ];
+  
 
 export default function ChoptaTungnathTrek() {
   const [openIndex, setOpenIndex] = useState([]);
@@ -277,7 +294,7 @@ ${email ? `*Email:* ${email}\n` : ""}
                       onClick={() => toggleAccordion(index)}
                       className="w-full flex items-start justify-between px-4 py-4 text-left hover:bg-gray-50 rounded-t-xl"
                     >
-                      <span className="flex-1 text-base md:text-lg font-semibold text-gray-800 leading-snug">
+                      <span className="flex-1 text-base md:text-lg font-semibold rounded-xl text-gray-800 leading-snug">
                         {item.title}
                       </span>
                       <span className="pl-3 pt-1">

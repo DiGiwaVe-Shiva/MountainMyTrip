@@ -375,7 +375,7 @@ const destinations = [
 const itinerary = [
   {
     title: "Day 1: Arrival in Mhedesh Village",
-    content: `• Travel from Dehradun to Mhedesh village, covering approximately 165 km.\n• The journey takes around 6–7 hours by vehicle.\n• mhedesh is located at an altitude of 2,400 meters in the Himalayan region.\n• Check into a local homestay or campsite and rest.\n• Explore nearby sites like  the Kalp Kedar Temple in the evening.\n• The Gulabi Kancha Trek begins from here and spans 3 days.`,
+    content: `• Travel from Dehradun to Mhedesh village, covering approximately 165 km.\n• The journey takes around 6–7 hours by vehicle.\n• mhedesh is located at an altitude of 2,400 meters in the Himalayan region.\n• Check into a local homestay or campsite and rest.\n•  Taste authentic local Garhwali food prepared by the villagers.\n• The Gulabi Kancha Trek begins from here and spans 3 days.`,
   },
   {
     title:
