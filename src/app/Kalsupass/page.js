@@ -710,7 +710,7 @@ export default function JalsuPassTrek() {
     name: "",
     phone: "",
     email: "",
-    tripName: "Jalsu Pass Trek",
+    tripName: "Kalsu Pass Trek",
     travellers: "",
   });
 
@@ -829,7 +829,7 @@ ${email ? `*Email:* ${email}\n` : ""}*Trip:* ${tripName}
             About this Activity
           </h2>
           <p className="text-gray-600 mb-4">
-            The Jalsu Pass Trek is a stunning high-altitude crossover trail in
+            The Kalsu Pass Trek is a stunning high-altitude crossover trail in
             Himachal Pradesh, linking the Chamba and Kangra valleys. Ideal for
             monsoon treks, it offers green meadows, vibrant flowers, and
             pristine streams along the route.

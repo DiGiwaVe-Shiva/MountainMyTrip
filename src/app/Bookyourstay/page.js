@@ -397,7 +397,6 @@ const BookYourStayForm = () => {
                 "Kuari pass Trek",
                 "BaliPass Trek",
                 "Dodital Trek",
-                "Chandrashila Trek",
                 "Harki Trek",
                 "Dinara Bugyal Trek",
                 "Sarutal Trek",
