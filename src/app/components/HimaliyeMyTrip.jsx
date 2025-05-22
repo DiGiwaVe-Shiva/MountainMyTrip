@@ -45,7 +45,7 @@ const tourPackages = [
     price: "7,499",
     discount: "12%",
     tag: "Summer Spiritual Trek",
-    image: "/deal52.webp",
+    image: "/kedarka.jpg",
     link: "/Kedarkantha",
   },
   {
