@@ -186,7 +186,6 @@
 //   </div>
 // </div>
 
-
 //           {/* Number of Travellers */}
 //           <div className="flex flex-col w-full items-start">
 //             <label htmlFor="passengers" className="text-xs text-gray-500 mb-1 block">
@@ -220,7 +219,6 @@
 //   );
 // }
 
-
 "use client";
 
 import { useState } from "react";
@@ -243,18 +241,17 @@ export default function Form() {
   const uttarakhandLocations = [
     "Gulabikantha Trek",
     "Chardham Trek",
-    "Chopta Tungnath Trek",
     "Kedarkantha Trek",
     "Brahmatal Trek",
     "Dayara Bugyal Trek",
     "Kuari pass Trek",
     "BaliPass Trek",
     "Dodital Trek",
-    "Chandrashila Trek",
     "Har ki Doon Trek",
     "Dinara Bugyal Trek",
     "Sarutal Trek",
     "Vally of Flowers Trek",
+    "ChoptaTungnathChandrashila Trek",
   ];
 
   const himachalLocations = [
@@ -301,7 +298,9 @@ export default function Form() {
 
   // Construct WhatsApp link with form data
   const message = `Hi, I'm interested in the "${location}" trek in ${activeTab.toUpperCase()}. My preferred travel date is ${travelDate}, and we are ${Travellers} traveller(s). Please share more details.`;
-  const whatsappLink = `https://wa.me/6239092532?text=${encodeURIComponent(message)}`;
+  const whatsappLink = `https://wa.me/6239092532?text=${encodeURIComponent(
+    message
+  )}`;
 
   return (
     <div className="relative w-full min-h-[100svh] overflow-hidden">
@@ -398,7 +397,10 @@ export default function Form() {
 
           {/* Travel Date */}
           <div className="flex flex-col w-full items-start">
-            <label htmlFor="travelDate" className="text-xs text-gray-500 mb-1 block">
+            <label
+              htmlFor="travelDate"
+              className="text-xs text-gray-500 mb-1 block"
+            >
               Travel Date
             </label>
             <div className="relative w-full">
@@ -415,7 +417,10 @@ export default function Form() {
 
           {/* Number of Travellers */}
           <div className="flex flex-col w-full items-start">
-            <label htmlFor="passengers" className="text-xs text-gray-500 mb-1 block">
+            <label
+              htmlFor="passengers"
+              className="text-xs text-gray-500 mb-1 block"
+            >
               Number of Travellers
             </label>
             <input

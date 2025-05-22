@@ -95,7 +95,7 @@ const tourPackages = [
     price: "9,999",
     discount: "10%",
     tag: "Spring & Autumn Valley Trek",
-    image: "/deal53.webp",
+    image: "/Harki.png",
     link: "/Hariki",
   },
   {
