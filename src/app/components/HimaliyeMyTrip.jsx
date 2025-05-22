@@ -99,7 +99,7 @@ const tourPackages = [
     link: "/Hariki",
   },
   {
-    title: "Chopta tungnath Chandrashila Trek",
+    title: "Chopta Tungnath Chandrashila Trek",
     nights: 3,
     days: 4,
     price: "7,999",
