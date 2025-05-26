@@ -293,7 +293,7 @@ ${email ? `*Email:* ${email}\n` : ""}
             </div>
           </div> */}
           {/* Itinerary */}
-<div className="my-8">
+<div className="my-8 px-2">
   <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800">
     Itinerary
   </h2>
@@ -321,7 +321,7 @@ ${email ? `*Email:* ${email}\n` : ""}
         >
           <button
             onClick={() => toggleAccordion(index)}
-            className="w-full px-4 py-4 flex justify-between items-center text-left hover:bg-gray-50 focus:outline-none"
+            className="w-full px-4 py-4 flex justify-between items- rounded-xl text-left hover:bg-gray-50 focus:outline-none"
           >
             <span className="font-medium text-gray-900 text-sm sm:text-base md:text-lg">
               {item.title}

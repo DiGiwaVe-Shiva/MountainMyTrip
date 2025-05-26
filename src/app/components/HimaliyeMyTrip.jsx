@@ -85,7 +85,7 @@ const tourPackages = [
     price: "16,499",
     discount: "10%",
     tag: "All Season Weekend Trek",
-    image: "/deal90.webp",
+    image: "/deal90.webp",  
     link: "/Jalsupass",
   },
   {
